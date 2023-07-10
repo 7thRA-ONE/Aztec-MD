@@ -20,7 +20,7 @@
         },
         "MONGODB": {
             "description": "A secret String for Mongodb Connection.(Required)",
-        }}
+        }
     },
     "buildpacks": [
         {

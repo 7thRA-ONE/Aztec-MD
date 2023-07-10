@@ -1,16 +1,16 @@
-require("./handler/MessageHandler");
+require("./lib/vorterx/vorterx");
 require("./config");
 const {
   default: WASocket,
   DisconnectReason,
   downloadContentFromMessage,
   makeInMemoryStore,
-  useSingleFileAuthState,
+  useMultiFileAuthState,
   jidDecode,
   delay,
   jidNormalizedUser,
   makeWALegacySocket,
-  useSingleFileLegacyAuthState,
+  useMultiFileLegacyAuthState,
   DEFAULT_CONNECTION_CONFIG,
   DEFAULT_LEGACY_CONNECTION_CONFIG,
 } = require("@whiskeysockets/baileys");
@@ -22,7 +22,7 @@ const path = require("path");
 const qrcode = require("qrcode");
 const { Boom } = require("@hapi/boom");
 const { Collection, Simple } = require("./Organs/typings");
-const Welcome = require("./handler/EventHandler");
+const Welcome = require("./lib/vorterx/aztec");
 const { serialize, WAConnection } = Simple;
 const FileType = require("file-type");
 const Commands = new Collection();
@@ -39,31 +39,6 @@ global.db = new QuickDB();
 const Auth = require("./Organs/typings/authstore");
 const { join } = require("path");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
-const readCommands = () => {
-  let dir = path.join(__dirname, "./Organs/commands");
-  let dirs = fs.readdirSync(dir);
-  let cmdlist = {};
-  try {
-    dirs.forEach(async (res) => {
-      let groups = res.toLowerCase();
-      Commands.category = dirs.filter((v) => v !== "_").map((v) => v);
-      cmdlist[groups] = [];
-      let files = fs
-        .readdirSync(`${dir}/${res}`)
-        .filter((file) => file.endsWith(".js"));
-      //console.log(files)
-      for (const file of files) {
-        const command = require(`${dir}/${res}/${file}`);
-        cmdlist[groups].push(command);
-        Commands.set(command.name, command);
-        delay(100);
-      }
-    });
-    Commands.list = cmdlist;
-  } catch (e) {
-    console.error(e);
-  }
-};
 
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),

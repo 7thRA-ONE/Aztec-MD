@@ -36,13 +36,13 @@ const axios = require("axios");
 const session = `./tokens/test.json`;
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
-const Auth = require("./Organs/typings/authstore");
+const Auth = require("./connection/module/mongodb");
 const { join } = require("path");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
 const { join } = require("path");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
 const readCommands = () => {
-  let dir = path.join(__dirname, "./Organs/commands");
+  let dir = path.join(__dirname, "./commands");
   let dirs = fs.readdirSync(dir);
   let cmdlist = {};
   try {
@@ -53,7 +53,6 @@ const readCommands = () => {
       let files = fs
         .readdirSync(`${dir}/${res}`)
         .filter((file) => file.endsWith(".js"));
-      //console.log(files)
       for (const file of files) {
         const command = require(`${dir}/${res}/${file}`);
         cmdlist[groups].push(command);
@@ -74,7 +73,6 @@ const store = makeInMemoryStore({
 readCommands();
 const PORT = port;
 const app = express();
-//const msgRetryCounterMap=MessageRetryMap
 let QR_GENERATE = "invalid";
 let status;
 const connect = async () => {
@@ -105,7 +103,7 @@ const connect = async () => {
     .padStart(6, "0")}`;
 
   await cfonts.say("NEZUKO\n\nBY\n\nETERNITY", {
-    font: "block", // define the font face
+    font: "block", 
     align: "center", // define text alignment
     colors: [randomHex, randomHexs], // define all colors
     background: "transparent", // define the background color, you can also use `backgroundColor` here as key
@@ -116,16 +114,16 @@ const connect = async () => {
     gradient: [randomHex, randomHexs, randomHexx], // define your two gradient colors
     independentGradient: false, // define if you want to recalculate the gradient for each new line
     transitionGradient: true, // define if this is a transition between colors directly
-    env: "node", // define the environment CFonts is being executed in
+    env: "node", 
   });
   await console.log("[SERVER STARTED]");
   store.bind(client.ev);
 
-  client.ev.on("creds.update", () => {
+  Vorterx.ev.on("creds.update", () => {
     saveState();
   });
 
-  client.ev.on("connection.update", async (update) => {
+  Vorterx.ev.on("connection.update", async (update) => {
     const { lastDisconnect, connection, qr } = update;
     status = connection;
     if (connection) {
@@ -136,7 +134,7 @@ const connect = async () => {
       let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
       if (reason === DisconnectReason.badSession) {
         console.log(`Bad Session File, Please Delete Session and Scan Again`);
-        client.logout();
+        Vorterx.logout();
       } else if (reason === DisconnectReason.connectionClosed) {
         console.log("Connection closed, reconnecting....");
         connect();
@@ -147,7 +145,7 @@ const connect = async () => {
         console.log(
           "Connection Replaced, Another New Session Opened, Please Close Current Session First"
         );
-        client.logout();
+        Vorterx.logout();
       } else if (reason === DisconnectReason.loggedOut) {
         clearState();
         console.log(`Device Logged Out, Please Scan Again And Run.`);
@@ -158,28 +156,27 @@ const connect = async () => {
       } else if (reason === DisconnectReason.timedOut) {
         console.log("Connection TimedOut, Reconnecting...");
         connect();
-      } else client.end(`Unknown DisconnectReason: ${reason}|${connection}`);
+      } else Vorterx.end(`Unknown DisconnectReason: ${reason}|${connection}`);
     }
     if (qr) {
       QR_GENERATE = qr;
     }
   });
 
-  // Welcome
-  client.ev.on("group-participants.update", async (m) => {
-    Welcome(client, m);
+  Vorterx.ev.on("group-participants.update", async (m) => {
+    Welcome(Vorterx, m);
   });
 
-  client.ev.on("messages.upsert", async (chatUpdate) => {
-    m = serialize(client, chatUpdate.messages[0]);
+  Vorterx.ev.on("messages.upsert", async (chatUpdate) => {
+    m = serialize(Vorterx, chatUpdate.messages[0]);
 
     if (!m.message) return;
     if (m.key && m.key.remoteJid == "status@broadcast") return;
     if (m.key.id.startsWith("BAE5") && m.key.id.length == 16) return;
 
-    require("./handler/MessageHandler")(client, m, Commands, chatUpdate);
+    require("./lib/vorterx/vorterx")(Vorterx, m, Commands, chatUpdate);
   });
-  client.decodeJid = (jid) => {
+  Vorterx.decodeJid = (jid) => {
     if (!jid) return jid;
     if (/:\d+@/gi.test(jid)) {
       let decode = jidDecode(jid) || {};
@@ -190,9 +187,9 @@ const connect = async () => {
     } else return jid;
   };
 
-  client.ev.on("contacts.update", async (update) => {
+  Vorterx.ev.on("contacts.update", async (update) => {
     for (let contact of update) {
-      let id = client.decodeJid(contact.id);
+      let id = Vorterx.decodeJid(contact.id);
       user.findOne({ id: id }).then((usr) => {
         if (!usr) {
           new user({ id: id, name: contact.notify }).save();
@@ -211,8 +208,8 @@ const connect = async () => {
    * @param {*} options
    * @returns
    */
-  client.sendText = (jid, text, quoted = "", options) =>
-    client.sendMessage(jid, { text: text, ...options }, { quoted });
+  Vorterx.sendText = (jid, text, quoted = "", options) =>
+    Vorterx.sendMessage(jid, { text: text, ...options }, { quoted });
   /**
    *
    * @param {*} jid
@@ -223,7 +220,7 @@ const connect = async () => {
    * @param {*} options
    * @returns
    */
-  client.sendFile = async (
+  Vorterx.sendFile = async (
     jid,
     path,
     fileName = "",
@@ -273,7 +270,7 @@ const connect = async () => {
    * @param {*} attachExtension
    * @returns
    */
-  client.downloadAndSaveMediaMessage = async (
+  Vorterx.downloadAndSaveMediaMessage = async (
     message,
     filename,
     attachExtension = true
@@ -295,7 +292,7 @@ const connect = async () => {
     return trueFileName;
   };
 
-  client.downloadMediaMessage = async (message) => {
+ Vorterx.downloadMediaMessage = async (message) => {
     let mime = (message.msg || message).mimetype || "";
     let messageType = message.mtype
       ? message.mtype.replace(/Message/gi, "")
@@ -313,7 +310,7 @@ const connect = async () => {
    * @param {*} jid
    * @returns
    */
-  client.username = async (jid) => {
+  Vorterx.username = async (jid) => {
     let name = await user.findOne({ id: jid });
     if (!name) {
       unme = "user";
@@ -332,7 +329,7 @@ app.get("/qr", async (req, res) => {
     return void res
       .status(404)
       .setHeader("Content-Type", "text/plain")
-      .send("Provide the session id for authentication")
+      .send("Provide the session id for the bot")
       .end();
   if (sessionId !== session)
     return void res
@@ -351,5 +348,5 @@ app.get("/qr", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on PORT ${PORT}`);
+  console.log(`This Server is running on PORT ${PORT}`);
 });

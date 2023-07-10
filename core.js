@@ -102,7 +102,7 @@ const connect = async () => {
     .toString(16)
     .padStart(6, "0")}`;
 
-  await cfonts.say("NEZUKO\n\nBY\n\nETERNITY", {
+  await cfonts.say("AZTEC\n\nBY\n\nVORTERX", {
     font: "block", 
     align: "center", // define text alignment
     colors: [randomHex, randomHexs], // define all colors
@@ -322,28 +322,6 @@ const connect = async () => {
 };
 
 connect();
-app.use("/", express.static(join(__dirname, "public")));
-app.get("/qr", async (req, res) => {
-  const { session } = req.query;
-  if (!session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Provide the session id for the bot")
-      .end();
-  if (sessionId !== session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Invalid session")
-      .end();
-  if (status == "open")
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Session already exist")
-      .end();
-  res.setHeader("content-type", "image/png");
   res.send(await qrcode.toBuffer(QR_GENERATE));
 });
 

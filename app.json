@@ -1,36 +1,38 @@
 {
-    "name": "aztec",
-    "description": "multi bot with rich features made by Vorterx team",
-    "keywords": [
-        "vorterx",
-        "aztec",
-        "diego"
-    ],
-    "logo": "/",
-    "repository": "https://github.com/Vorterx/Aztec-MD.git"
-    "env": {
-        "PREFIX": {
-            "description": "Add prefix of your bot that you want"
-        },
-        "SESSION_ID": {
-            "description": "A string for the session that is required to authenticate the bot"
-        },
-        "MODS": {
-            "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")"
-        },
-        "MONGODB": {
-            "description": "A secret String for Mongodb Connection.(Required)",
-        }
+  "name": "aztec",
+  "description": "multi bot with rich features made by Vorterx team",
+  "keywords": [
+    "vorterx",
+    "aztec",
+    "diego"
+  ],
+  "repository": "https://github.com/Vorterx/Aztec-MD.git",
+  "logo": "https://graph.org/file/02abf0fd8fc2a13cc67a1.jpg",
+  "env": {
+    "PREFIX": {
+      "description": "Prefix of your bot Ex: . , / , # , & etc. Put anythong except @ (Default is .)",
+      "required": false
     },
-    "buildpacks": [
-        {
-            "url": "heroku/nodejs"
-        },
-        {
-            "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        }
-    ]
+    "SESSION_ID": {
+      "description": "A random string for your bot session. Which works as an OTP to get qr code. You have to change session every time to get a new qr."
+    },
+    "MODS": {
+      "description": "Put any phone number without + , () and spaces \",\" Ex: 27686881509 )",
+      "required": false
+    },
+    "MONGODB": {
+      "description": "Mongodb Url is required add mongoUrl."
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ]
 }

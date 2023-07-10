@@ -6,20 +6,20 @@
         "aztec",
         "diego"
     ],
-    "logo": "./",
+    "logo": "/",
     "repository": "https://github.com/Vorterx/Aztec-MD.git"
     "env": {
         "PREFIX": {
-            "description": "Add prefix of your bot that you want",
+            "description": "Add prefix of your bot that you want"
         },
         "SESSION_ID": {
-            "description": "A string for the session that is required to authenticate the bot",
+            "description": "A string for the session that is required to authenticate the bot"
         },
         "MODS": {
             "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")"
         },
         "MONGODB": {
-            "description": "A secret String for Mongodb Connection.(Required)",
+            "description": "A secret String for Mongodb Connection.(Required)"
         }
     },
     "buildpacks": [

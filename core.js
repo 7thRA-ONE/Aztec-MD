@@ -318,6 +318,7 @@ const connect = async () => {
 };
 
 connect();
+res.setHeader("content-type", "image/png");
   res.send(await qrcode.toBuffer(QR_GENERATE));
 });
 

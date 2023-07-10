@@ -36,7 +36,6 @@ const session = `./tokens/test.json`;
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
 const Auth = require("./connection/module/mongodb");
-const { join } = require("path");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
 const readCommands = () => {
   let dir = path.join(__dirname, "./commands");

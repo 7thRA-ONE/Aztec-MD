@@ -1,0 +1,36 @@
+{
+    "name": "aztec",
+    "description": "multi bot with rich features made by Vorterx team",
+    "keywords": [
+        "vorterx",
+        "aztec",
+        "diego"
+    ],
+    "logo": "./",
+    "repository": "https://github.com/Vorterx/Aztec-MD.git"
+    "env": {
+        "PREFIX": {
+            "description": "Add prefix of your bot that you want",
+        },
+        "SESSION_ID": {
+            "description": "A string for the session that is required to authenticate the bot",
+        },
+        "MODS": {
+            "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")"
+        },
+        "MONGODB": {
+            "description": "A secret String for Mongodb Connection.(Required)",
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
+}

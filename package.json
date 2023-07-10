@@ -7,6 +7,7 @@
   "scripts": {
   "start": "node --max_old_space_size=8192 core.js",
   "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
    "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@6.2.1",
     "@adiwajshing/keyed-db": "^0.2.4",

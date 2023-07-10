@@ -39,6 +39,33 @@ global.db = new QuickDB();
 const Auth = require("./Organs/typings/authstore");
 const { join } = require("path");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
+const { join } = require("path");
+const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
+const readCommands = () => {
+  let dir = path.join(__dirname, "./Organs/commands");
+  let dirs = fs.readdirSync(dir);
+  let cmdlist = {};
+  try {
+    dirs.forEach(async (res) => {
+      let groups = res.toLowerCase();
+      Commands.category = dirs.filter((v) => v !== "_").map((v) => v);
+      cmdlist[groups] = [];
+      let files = fs
+        .readdirSync(`${dir}/${res}`)
+        .filter((file) => file.endsWith(".js"));
+      //console.log(files)
+      for (const file of files) {
+        const command = require(`${dir}/${res}/${file}`);
+        cmdlist[groups].push(command);
+        Commands.set(command.name, command);
+        delay(100);
+      }
+    });
+    Commands.list = cmdlist;
+  } catch (e) {
+    console.error(e);
+  }
+};
 
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
@@ -60,7 +87,7 @@ const connect = async () => {
   let { version, isLatest } = await fetchLatestBaileysVersion();
   let connOptions = {
     printQRInTerminal: true,
-    browser: ["Nezuko", "Firefox", "105.0.1343.42"],
+    browser: ["Aztec", "Firefox", "105.0.1343.42"],
     logger: pino({ level: "silent" }),
     defautQueryTimeoutMs: undefined,
     auth: state,

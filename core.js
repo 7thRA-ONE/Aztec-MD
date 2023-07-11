@@ -21,7 +21,7 @@ const yargs = require("yargs");
 const path = require("path");
 const qrcode = require("qrcode");
 const { Boom } = require("@hapi/boom");
-const { Collection, Simple } = require("./lib");
+const { Collection, Simple } = require("./lib/connection");
 const Welcome = require("./lib/vorterx/aztec");
 const { serialize, WAConnection } = Simple;
 const FileType = require("file-type");
@@ -35,7 +35,7 @@ const axios = require("axios");
 const session = `./tokens/test.json`;
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
-const Auth = require("./lib/mongodb");
+const Auth = require("./lib/connection/mongodb");
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
 const readCommands = () => {
   let dir = path.join(__dirname, "./commands");

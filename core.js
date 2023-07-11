@@ -47,12 +47,12 @@ const readCommands = () => {
       Commands.category = dirs.filter((v) => v !== "_").map((v) => v);
       cmdlist[groups] = [];
       let files = fs
-        .readdirSync(`${dir}/${res}`)
+        .readdirSync("./commands")
         .filter((file) => file.endsWith(".js"));
-      for (const file of files) {
+      for (const file of cmdfiles) {
         const command = require(`../commands/${file}`);
         cmdlist[groups].push(command);
-        Commands.set(command.name, command);
+        Commands.set(cmdfiles.name, cmdfiles);
         delay(100);
       }
     });

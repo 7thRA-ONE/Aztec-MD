@@ -50,7 +50,7 @@ const readCommands = () => {
         .readdirSync("./commands")
         .filter((file) => file.endsWith(".js"));
       for (const file of files) {
-        const command = require(`../commands/${file}`);
+        const command = require(`./commands/${file}`);
         cmdlist[groups].push(command);
         Commands.set(commamd.name, command);
         delay(100);

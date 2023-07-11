@@ -10,7 +10,7 @@ global.owner = vorterx.split(",");
 global.mongodb = process.env.MONGODB || "none";
 global.prefix = process.env.PREFIX || ".";
 global.sessionId = process.env.SESSION_ID || "vorterx";
-global.port = process.env.PORT || 1200;
+global.port = process.env.PORT || 8081;
 
 let file = require.resolve(__filename);
 fs.watchFile(file, () => {

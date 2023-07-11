@@ -52,7 +52,7 @@ const readCommands = () => {
       for (const file of files) {
         const command = require(`./commands/${file}`);
         cmdlist[groups].push(command);
-        Commands.set(commamd.name, command);
+        Commands.set(command.name, command);
         delay(100);
       }
     });

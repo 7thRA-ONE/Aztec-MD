@@ -87,7 +87,7 @@ const connect = async () => {
     auth: state,
     version,
   };
-  const vorterx = new WAConnection(WASocket(connOptions));
+  const client = new WAConnection(WASocket(connOptions));
   const randomHexs = `#${((Math.random() * 0xffffff) << 0)
     .toString(16)
     .padStart(6, "0")}`;
@@ -113,13 +113,13 @@ const connect = async () => {
     env: "node", 
   });
   await console.log("[SERVER HAS STARTED LAUNCH]");
-  store.bind(vorterx.ev);
+  store.bind(client.ev);
 
-  vorterx.ev.on("creds.update", () => {
+  client.ev.on("creds.update", () => {
     saveState();
   });
 
-  vorterx.ev.on("connection.update", async (update) => {
+  client.ev.on("connection.update", async (update) => {
     const { lastDisconnect, connection, qr } = update;
     status = connection;
     if (connection) {
@@ -130,7 +130,7 @@ const connect = async () => {
       let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
       if (reason === DisconnectReason.badSession) {
         console.log(` ♻️ Bad Session File, Please Delete Session and Scan Again`);
-        vorterx.logout();
+        client.logout();
       } else if (reason === DisconnectReason.connectionClosed) {
         console.log(" ⚕️ Connection closed reconnecting please wait....");
         connect();
@@ -152,27 +152,27 @@ const connect = async () => {
       } else if (reason === DisconnectReason.timedOut) {
         console.log(" 🔌 Connection TimedOut Reconnecting please wait...");
         connect();
-      } else vorterx.end(`Unknown DisconnectReason: ${reason}|${connection}`);
+      } else client.end(`Unknown DisconnectReason: ${reason}|${connection}`);
     }
     if (qr) {
       QR_GENERATE = qr;
     }
   });
 
-  vorterx.ev.on("group-participants.update", async (m) => {
-    Welcome(vorterx, m);
+  client.ev.on("group-participants.update", async (m) => {
+    Welcome(client, m);
   });
 
-  vorterx.ev.on("messages.upsert", async (chatUpdate) => {
-    m = serialize(vorterx, chatUpdate.messages[0]);
+  client.ev.on("messages.upsert", async (chatUpdate) => {
+    m = serialize(client, chatUpdate.messages[0]);
 
     if (!m.message) return;
     if (m.key && m.key.remoteJid == "status@broadcast") return;
     if (m.key.id.startsWith("BAE5") && m.key.id.length == 16) return;
 
-    require("./lib/vorterx/vorterx")(vorterx, m, Commands, chatUpdate);
+    require("./lib/vorterx/vorterx")(client, m, Commands, chatUpdate);
   });
-  vorterx.decodeJid = (jid) => {
+  client.decodeJid = (jid) => {
     if (!jid) return jid;
     if (/:\d+@/gi.test(jid)) {
       let decode = jidDecode(jid) || {};
@@ -183,9 +183,9 @@ const connect = async () => {
     } else return jid;
   };
 
-  vorterx.ev.on("contacts.update", async (update) => {
+  client.ev.on("contacts.update", async (update) => {
     for (let contact of update) {
-      let id = vorterx.decodeJid(contact.id);
+      let id = client.decodeJid(contact.id);
       user.findOne({ id: id }).then((usr) => {
         if (!usr) {
           new user({ id: id, name: contact.notify }).save();
@@ -204,8 +204,8 @@ const connect = async () => {
    * @param {*} options
    * @returns
    */
-  vorterx.sendText = (jid, text, quoted = "", options) =>
-    vorterx.sendMessage(jid, { text: text, ...options }, { quoted });
+  client.sendText = (jid, text, quoted = "", options) =>
+    client.sendMessage(jid, { text: text, ...options }, { quoted });
   /**
    *
    * @param {*} jid
@@ -216,7 +216,7 @@ const connect = async () => {
    * @param {*} options
    * @returns
    */
-  vorterx.sendFile = async (
+  client.sendFile = async (
     jid,
     path,
     fileName = "",
@@ -224,7 +224,7 @@ const connect = async () => {
     quoted = "",
     options = {}
   ) => {
-    let types = await vorterx.getFile(path, true);
+    let types = await client.getFile(path, true);
     let { mime, ext, res, data, filename } = types;
     if ((res && res.status !== 200) || file.length <= 65536) {
       try {
@@ -252,7 +252,7 @@ const connect = async () => {
     else if (/video/.test(mime)) type = "video";
     else if (/audio/.test(mime)) type = "audio";
     else type = "document";
-    await vorterx.sendMessage(
+    await client.sendMessage(
       jid,
       { [type]: { url: pathFile }, caption, mimetype, fileName, ...options },
       { quoted, ...options }
@@ -266,7 +266,7 @@ const connect = async () => {
    * @param {*} attachExtension
    * @returns
    */
-  vorterx.downloadAndSaveMediaMessage = async (
+  client.downloadAndSaveMediaMessage = async (
     message,
     filename,
     attachExtension = true
@@ -288,7 +288,7 @@ const connect = async () => {
     return trueFileName;
   };
 
- vorterx.downloadMediaMessage = async (message) => {
+ client.downloadMediaMessage = async (message) => {
     let mime = (message.msg || message).mimetype || "";
     let messageType = message.mtype
       ? message.mtype.replace(/Message/gi, "")
@@ -306,7 +306,7 @@ const connect = async () => {
    * @param {*} jid
    * @returns
    */
-  vorterx.username = async (jid) => {
+  client.username = async (jid) => {
     let name = await user.findOne({ id: jid });
     if (!name) {
       unme = "user";

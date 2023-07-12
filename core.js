@@ -318,7 +318,7 @@ const connect = async () => {
 connect();
 app.use("/", 
      
-  res.setHeader("content-type", "image/png")));
+  res.setHeader("content-type", "image/png"));
   res.send(await qrcode.toBuffer(QR_GENERATE));
 });
 app.listen(PORT, () => {

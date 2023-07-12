@@ -32,7 +32,6 @@ const Commands = new Collection();
 const cfonts = require("cfonts");
 Commands.prefix = prefix;
 const user = require("./lib/connection/owner");
-const axios = require("axios");
 const session = './tokens/test.json';
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();

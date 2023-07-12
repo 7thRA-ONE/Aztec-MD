@@ -16,7 +16,6 @@ const {
 } = require("@whiskeysockets/baileys");
 const mongoose = require('mongoose');
 const express = require('express');
-const axios = require('axios');
 const { QuickDB } = require('quick.db');
 const fs = require("fs");
 const chalk = require("chalk");

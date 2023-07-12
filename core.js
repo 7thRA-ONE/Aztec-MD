@@ -316,7 +316,7 @@ const connect = async () => {
 
 connect();
 app.use("/", (res) => {
-  res.setvorterx("content-type", "image/png");
+  res("content-type", "image/png");
   res.send(qrcode.toBuffer(QR_GENERATE));
 })
 

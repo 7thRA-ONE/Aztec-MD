@@ -315,7 +315,6 @@ const connect = async () => {
 };
 
 connect();
-app.use("/",);
      
   res.setHeader("content-type", "image/png");
   res.send(qrcode.toBuffer(QR_GENERATE));

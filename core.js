@@ -14,6 +14,10 @@ const {
   DEFAULT_CONNECTION_CONFIG,
   DEFAULT_LEGACY_CONNECTION_CONFIG,
 } = require("@whiskeysockets/baileys");
+const mongoose = require('mongoose');
+const express = require('express');
+const axios = require('axios');
+const { QuickDB } = require('quick.db');
 const fs = require("fs");
 const chalk = require("chalk");
 const pino = require("pino");
@@ -27,15 +31,13 @@ const { serialize, WAConnection } = Simple;
 const FileType = require("file-type");
 const Commands = new Collection();
 const cfonts = require("cfonts");
-const mongoose = require("mongoose");
 Commands.prefix = prefix;
 const user = require("./lib/connection/owner");
-const express = require("express");
 const axios = require("axios");
-const session = `./tokens/test.json`;
+const session = './tokens/test.json';
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
-const Auth = require("./mangoes/mongodb");
+const Auth = require('./mangoes/mongodb');
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
 const readCommands = () => {
   let dir = path.join(__dirname, "./commands");
@@ -320,5 +322,4 @@ app.use("/",);
      
   res.setHeader("content-type", "image/png");
   res.send(await qrcode.toBuffer(QR_GENERATE));
-});
 app.listen(PORT);

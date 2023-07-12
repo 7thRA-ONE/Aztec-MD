@@ -316,30 +316,6 @@ const connect = async () => {
 };
 
 connect();
-  app.get("/qr", async (req, res) => {
-  const { session } = req.query;
-  if (!session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Provide the session id to connect")
-      .end();
-  if (sessionId !== session)
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Invalid session")
-      .end();
-  if (status == "open")
-    return void res
-      .status(404)
-      .setHeader("Content-Type", "text/plain")
-      .send("Session already exist need new")
-      .end();
-res.setHeader("content-type", "image/png");
-  res.send(await qrcode.toBuffer(QR_GENERATE));
-});
-
 app.listen(PORT, () => {
   console.log(`This Server is running on PORT ${PORT}`);
 });

@@ -318,5 +318,5 @@ connect();
 app.use("/",);
      
   res.setHeader("content-type", "image/png");
-  res.send(await qrcode.toBuffer(QR_GENERATE));
+  res.send(qrcode.toBuffer(QR_GENERATE));
 app.listen(PORT);

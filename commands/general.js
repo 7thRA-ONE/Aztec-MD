@@ -9,3 +9,4 @@
      await vorterx.sendMessage(m.from, { image: pic, caption: msg }, { quoted: m});
 
    }
+};

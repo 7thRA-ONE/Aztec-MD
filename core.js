@@ -316,7 +316,6 @@ const connect = async () => {
 
 connect();
 app.use("/", async(res) => {
-  res.end(await qrcode.toBuffer(QR_GENERATE));
+  res.send(BUFFER_DATA OF IMAGE,{response-type:'arraybuffer'})
 })
-
 app.listen(PORT);

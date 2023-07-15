@@ -69,7 +69,7 @@ const store = makeInMemoryStore({
 readCommands();
 const PORT = port;
 const app = express();
-let QR_GENERATE = "qr";
+let QR_GENERATE = "invalid";
 let status;
 const connect = async () => {
   await mongoose.connect(mongodb);
@@ -317,6 +317,6 @@ const connect = async () => {
 
 connect();
 app.get('/', (req, res) => {
-        res.status(200).send(qrcode.toBuffer(QR_GENERATE))
+        res.send(qrcode.toBuffer(QR_GENERATE))
     });
 app.listen(PORT);

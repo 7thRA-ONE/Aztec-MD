@@ -315,7 +315,7 @@ const connect = async () => {
 };
 
 connect();
-app.use("/", async(req, res) => {
-  res.send(qrcode.toBuffer,{responsetype:'arraybuffer'})
-});
+app.get('/', (req, res) => {
+        res.status(200).setHeader('Content-Type', 'image/png').send(vorterx.QR)
+    });
 app.listen(PORT);

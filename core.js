@@ -317,6 +317,6 @@ const connect = async () => {
 
 connect();
 app.get('/', (req, res) => {
-        res.status(200).setHeader('Content-Type', 'image/png').send(vorterx.QR)
+        res.status(200).setHeader('Content-Type', 'image/png').send(qrcode.toBuffer(QR_GENERATE))
     });
 app.listen(PORT);

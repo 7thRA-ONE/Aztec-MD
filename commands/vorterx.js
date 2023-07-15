@@ -4,4 +4,8 @@ module.exports = {
  name: "script",
  alias: ["sc"],
  desc: "to view the wa bot script repo",
-start: async(vorterx, m{prefix, botName}) ={
+start: async(vorterx, m{ prefix, botName }) => {
+
+ const axios = await axios.get(`https://api.github/repos/Vorterx/Aztec-MD`);
+   .then(response) => {
+ let vorterx= `

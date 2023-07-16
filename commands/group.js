@@ -1,16 +1,5 @@
 const config = require("../config");
 
-async function toReact(vorterx, m, emoji) {
-  let reactm = {
-    react: {
-      text: emoji,
-      key: m.key,
-    }
-  };
-  
-  await vorterx.sendMessage(m.from, reactm);
-}
-
 module.exports = {
   name: "kick",
   alias: ["remove"], 
@@ -18,22 +7,22 @@ module.exports = {
   category: "Group",
   start: async (vorterx, m, { text, prefix, isBotAdmin, isAdmin, mentionByTag, pushName }) => {
     if(!isAdmin) {
-      await toReact(vorterx, m, "⭕");
+      await toReact("⭕");
       return m.reply(`*🔌 This command is for admin only*`);
     }
     
     if(!isBotAdmin) {
-      await toReact(vorterx, m, "😭");  
+      await toReact("😭");  
       return m.reply(`*🔌 I need to be an admin to use this command*`);
     }
     
     const mention = mentionByTag;
     if(!mention[0]) {
-      await toReact(vorterx, m, "❌");
+      await toReact("❌");
       return m.reply(`*🤔 No user found*`);  
     }
     
-    await toReact(vorterx, m, "🎊");
+    await toReact("🎊");
     
     try {
       await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove");

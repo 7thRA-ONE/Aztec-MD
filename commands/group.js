@@ -1,4 +1,13 @@
 const config = require("../config");
+ async function doReact(emoji) {
+      let reactm = {
+        react: {
+          text: emoji,
+          key: m.key,
+        },
+      };
+      await vorterx.sendMessage(m.from, reactm);
+    }
 
 module.exports = {
   name: "kick",

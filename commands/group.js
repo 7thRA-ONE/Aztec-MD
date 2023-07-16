@@ -29,8 +29,7 @@ case "group":
 		     await toReact("🕳️");
                 await vorterx.groupSettingUpdate(m.from, 'not_announcement').then((res) => m.reply(`*🔇Group Has Been Opened By ${pushName}*`)).catch((err) => m.reply(jsonformat(err)))
              } else if (args[0] === 'close'){ await toReact("💣");
-                await vortex.groupSettingUpdate(m.from, 'announcement').then((res) => m.reply(`*🔇Group Has been Closed By ${pushName}*`)).catch((err) => m.reply(jsonformat(err)))
-             },{quoted:m})
+                await vortex.groupSettingUpdate(m.from, 'announcement').then((res) => m.reply(`*🔇Group Has been Closed By ${pushName}*`)).catch((err) => m.reply(jsonformat(err))),{quoted:m})
 				
             break;
             default;

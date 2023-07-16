@@ -9,7 +9,7 @@ module.exports = {
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     
   let axios = await axios.get("https://api.github/repos/Vorterx/Aztec-MD");
-          .then(response) => {
+    
     let vorterx = `*💖Hey ${pushName} this is Aztec repo\n
   ╭─❮❮| Aztec Script Bot|❯❯
 │

@@ -1,5 +1,5 @@
 const config = require("../config");
- async function doReact(emoji) {
+ async function toReact(emoji) {
       let reactm = {
         react: {
           text: emoji,

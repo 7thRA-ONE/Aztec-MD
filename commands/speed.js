@@ -8,6 +8,6 @@ module.exports = {
   var start = new Date().getTime();
   await vorterx.sendMessage("*Responding to speed*");
     var end = new Date().getTime();
-    return await vorterx.sendMessage("*Response* " + (end - start)*);
+    return await vorterx.sendMessage("*Response* " + (end - start));
          }
                           );

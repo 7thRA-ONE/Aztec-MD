@@ -30,3 +30,11 @@ module.exports = {
           category[info.category].push(info);
         }
       }
+const keys = Object.keys(category);
+      for (const key of keys) {
+        txt += `*${key.toUpperCase()} ${
+          emo[keys.indexOf(key)]
+        } :-*  \n\`\`\`${category[key]
+          .map((cmd) => cmd.name)
+          .join(", ")}\`\`\`\n\n`;
+      }

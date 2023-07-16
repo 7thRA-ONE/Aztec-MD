@@ -93,7 +93,7 @@ module.exports = {
       });
     } catch (err) {
       console.error(err);
-      await m.reply(`Failed to tag all members: ${err}`);
+     await m.reply(`Failed to tag all members: ${err}`);
     }
   },
 };
@@ -109,4 +109,4 @@ module.exports = {
     if(isAdmin) { await toReact("🚫"); return m.reply("*😐This cmd was prommamed for owner only*");
     }
     await toReact("👋");
-    await vorterx.groupLeave(m.from)});
+    await vorterx.groupLeave(m.from)}};

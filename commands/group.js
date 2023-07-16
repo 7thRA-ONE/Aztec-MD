@@ -120,4 +120,4 @@ module.exports = {
     if(isAdmin) { await toReact("🚫"); return m.reply("*😐This cmd was prommamed for owner only*");
     }
     await toReact("👋");
-    await vorterx.groupLeave(m.from)}};
+    await vorterx.groupLeave(m.from)}},};

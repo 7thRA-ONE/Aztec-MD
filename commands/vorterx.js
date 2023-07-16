@@ -26,7 +26,7 @@ module.exports = {
 │────────────────⦿   
 │ *© VORTERX*
 ╰────────────────⦿`;
-  vorterx.sendMessage(m,from, { image: aztec, caption: vorterx }, {quoted: m});
+ await vorterx.sendMessage(m.from, { image: aztec, caption: vorterx }, {quoted: m});
  }
 };
 

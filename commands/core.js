@@ -1,4 +1,4 @@
-itconst fs = require("fs")
+const fs = require("fs")
 
 module.exports = {
   name: "menu",

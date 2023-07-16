@@ -10,7 +10,7 @@ module.exports = {
     
   let axios = await axios.get("https://api.github/repos/Vorterx/Aztec-MD");
     
-    let vorterx = `*💖Hey ${pushName} this is Aztec repo\n
+    let amarok = `*💖Hey ${pushName} this is Aztec repo\n
   ╭─❮❮| Aztec Script Bot|❯❯
 │
 │⚕️Rated: ${response.stargazers_count}
@@ -26,7 +26,7 @@ module.exports = {
 │────────────────⦿   
 │ *© VORTERX*
 ╰────────────────⦿`;
- await vorterx.sendMessage(m.from, { image: aztec, caption: vorterx }, { quoted: m});
+ await vorterx.sendMessage(m.from, { image: aztec, caption: amarok }, { quoted: m});
  }
 };
 

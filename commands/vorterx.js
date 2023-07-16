@@ -5,7 +5,7 @@ module.exports = {
   alias: ["sc"],
   category: "Mics",
   description: "the repo of the bot",
-  start: async(vorterx, m { prefix, pushName }) => {
+  start: async(vorterx, m, { prefix, pushName }) => {
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     
   let axios = await axios.get("https://api.github/repos/Vorterx/Aztec-MD");

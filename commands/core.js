@@ -38,9 +38,13 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        txt += `*${key.toUpperCase()} ${
+        amarok += `*${key.toUpperCase()} ${
           emo[keys.indexOf(key)]
         } :-*  \n\`\`\`${category[key]
-          .map((cmd) => cmd.name)
-          .join(", ")}\`\`\`\n\n`;
+           .map((cmd) => `|${prefix+ cmd.name}`)
+          .join("n\")}\n\n└─────────◉\n\n`;
       }
+vorterx.sendMessage(m.from, {image: aztec}, caption: amarok}, { quoted: m });
+   }
+ }
+};

@@ -1,7 +1,8 @@
 require ('../../../config')
 module.exports = {
 	name: "kick",
-	desc: "remove Member from group",
+	alias: ["remove"],
+	description: "remove Member from group",
 	category: "Group",
 	start: async(vorterx, m, { text, prefix, isBotAdmin,isAdmin,mentionByTag}) => {
 		if(!isAdmin) { react("⭕") return m.reply(`*🔌This is admin only command*`);

@@ -20,7 +20,6 @@ const fs = require("fs");
 const chalk = require("chalk");
 const pino = require("pino");
 const yargs = require("yargs");
-const client = require("./lib/vorterx/vorterx");
 const vorterx = require("./lib/vorterx/vorterx");
 const path = require("path");
 const qrcode = require("qrcode");

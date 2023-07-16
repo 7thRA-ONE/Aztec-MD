@@ -44,7 +44,7 @@ const keys = Object.keys(category);
            .map((cmd) => `|${prefix+ cmd.name}`)
           .join("n\")}\n\n└─────────◉\n\n`;
       }
-vorterx.sendMessage(m.from, {image: aztec}, caption: amarok}, { quoted: m });
+      amarok += `*©VORTERX*`;
+vorterx.sendMessage(m.from, { image: aztec }, caption: amarok }, { quoted: m });
    }
- }
 };

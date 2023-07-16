@@ -28,5 +28,5 @@ module.exports = {
 ╰────────────────⦿`;
  await vorterx.sendMessage(m.from, { image: aztec, caption: vorterx }, { quoted: m});
  }
-};
+}
 

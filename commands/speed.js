@@ -9,3 +9,5 @@ module.exports = {
   const {amarok} = vorterx.sendMessage(m.from, {text: "*Responding to speed"*});
     var end = new Date().getTime();
     return await vorterx.sendMessage(m.from,{text: "*Response* "+ (end - new) *", m:amarok});
+         }
+                          );           

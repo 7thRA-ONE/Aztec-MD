@@ -1,40 +1,24 @@
 const config = require("../config");
 
 module.exports = {
-  name: "kick",
-  alias: ["remove"], 
-  description: "Remove member from group",
-  category: "Group",
-  start: async (vorterx, m, { text, prefix, isBotAdmin, isAdmin, mentionByTag, pushName }) => {
-    if(!isAdmin) {
-      await toReact("⭕");
-      return m.reply(`*🔌 This command is for admin only*`);
-    }
-    
-    if(!isBotAdmin) {
-      await toReact("😭");  
-      return m.reply(`*🔌 I need to be an admin to use this command*`);
-    }
-    
-    const mention = mentionByTag;
-    if(!mention[0]) {
-      await toReact("❌");
-      return m.reply(`*🤔 No user found*`);  
-    }
-    
-    await toReact("🎊");
-    
-    try {
-      await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove");
-      await vorterx.sendMessage(m.from, { 
-        text: `*🎊 User has been removed by ${pushName}*`,
-      }, {quoted: m});
-    } catch(err) {
-      console.error(err);
-      await m.reply(`Failed to remove user: ${err}`);
-    }
-  }
-};
+  module.exports = {
+ name: "kick",
+ alias: ["remove"],
+ description: "remove Member from group",
+ category: "Group",
+ start: async(vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, mentionByTag}) => {
+  if(!isAdmin) { await toReact("⭕"); return m.reply(`*🔌This is admin only command*`);
+        }
+  if(!isBotAdmin) { await toReact("😭"); return m.reply(`*🔌I need to be an admin in order to use this command*`);
+        }
+  const mention = await mentionByTag
+  if(!mention[0]) { await toReact("❌"); return m.reply(`*🤔No user found*`);
+        }
+  await toReact("🎊");
+  await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove")
+  await vorterx.sendMessage(m.from,{text:`*🎊User has been removed by ${m.sender.pushname}*`},{quoted:m})
+ },
+}
 
 module.exports = {
   name: "group",

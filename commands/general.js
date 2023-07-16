@@ -1,13 +1,13 @@
 const fs = require("fs");
 
 module.exports = {
-   name: 'both',
+   name: 'alive',
    alias: ['alv'],
    category: 'Mics',
    description: 'Some virous commands in one',
    start: async(vorterx, m, { prefix, pushName, botName }) => {
    let aztec = fs.readFileSync("./lib/connect/vorterx.png");
-      let msg = `Hey ${pushName} This is ${botName} developed by Diegoson\n\n*👾Descripto: Whats script bot\n*🚦Botname: ${botName}\n*👾Prefix: ${prefix}\n*📲Version: 3.0.0\n\n\n*©️VORTERX*`;
+      let msg = `Hey ${pushName} This is ${botName} developed by Diegoson\n\n*👾Descripto: Whats script bot\n*🚦Botname: ${botName}\n*👾Prefix: ${prefix}\n*📲Version: 3.0.0\n\n\n*©️AZTEC-MD BY VORTERX*`;
      await vorterx.sendMessage(m.from, { image: aztec, caption: msg }, { quoted: m});
 
    }

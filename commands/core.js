@@ -6,7 +6,7 @@ module.exports = {
   desc: "List all command",
   category: "General",
   react: "⚕️",
-  start: async (vorterx, m, { commands, args, prefix, text, emo, toUpper }) => {
+  start: async (vorterx, m, { commands, args, prefix, text,  toUpper }) => {
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
     if (args[0]) {
@@ -40,9 +40,7 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*${key.toUpperCase()} ${
-          emo[keys.indexOf(key)]
-        } :-*  \n\`\`\`${category[key]
+        amarok += `*${key.toUpperCase()} :-*  \n\`\`\`${category[key]
            .map((cmd) => `|${prefix+ cmd.name}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }

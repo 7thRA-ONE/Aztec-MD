@@ -5,9 +5,9 @@ module.exports = {
   start: async(vorterx, m, { prefix, toReact }) => {
   await toReact("🏇");
     
-  var new = new Date().getTime();
-  const { amarok } = vorterx.sendMessage(m.from, {text: "*Responding to speed"*});
+  var start = new Date().getTime();
+  await vorterx.sendMessage("*Responding to speed*");
     var end = new Date().getTime();
-    return await vorterx.sendMessage(m.from,{text: "*Response* "+ (end - new) *", m:amarok});
+    return await vorterx.sendMessage("*Response* " + (end - start)*);
          }
-                          );           
+                          );

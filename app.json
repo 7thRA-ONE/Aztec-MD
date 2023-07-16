@@ -13,6 +13,9 @@
       "description": "Prefix of your bot Ex: . , / , # , & etc. Put anythong except @ (Default is .)",
       "required": false
     },
+    "BOTNAME": {
+      "description": "Put your bot name here as its required."
+    }, 
     "SESSION_ID": {
       "description": "A random string for your bot session. Which works as an OTP to get qr code. You have to change session every time to get a new qr."
     },

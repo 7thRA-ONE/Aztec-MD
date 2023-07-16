@@ -12,3 +12,21 @@ module.exports = {
       let cmd =
         commands.get(name) ||
         Array.from(commands.values()).find((v) => v.alias.includes(name));
+} else {
+      const { pushName, sender } = m;
+      let cm = commands.keys();
+      let category = [];
+
+      for (let cmd of cm) {
+        let info = commands.get(cmd);
+        if (!cmd) continue;
+        if (!info.category || info.category === "private") continue;
+        )
+          continue;
+        if (Object.keys(category).includes(info.category))
+          category[info.category].push(info);
+        else {
+          category[info.category] = [];
+          category[info.category].push(info);
+        }
+      }

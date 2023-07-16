@@ -5,6 +5,7 @@ module.exports = {
   category: "General",
   react: "⚕️",
   start: async (vorterx, m, { commands, args, prefix, text, toUpper }) => {
+  let aztec = fs.readFileAsync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
     if (args[0]) {
       let data = [];
@@ -42,9 +43,10 @@ const keys = Object.keys(category);
           emo[keys.indexOf(key)]
         } :-*  \n\`\`\`${category[key]
            .map((cmd) => `|${prefix+ cmd.name}`)
-          .join("n\")}\n\n└─────────◉\n\n`;
+          .join("\n")}\n\n└─────────◉\n\n`;
       }
       amarok += `*©VORTERX*`;
-vorterx.sendMessage(m.from, { image: aztec }, caption: amarok }, { quoted: m });
+await vorterx.sendMessage(m.from, { image: aztec }, caption: amarok }, { quoted: m});
    }
+},
 };

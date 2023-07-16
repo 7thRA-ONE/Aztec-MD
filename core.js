@@ -17,6 +17,7 @@ const {
 const mongoose = require('mongoose');
 const express = require('express');
 const fs = require("fs");
+const kg = require(."/lib/vorterx/vorterx");
 const chalk = require("chalk");
 const pino = require("pino");
 const yargs = require("yargs");

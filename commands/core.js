@@ -1,4 +1,4 @@
-const fs = require("fs")
+itconst fs = require("fs")
 
 module.exports = {
   name: "menu",
@@ -40,7 +40,7 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*┌─『${key.toUpperCase()}*』─❖\n\`${category[key]
+        amarok += `*┌─『${key.toUpperCase()}*』─❖\n\${category[key]
           .map((cmd) => ` |${prefix+ cmd.name}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }

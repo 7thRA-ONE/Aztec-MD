@@ -5,7 +5,7 @@ module.exports = {
 	description: "remove Member from group",
 	category: "Group",
 	start: async(vorterx, m, { text, prefix, isBotAdmin,isAdmin,mentionByTag}) => {
-		if(!isAdmin) { react("⭕") return m.reply(`*🔌This is admin only command*`);
+		if(!isAdmin) { react("⭕"); return m.reply(`*🔌This is admin only command*`);
                  }
 		if(!isBotAdmin) { react("😭"); return m.reply(`*🔌I need to be an admin in order to use this command*`);
                     }

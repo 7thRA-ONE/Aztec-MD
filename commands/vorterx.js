@@ -6,7 +6,8 @@ module.exports = {
   category: "Mics",
   description: "the repo of the bot",
   start: async(vorterx, m { prefix, pushName }) => {
-
+  let aztec = fs.readFileSync("./lib/connect/vorterx.png");
+    
   const axios = await axios.get("https://api.github/repos/Vorterx/Aztec-MD");
     .then(response) => {
   let vorterx= `*💖Hey ${pushName} this is Aztec repo\n
@@ -18,12 +19,14 @@ module.exports = {
 │
 │⚕️Update: ${response.updated_at}
 │
-│⚕️
+│⚕️Repo: ${response.html_url}
 │
-│
-│
-│
+│⚕️Branch: ${response.branch}
 │
 │────────────────⦿   
 │ *© VORTERX*
-╰────────────────⦿
+╰────────────────⦿`;
+  vorterx.sendMessage(m,from, { image: aztec, caption: vorterx }, {quoted: m});
+ }
+};
+

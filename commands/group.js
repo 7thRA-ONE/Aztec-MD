@@ -18,7 +18,7 @@ module.exports = {
 	},
 }
 
-case "group",
+case "group":
 	 start: async(vorterx, m, { text, prefix, isBotAdmin,isAdmin,args}) => {
             if(!isAdmin) { await toReact("🔇"); return m.reply("*🔇This command can only be used by Admin*");
 		 }
@@ -31,9 +31,9 @@ case "group",
              } else if (args[0] === 'close'){ await toReact("💣");
                 await vortex.groupSettingUpdate(m.from, 'announcement').then((res) => m.reply(`*🔇Group Has been Closed By ${pushName}*`)).catch((err) => m.reply(jsonformat(err)))
              },{quoted:m})
-				}
+				
             break;
             default;
            break;
 }
-	}
+	} }

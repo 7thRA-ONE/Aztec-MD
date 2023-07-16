@@ -34,5 +34,5 @@ case "group":
             break;
             default;
            break;
-}
-	} }
+
+	} };

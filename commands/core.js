@@ -2,10 +2,10 @@ const fs = require("fs")
 
 module.exports = {
   name: "menu",
-  alias: ["h"],
-  desc: "List all command",
+  alias: ["list"],
+  description: "The list of all command",
   category: "General",
-  react: "⚕️",
+  react: "🔥",
   start: async (vorterx, m, { commands, args, prefix, text,  toUpper }) => {
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
@@ -40,7 +40,7 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*${key.toUpperCase()} :-*  \n\`\`\`${category[key]
+        amarok += `*┌─『${key.toUpperCase()}*』─❖\n\n\`\`\`${category[key]
            .map((cmd) => `|${prefix+ cmd.name}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }

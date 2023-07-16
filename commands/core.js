@@ -7,7 +7,7 @@ module.exports = {
   category: "General",
   react: "⚕️",
   start: async (vorterx, m, { commands, args, prefix, text, toUpper }) => {
-  let aztec = fs.readFileAsync("./lib/connect/vorterx.png");
+  let aztec = fs.readFileaSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
     if (args[0]) {
       let data = [];

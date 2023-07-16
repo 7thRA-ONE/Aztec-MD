@@ -12,13 +12,13 @@ module.exports = {
   let vorterx= `*💖Hey ${pushName} this is Aztec repo\n
   ╭─❮❮| Aztec Script Bot|❯❯
 │
-│⚕️Rated: ${response.stargazers}
+│⚕️Rated: ${response.stargazers_count}
 │
-│⚕️Size: ${response.size}
+│⚕️Forks: ${response.forks_count}
+│
+│⚕️Update: ${response.updated_at}
 │
 │⚕️
-│
-│
 │
 │
 │

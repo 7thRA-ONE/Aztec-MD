@@ -1,4 +1,6 @@
- module.exports = {
+const fs = require("fs");
+
+module.exports = {
    name: 'both',
    alias: ['alv'],
    category: 'Mics',

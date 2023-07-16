@@ -14,6 +14,6 @@ module.exports = {
         }
 		await toReact("🎊");
 		await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove")
-		await vorterx.sendMessage(m.from,{text:`*🎊User has been removed by ${pushname}*`},{quoted:m})
+		await vorterx.sendMessage(m.from,{text:`*🎊User has been removed by ${pushName}*`},{quoted:m})
 	},
 }

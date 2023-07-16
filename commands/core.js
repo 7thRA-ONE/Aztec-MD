@@ -32,11 +32,11 @@ module.exports = {
           category[info.category].push(info);
         }
       }
-      let amarok = `*┏━━⟪ AZTEC-MD ⟫━⦿
+      let amarok = `┏━━⟪ AZTEC-MD ⟫━⦿
 ┃ ✗ USER: ${pushName}
 ┃ ✗ BOTNAME: AZTEC-MD 
 ┃ ✗ PREFIX: ${prefix}
-┗━━━━━━━━━━⦿\n\n*`;
+┗━━━━━━━━━━⦿\n\n`;
 
 const keys = Object.keys(category);
       for (const key of keys) {

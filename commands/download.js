@@ -1,4 +1,4 @@
-const YT = require('../ytdl-core')
+const YT = require('../lib/ytdl-core')
 const { isUrl, fetchBuffer } = require('../lib/module/function')
 const fs=require("fs")
 const yts= require("yt-search")

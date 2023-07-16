@@ -6,7 +6,7 @@ module.exports = {
   desc: "List all command",
   category: "General",
   react: "⚕️",
-  start: async (vorterx, m, { commands, args, prefix, text, toUpper }) => {
+  start: async (vorterx, m, { commands, args, prefix, text, emo, toUpper }) => {
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
     if (args[0]) {

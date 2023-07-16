@@ -10,4 +10,4 @@ module.exports = {
     var end = new Date().getTime();
     return await vorterx.sendMessage("*Response* " + (end - start));
          }
-                          );
+                          )

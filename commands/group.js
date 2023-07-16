@@ -1,5 +1,15 @@
 const config = require("../config");
 
+async function toReact(emoji) {
+      const reactm = {
+        react: {
+          text: emoji,
+          key: m.key,
+        },
+      };
+      await vorterx.sendMessage(m.from, reactm);
+    } 
+
 module.exports = {
   name: "kick",
   alias: ["remove"],

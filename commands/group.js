@@ -113,3 +113,16 @@ module.exports = {
     }
   },
 };
+
+  //---------------[GROUP LEAVE]---
+
+module.exports = {
+  name: "leave",
+  description: "To leave the gc",
+  category: "group",
+  start: async(vorterx, m, { prefix, toReact }) => {    
+
+    if(isAdmin) { await toReact("🚫"); return m.reply("*😐This cmd was prommamed for owner only*");
+    }
+    await toReact("👋");
+    await vorterx.groupLeave(m.from)});

@@ -2,7 +2,7 @@ module.exports = {
   name: "ping",
   description: "TO chek bot speeed",
   category: "General",
-  start: async(vorterx, m, { prefix }) => {
+  start: async(vorterx, m, { prefix, toReact }) => {
   await toReact("🏇");
     
   var new = new Date().getTime();

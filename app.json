@@ -7,7 +7,7 @@
     "diego"
   ],
   "repository": "https://github.com/Vorterx/Aztec-MD.git",
-  "logo": "https://graph.org/file/02abf0fd8fc2a13cc67a1.jpg",
+  "logo": "https://i.ibb.co/wKzdRH6/vorterx.png",
   "env": {
     "PREFIX": {
       "description": "Prefix of your bot Ex: . , / , # , & etc. Put anythong except @ (Default is .)",

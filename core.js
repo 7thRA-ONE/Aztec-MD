@@ -32,14 +32,36 @@ const FileType = require("file-type");
 const Commands = new Collection();
 const cfonts = require("cfonts");
 Commands.prefix = prefix;
-const { readCommands, commands } = require("./lib/connect-path.js");
 const user = require("./lib/connection/owner");
 const session = './tokens/test.json';
 const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
 const Auth = require('./mangoes/mongodb');
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
-
+const readCommands = () => {
+  let dir = path.join(__dirname, "./commands");
+  let dirs = fs.readdirSync(dir);
+  let cmdlist = {};
+  try {
+    dirs.forEach(async (res) => {
+      let groups = res.toLowerCase();
+      Commands.category = dirs.filter((v) => v !== "_").map((v) => v);
+      cmdlist[groups] = [];
+      let files = fs
+        .readdirSync("./commands")
+        .filter((file) => file.endsWith(".js"));
+      for (const file of files) {
+        const command = require(`./commands/${file}`);
+        cmdlist[groups].push(command);
+        Commands.set(command.name, command);
+        delay(100);
+      }
+    });
+    Commands.list = cmdlist;
+  } catch (e) {
+    console.error(e);
+  }
+};
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });

@@ -2,8 +2,8 @@ const config = require("../config");
 
 require ("../config");
 module.exports = {
-	name: ["kick","sick"],
-	alias: ["remove"],
+	name: "kick",
+	alias: ["remove", "sick"],
 	description: "remove Member from group",
 	category: "Group",
 	start: async(vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, mentionByTag, pushName}) => {

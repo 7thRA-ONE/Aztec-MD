@@ -9,5 +9,6 @@ await toReact("❌"); return m.reply("*👋 Sorry this command is for groups onl
 }
 await toReact("🔉");
 return await vorterx.groupSettingUpdate(m.from, "announcement");
+  m.reply(`*🔉Group has been closed by ${pushName}*`);
   }
 };

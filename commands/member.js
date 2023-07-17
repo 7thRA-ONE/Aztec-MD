@@ -1,4 +1,4 @@
-const Function = require("../lib/vorterx/vorterx");
+const Function = require("../lib/module/function");
 
 module.exports = {
   name: "add",

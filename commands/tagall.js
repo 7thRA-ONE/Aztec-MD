@@ -1,12 +1,11 @@
 module.exports = {
     name: "tagall",
-    alias: ["taga"],
     description: "tag members",
     category: "Group",
     start: async (vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, isMedia, participants }) => {
         if (!isAdmin) {
             await toReact("⭕");
-            return m.reply(`*🔌This is admin only command*`);
+            return m.reply(`*🔌This command is for admin only*`);
         }
         if (!isBotAdmin) {
             await toReact("😭");
@@ -20,11 +19,11 @@ module.exports = {
             message2 = "Check this Out!";
         }
 
-        let mess = `❯`;
+        let mess = `╭─❮❮| Tᴀɢɢɪɴɢ Aʟʟ |❯❯`;
         for (let mem of participants) {
-            mess += `❯ @${mem.id.split("@")[0]}\n`;
+            mess += `│ @${mem.id.split("@")[0]}\n`;
         }
-        mess += `╰────────────⊰\n\n`;
+        mess += `╰────────────⦿\n\n`;
 
         await toReact("💘");
         vorterx.sendMessage(

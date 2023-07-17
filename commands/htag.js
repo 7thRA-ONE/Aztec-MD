@@ -1,13 +1,5 @@
-/*const mention = await mentionByTag
-		if(!mention[0]) { await toReact("❌"); return m.reply(`*🤔No user found*`);
-        }
-		await toReact("🎊");
-		await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove")
-		await vorterx.sendMessage(m.from,{text:`*🎊User has been removed by ${m.sender.pushname}*`},{quoted:m})
-	},
-
-                              }module.exports = {
-  name: "hidetag",
+module.exports = {
+  name: "htag",
   alias: ["h"],
   description: "Hide tag all members",
   category: "Group",
@@ -35,4 +27,4 @@
       { quoted: m }
     );
   },
-};*/
+};

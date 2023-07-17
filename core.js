@@ -44,7 +44,7 @@ const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
 
-async(await readCommands());
+readCommands();
 const PORT = port;
 const app = express();
 let QR_GENERATE = "invalid";

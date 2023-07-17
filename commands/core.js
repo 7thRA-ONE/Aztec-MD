@@ -45,7 +45,7 @@ const keys = Object.keys(category);
           .join("\n")}\n\n└─────────◉\n\n`;
       }
       amarok += `*©VORTERX*`;
-await vorterx.sendMessage(m.from, { video: {url: botVideo }, gifPlayback: true, caption: amarok }, { quoted: m});
+await vorterx.sendMessage(m.from, { image: aztec, caption: amarok }, { quoted: m});
    }
 },
 };

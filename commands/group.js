@@ -9,10 +9,10 @@ module.exports = {
         //     return m.reply(`*🔌 This is admin only command*`);
         // }
 
-        if (!isBotAdmin) {
-            await toReact("😭");
-            return m.reply(`*🔌 I need to be an admin in order to use this command*`);
-        }
+        // if (!isBotAdmin) {
+        //     await toReact("😭");
+        //     return m.reply(`*🔌 I need to be an admin in order to use this command*`);
+        // }
 
         let message2 = isMedia ? "Check this out!" : m.quoted ? m.quoted.msg : text || "No message";
 

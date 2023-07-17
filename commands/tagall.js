@@ -19,7 +19,7 @@ module.exports = {
             message2 = "Check this Out!";
         }
 
-        let mess = `╭─❮❮| Tᴀɢɢɪɴɢ Aʟʟ |❯❯`;
+        let mess = `╭─❮❮| Tᴀɢɢɪɴɢ Aʟʟ |❯❯`\n;
         for (let mem of participants) {
             mess += `│ @${mem.id.split("@")[0]}\n`;
         }

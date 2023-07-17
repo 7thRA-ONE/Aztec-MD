@@ -79,8 +79,36 @@ async function tagall(vorterx, m, { text, prefix, isBotAdmin, isAdmin }) {
   );
 }
 
+async function unmute(vorterx, m, { toReact, isAdmin, isBotAdmin, isGroup, pushName }) {
+name:"unmute",
+description: "To Open the group",
+category: "Group",
+
+if(isGroup) { 
+await toReact("❌"); return m.reply("*👋 Sorry this command is for groups only*");
+}
+await toReact("🔉");
+  m.reply(`*🔉Group has been opened by ${pushName}*`);
+return await vorterx.groupSettingUpdate(m.from, "not_announcement");
+  };
+
+async function mute(vorterx, m, { toReact, isAdmin, isBotAdmin, isGroup, pushName }) {
+name:"mute",
+description: "To close the group",
+category: "Group",
+
+if(isGroup) { 
+await toReact("❌"); return m.reply("*👋 Sorry this command is for groups only*");
+}
+await toReact("🔉");
+    m.reply(`*🔉Group has been closed by ${pushName}*`);
+return await vorterx.groupSettingUpdate(m.from, "announcement");
+  };
+
 module.exports = {
   kick,
   group,
   tagall,
+  unmute,
+  mute
 };

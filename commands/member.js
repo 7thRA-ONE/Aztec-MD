@@ -1,8 +1,10 @@
+const Function = require("../lib/vorterx/vorterx");
+
 module.exports = {
   name: "add",
   description: "To add a user to a group",
   category: "Group",
-  start: async(vorterx, m, { prefix, v, isAdmin, isBotAdmin, isGroup, toReact }) => {
+  start: async(vorterx, m, { prefix, v, isAdmin, isBotAdmin, replace, isGroup, toReact }) => {
 
    if(isGroup) { await toReact("❌"); return m.reply("*💔This command is for Admins only*");}
  	

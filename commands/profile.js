@@ -83,7 +83,7 @@ let disec = m.sender.substring(3, 7)
             if (pushName) {
              tex += `乂 *U S E R - P R O F I L E*\n\n`;
               tex +=      `◦*Name: ${pushName}*\n\n`
-	      tex +=      `◦*Contact: ${users}*\n\n`
+	      tex +=      `◦*Contact: ${m.sender}*\n\n`
 	      tex +=      `◦*Decription: ${yuo}*\n\n`
 	    }
 
@@ -191,7 +191,7 @@ let disec = users.substring(3, 7)
             if (unme) {
               tex += `乂 *U S E R - P R O F I L E*\n\n`;
               tex +=      `◦*Name: ${pushName}*\n\n`
-	      tex +=      `◦*Contact: ${users}*\n\n`
+	      tex +=      `◦*Contact: ${m.sender}*\n\n`
 	      tex +=      `◦*Decription: ${yuo}*\n\n`
 			}
       tex += `乂 *U S E R - S T A T U S*\n\n`;

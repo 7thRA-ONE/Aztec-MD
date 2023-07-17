@@ -81,13 +81,17 @@ let typeR = await db.get(`${m.sender}ooicon-y`) || "img"
 let disec = m.sender.substring(3, 7)
 			let tex = "";
             if (pushName) {
-             tex += `*🪪 Name*: ${pushName}#${disec}\n\n`
-			 tex += `*🍥 Number*: ${m.sender}\n\n`
-			tex += `*🎌 Bio*: ${yuo}\n\n`
-			}
+             tex += `乂 *U S E R - P R O F I L E*\n\n`;
+              tex +=      `◦*Name*: ${unme}#${disec}\n\n`
+	      tex +=      `◦*Contact*: ${users}\n\n`
+	      tex +=      `◦*Decription*: ${yuo}\n\n`
+	    }
 
-			tex += `*🎯 XP*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}\n\n*🔮 Level*: ${userw.level}\n\n*🏮 Role*: ${role}\n`
-			let yui = await db.get(`${m.sender}.icon`)
+      tex += `乂 *U S E R - S T A T U S*\n\n`;
+      tex +=      `◦*Balance*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}`
+      tex +=      `◦*Level*: ${userw.level}`\n\n
+      tex +=      `◦Role*: ${role}\n`
+let yui = await db.get(`${m.sender}.icon`)
 			if (yui) {
 				ppuser = yui
 			} else {
@@ -97,13 +101,6 @@ let disec = m.sender.substring(3, 7)
                     ppuser = 'https://i.pinimg.com/564x/84/09/12/840912dd744e6662ab211b8070b5d84c.jpg'
                 }
 			}
-				
-				if (groupName) {
-					tex += `\n*🌊 Group*: ${groupName}\n\n`
-				}
-				if (isAdmin) {
-					tex += `*〽️ Admin*: true\n`
-				}
 				console.log(`${tex} ${yui} ${bio}`)
 
 				if ( typeR == "img"){
@@ -178,7 +175,7 @@ const userw = await Levels.fetch(users, "bot");
         }
 		let bio = ''
 try {
-bio = (await client.fetchStatus(users)).status
+bio = (await vorterx.fetchStatus(users)).status
 } catch (error) {
 	console.log(error)
 bio = 'None'
@@ -195,11 +192,11 @@ let disec = users.substring(3, 7)
             if (unme) {
               tex += `乂 *U S E R - P R O F I L E*\n\n`;
               tex +=      `◦*Name*: ${unme}#${disec}\n\n`
-			        tex +=      `◦*Contact*: ${users}\n\n`
-		        	tex +=      `◦*Decription*: ${yuo}\n\n`
+	      tex +=      `◦*Contact*: ${users}\n\n`
+	      tex +=      `◦*Decription*: ${yuo}\n\n`
 			}
       tex += `乂 *U S E R - S T A T U S*\n\n`;
-			tex +=      `◦*Balance*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}`
+      tex +=      `◦*Balance*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}`
       tex +=      `◦*Level*: ${userw.level}`\n\n
       tex +=      `◦Role*: ${role}\n`
 			let yui = await db.get(`${users}.icon`)

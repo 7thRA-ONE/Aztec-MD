@@ -3,14 +3,14 @@ module.exports = {
     description: "tag members",
     category: "Group",
     start: async (vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, isMedia, participants }) => {
-        if (!isAdmin) {
-            await toReact("⭕");
-            return m.reply(`*🔌This command is for admin only*`);
-        }
-        if (!isBotAdmin) {
-            await toReact("😭");
-            return m.reply(`*🔌I need to be an admin in order to use this command*`);
-        }
+        //if (!isAdmin) {
+         //   await toReact("⭕");
+           // return m.reply(`*🔌This command is for admin only*`);
+      //  }
+      //  if (!isBotAdmin) {
+      //      await toReact("😭");
+      //      return m.reply(`*🔌I need to be an admin in order to use this command*`);
+      //  }
         if (!isMedia) {
             var message2 = m.quoted
                 ? m.quoted.msg

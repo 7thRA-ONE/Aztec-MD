@@ -81,6 +81,7 @@ async function tagall(vorterx, m, { text, prefix, isBotAdmin, isAdmin }) {
 
 async function unmute(vorterx, m, { toReact, isAdmin, isBotAdmin, isGroup, pushName }) {
 name:"unmute",
+alias: ["un"],
 description: "To Open the group",
 category: "Group",
 

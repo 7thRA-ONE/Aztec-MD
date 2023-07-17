@@ -11,7 +11,7 @@ module.exports={
     category:"Extra",
     start:async(vorterx,m,{command,pushName,groupName,isAdmin,iscreator,toReact,mentionByTag,prefix,text,args,quoted,mime})=>{
         
-
+await toReact("😘");
         if(!text){
         const userw = await Levels.fetch(m.sender, "bot");
 				        const levelRole = userw.level

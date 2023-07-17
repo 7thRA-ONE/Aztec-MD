@@ -82,7 +82,7 @@ let disec = m.sender.substring(3, 7)
 			let tex = "";
             if (pushName) {
              tex += `乂 *U S E R - P R O F I L E*\n\n`;
-              tex +=      `◦*Name*: ${unme}#${disec}\n\n`
+              tex +=      `◦*Name*: ${pushName}\n\n`
 	      tex +=      `◦*Contact*: ${users}\n\n`
 	      tex +=      `◦*Decription*: ${yuo}\n\n`
 	    }
@@ -101,8 +101,7 @@ let yui = await db.get(`${m.sender}.icon`)
                     ppuser = 'https://i.pinimg.com/564x/84/09/12/840912dd744e6662ab211b8070b5d84c.jpg'
                 }
 			}
-				console.log(`${tex} ${yui} ${bio}`)
-
+				
 				if ( typeR == "img"){
 				return vorterx.sendMessage(m.from, { image: { url: ppuser }, caption: tex }, { quoted: m })
 				} else if ( typeR == "gif") {
@@ -191,7 +190,7 @@ let disec = users.substring(3, 7)
 			let tex = "";
             if (unme) {
               tex += `乂 *U S E R - P R O F I L E*\n\n`;
-              tex +=      `◦*Name*: ${unme}#${disec}\n\n`
+              tex +=      `◦*Name*: ${pushName}\n\n`
 	      tex +=      `◦*Contact*: ${users}\n\n`
 	      tex +=      `◦*Decription*: ${yuo}\n\n`
 			}
@@ -210,8 +209,7 @@ let disec = users.substring(3, 7)
                 }
 			}
 				
-				console.log(`${tex} ${yui} ${bio}`)
-
+				
 				if ( typeR == "img"){
 				return vorterx.sendMessage(m.from, { image: { url: ppuser }, caption: tex }, { quoted: m })
 				} else if ( typeR == "gif") {

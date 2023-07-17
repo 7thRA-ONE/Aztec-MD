@@ -32,7 +32,7 @@ const FileType = require("file-type");
 const Commands = new Collection();
 const cfonts = require("cfonts");
 Commands.prefix = prefix;
-const { readCommands } = require("./lib/connect-path");
+const { readcommands, commands } = require("./lib/connect-path");
 const user = require("./lib/connection/owner");
 const session = './tokens/test.json';
 const { QuickDB } = require("quick.db");
@@ -44,7 +44,7 @@ const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
 });
 
-readCommands();
+await readCommands();
 const PORT = port;
 const app = express();
 let QR_GENERATE = "invalid";

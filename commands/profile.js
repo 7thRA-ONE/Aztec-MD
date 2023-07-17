@@ -83,7 +83,7 @@ let disec = m.sender.substring(3, 7)
             if (pushName) {
              tex += `乂 *U S E R - P R O F I L E*\n\n`;
               tex +=      `*◦Name*: ${pushName}\n\n`
-	      tex +=      `*◦Contact*: ${m.sender}\n\n`
+	      tex +=      `*◦Contact*: ${m.sender.split('@')[0]}\n\n`
 	      tex +=      `*◦Decription*: ${yuo}\n\n`
 	    }
 
@@ -191,13 +191,13 @@ let disec = users.substring(3, 7)
             if (unme) {
               tex += `乂 *U S E R - P R O F I L E*\n\n`;
               tex +=      `◦*Name: ${pushName}*\n\n`
-	      tex +=      `◦*Contact: ${m.sender}*\n\n`
+	      tex +=      `◦*Contact: ${m.sender.split('@')[0]}*\n\n`
 	      tex +=      `◦*Decription: ${yuo}*\n\n`
 			}
       tex += `乂 *U S E R - S T A T U S*\n\n`;
       tex +=      `*◦Balance*: ${userw.xp}\n\n`
       tex +=      `*◦Level*: ${userw.level}\n\n`
-      tex +=      `*◦Role*: ${role}\n`
+      tex +=      `*◦Role*: ${role}\n\n\n`
 			let yui = await db.get(`${users}.icon`)
 			if (yui) {
 				ppuser = yui

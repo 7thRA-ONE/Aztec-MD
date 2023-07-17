@@ -38,30 +38,6 @@ const { QuickDB } = require("quick.db");
 global.db = new QuickDB();
 const Auth = require('./mangoes/mongodb');
 const { fetchLatestBaileysVersion } = require("@whiskeysockets/baileys");
-const readCommands = () => {
-  let dir = path.join(__dirname, "./commands");
-  let dirs = fs.readdirSync(dir);
-  let cmdlist = {};
-  try {
-    dirs.forEach(async (res) => {
-      let groups = res.toLowerCase();
-      Commands.category = dirs.filter((v) => v !== "_").map((v) => v);
-      cmdlist[groups] = [];
-      let files = fs
-        .readdirSync("./commands")
-        .filter((file) => file.endsWith(".js"));
-      for (const file of files) {
-        const command = require(`./commands/${file}`);
-        cmdlist[groups].push(command);
-        Commands.set(command.name, command);
-        delay(100);
-      }
-    });
-    Commands.list = cmdlist;
-  } catch (e) {
-    console.error(e);
-  }
-};
 
 const store = makeInMemoryStore({
   logger: pino().child({ level: "silent", stream: "store" }),
@@ -101,19 +77,19 @@ const connect = async () => {
 
   await cfonts.say("AZTEC\n\nBY\n\nVORTERX", {
     font: "block", 
-    align: "center", // define text alignment
-    colors: [randomHex, randomHexs], // define all colors
-    background: "transparent", // define the background color, you can also use `backgroundColor` here as key
-    letterSpacing: 2, // define letter spacing
-    lineHeight: 2, // define the line height
-    space: true, // define if the output text should have empty lines on top and on the bottom
-    maxLength: "0", // define how many character can be on one line
-    gradient: [randomHex, randomHexs, randomHexx], // define your two gradient colors
-    independentGradient: false, // define if you want to recalculate the gradient for each new line
-    transitionGradient: true, // define if this is a transition between colors directly
+    align: "center", 
+    colors: [randomHex, randomHexs], 
+    background: "transparent", 
+    letterSpacing: 2, 
+    lineHeight: 2, 
+    space: true, 
+    maxLength: "0", 
+    gradient: [randomHex, randomHexs, randomHexx], 
+    independentGradient: false,
+    transitionGradient: true,
     env: "node", 
   });
-  await console.log("[SERVER HAS STARTED LAUNCH]");
+  await console.log("[🚀SERVER HAS STARTED TO LAUNCH]");
   store.bind(vorterx.ev);
 
   vorterx.ev.on("creds.update", () => {

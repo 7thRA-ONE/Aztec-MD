@@ -4,10 +4,10 @@ module.exports = {
   description: "Hide tag all members",
   category: "Group",
   start: async (vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, isMedia, participants }) => {
-    if (!isAdmin) {
-      await toReact("❌");
-      return m.reply(`*You* must be *Admin* in order to use this Command!`);
-    }
+    // if (!isAdmin) {
+    //   await toReact("❌");
+    //   return m.reply(`*You* must be *Admin* in order to use this Command!`);
+    // }
     let message2;
     if (!isMedia) {
       message2 = m.quoted

@@ -2,7 +2,7 @@ const config = require("../config");
 
 require ("../config");
 module.exports = {
-	name: "kick",
+	name: "kick","sick",
 	alias: ["remove"],
 	description: "remove Member from group",
 	category: "Group",

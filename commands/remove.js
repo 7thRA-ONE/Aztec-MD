@@ -23,7 +23,7 @@ module.exports = {
                 return m.reply("*🔌I need to be an admin in order to use this command*");
             }
     
-            const users = await mentionByTag;
+            const users = await mentionByTag
             
             if (!users) { 
                 await toReact("❌"); 

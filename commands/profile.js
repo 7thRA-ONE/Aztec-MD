@@ -9,7 +9,7 @@ module.exports={
     name:"profile",
     description:"To shows your profile pic information",
     category:"Extra",
-    start:async(vorterx,m,{command,pushName,groupName,isAdmin,iscreator,toReact,mentionByTag,prefix,text,args,quoted,mime})=>{
+    start:async(vorterx,m,{command,pushName,groupName,isAdmin,iscreator,toReact,mentionByTag,prefix,text,args,unme,quoted,mime})=>{
         
 await toReact("😘");
         if(!text){

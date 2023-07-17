@@ -8,7 +8,7 @@ if(isGroup) {
 await toReact("❌"); return m.reply("*👋 Sorry this command is for groups only*");
 }
 await toReact("🔉");
-  return m.reply(`*🔉Group has been opened by ${pushName}*`);
+  m.reply(`*🔉Group has been opened by ${pushName}*`);
 return await vorterx.groupSettingUpdate(m.from, "not_announcement");
   }
 };

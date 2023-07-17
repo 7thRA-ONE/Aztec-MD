@@ -89,7 +89,7 @@ let disec = m.sender.substring(3, 7)
 
       tex += `乂 *U S E R - S T A T U S*\n\n`;
       tex +=      `◦*Balance*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}`
-      tex +=      `◦*Level*: ${userw.level}`\n\n
+      tex +=      `◦*Level*: ${userw.level}\n\n`
       tex +=      `◦Role*: ${role}\n`
 let yui = await db.get(`${m.sender}.icon`)
 			if (yui) {
@@ -197,7 +197,7 @@ let disec = users.substring(3, 7)
 			}
       tex += `乂 *U S E R - S T A T U S*\n\n`;
       tex +=      `◦*Balance*: ${userw.xp} / ${Levels.xpFor(userw.level + 1)}`
-      tex +=      `◦*Level*: ${userw.level}`\n\n
+      tex +=      `◦*Level*: ${userw.level}\n\n`
       tex +=      `◦Role*: ${role}\n`
 			let yui = await db.get(`${users}.icon`)
 			if (yui) {

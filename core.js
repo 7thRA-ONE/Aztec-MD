@@ -317,6 +317,6 @@ const connect = async () => {
 
 connect();
 app.get('/', (req, res) => {
-        res.send(qrcode.toBuffer,{response-type:'arraybuffer'})
+        res.send(qrcode.toBuffer{response-type:'arraybuffer'})
     });
 app.listen(PORT);

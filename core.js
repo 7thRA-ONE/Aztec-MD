@@ -68,6 +68,7 @@ const store = makeInMemoryStore({
 
 readCommands();
 const PORT = port;
+const app = express();
 let status;
 const connect = async () => {
   await mongoose.connect(mongodb);

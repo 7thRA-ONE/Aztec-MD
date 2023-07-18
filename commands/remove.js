@@ -20,7 +20,7 @@
 // 	},
 // }
 
-require ('../../../config')
+require ('../../config')
 module.exports = {
 	name: "kick",
 	desc: "remove Member from group",

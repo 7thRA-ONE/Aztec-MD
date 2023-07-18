@@ -5,7 +5,7 @@ module.exports = {
   alias:["ai"],
   description: "To search anonymous act",
   category: "Search",
-  start: async(vorterx, m, {prefix, toReact, text, pushName }) => {
+  start: async(vorterx, m, {prefix, toReact, getJeson, text, pushName }) => {
 
     if(!process.env.ChatGpT) { await toReact("⛔"); return m.reply("⛔ Error no Chat gpt api has been executed yet");
   }

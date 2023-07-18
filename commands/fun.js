@@ -1,15 +1,4 @@
-const path = require("path");
-const axios =  require("axios");
+//-----[GAMES CENTER]---
+//----[©AZTEC-MD]-----
 
-module.exports = {
-  name: "fact",
-  description: "To tell facts but as a game",
-  category: "Games",
-  start: async(vorterx, m, { prefix, pushName, toReact }) => {
-
-  await toReact("🙂");
-    const { data } = await axios.get(`https://nekos.life/api/v2/fact`)
-        return m.reply(`*乂 F A C T- G A M E R\n\n**❤️Note*: ${data.fact}\n\n\n*©AZTEC-MD*`)   
-    }
-
-};
+const vorterx_0xe9dcd4=vorterx_0x2716;(function(_0xfd9c81,_0x5036e5){const _0x44d736=vorterx_0x2716,_0xb4f383=_0xfd9c81();while(!![]){try{const _0x22c985=parseInt(_0x44d736(0x1a5))/0x1+parseInt(_0x44d736(0x1aa))/0x2+parseInt(_0x44d736(0x1ac))/0x3*(parseInt(_0x44d736(0x1a9))/0x4)+parseInt(_0x44d736(0x1ae))/0x5*(parseInt(_0x44d736(0x1b4))/0x6)+-parseInt(_0x44d736(0x1a2))/0x7+parseInt(_0x44d736(0x1a3))/0x8*(parseInt(_0x44d736(0x1ad))/0x9)+-parseInt(_0x44d736(0x1b2))/0xa*(parseInt(_0x44d736(0x1a4))/0xb);if(_0x22c985===_0x5036e5)break;else _0xb4f383['push'](_0xb4f383['shift']());}catch(_0x5145e9){_0xb4f383['push'](_0xb4f383['shift']());}}}(vorterx_0x1f45,0x428a0));function vorterx_0x2716(_0x5d9234,_0x23679e){const _0x1f456c=vorterx_0x1f45();return vorterx_0x2716=function(_0x2716b8,_0x22b2d5){_0x2716b8=_0x2716b8-0x1a1;let _0x26fd4c=_0x1f456c[_0x2716b8];return _0x26fd4c;},vorterx_0x2716(_0x5d9234,_0x23679e);}const path=require(vorterx_0xe9dcd4(0x1a8)),axios=require('axios');module[vorterx_0xe9dcd4(0x1a7)]={'name':'fact','description':vorterx_0xe9dcd4(0x1a1),'category':vorterx_0xe9dcd4(0x1ab),'start':async(_0x12ab0b,_0x310019,{prefix:_0x20c709,pushName:_0x59c42d,toReact:_0xb26745})=>{const _0x5830a2=vorterx_0xe9dcd4;await _0xb26745('🙂');const {data:_0x518587}=await axios[_0x5830a2(0x1a6)]('https://nekos.life/api/v2/fact');return _0x310019[_0x5830a2(0x1b0)](_0x5830a2(0x1b3)+_0x518587[_0x5830a2(0x1b1)]+_0x5830a2(0x1af));}};function vorterx_0x1f45(){const _0x31097f=['1019662CHfHSy','Games','21jQsfWt','9DltLum','2015jIeBza','\x0a\x0a\x0a*©AZTEC-MD*','reply','fact','5591210edqkyw','*乂\x20F\x20A\x20C\x20T\x20S\x20-\x20G\x20A\x20M\x20E\x20R*\x0a\x0a\x20\x20*🚦Note*:\x20','18yRqExu','To\x20tell\x20facts\x20but\x20as\x20a\x20game','2795184FqYdTu','1004024FAhqFm','11YZiZlQ','95327kNdbKX','get','exports','path','285204lSbZPM'];vorterx_0x1f45=function(){return _0x31097f;};return vorterx_0x1f45();}

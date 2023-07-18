@@ -11,7 +11,7 @@ module.exports = {
                            }
     await toReact("🤖");
     if(!process.env.ChatGpT) return
-    const api = new ChatGpT({
+    const api = new chatGPTAPI({
       apiKey: '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'
     })
   

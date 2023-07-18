@@ -11,8 +11,9 @@ module.exports = {
         }
 		if(!isBotAdmin) { await toReact("😭"); return m.reply(`*🔌I need to be an admin in order to use this command*`);
         }
-		const mention = await mentionByTag
-		if(!mention[0]) { await toReact("❌"); return m.reply(`*🤔No user found*`);
+		// const mention = await mentionByTag
+		const users = (await mentionByTag)[0] || m.msg.contextInfo.participant;
+		if(!users) { await toReact("❌"); return m.reply(`*🤔No user found*`);
         }
 		await toReact("🎊");
 		await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove")

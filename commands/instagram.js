@@ -13,4 +13,4 @@ let response = await Insta(text)
 for (let i=0;i<response.length;i++) {
 await vorterx.sendFileUrl(m.from, response[i], `*Downloaded Media from instagram.*`, vortii)
 }
-    });
+    };

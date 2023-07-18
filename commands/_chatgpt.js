@@ -5,9 +5,20 @@ module.exports = {
   alias:["ai"],
   description: "To search anonymous act",
   category: "Search",
-  start: async(vorterx, m, {prefix, toReact, pushName }) => {
+  start: async(vorterx, m, {prefix, toReact, text, pushName }) => {
 
-  if(!process.env.ChatGpT) { await toReact("⛔"); return m.reply("⛔Error no gpt api has been excuted yet");
+    if(!process.env.ChatGpT) { await toReact("⛔"); return m.reply("⛔ Error no Chat gpt api has been executed yet");
+  }
+    if (!text) { await toReact("⛔"); return m.reply("*🤖need text example ai who is diegoson*");
+               }
+    await toReact("🤖");
+let response  = await getJson(`https://api-viper-x0.vercel.app/api/openai?openaiapikey=${chatgpt}&text=${match}`)
+
+await m.reply(response.data.text);
+
+});
+
+  /*if(!process.env.ChatGpT) { await toReact("⛔"); return m.reply("⛔Error no gpt api has been excuted yet");
                            }
     await toReact("🤖");
     if(!process.env.ChatGpT) return
@@ -23,4 +34,4 @@ module.exports = {
 
 
     }
-};
+};*/

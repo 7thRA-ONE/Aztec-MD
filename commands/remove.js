@@ -13,7 +13,7 @@ module.exports = {
         }
 		// const mention = await mentionByTag
 		const users = (await mentionByTag)[0] || m.msg.contextInfo.participant;
-		if(!users) { await toReact("❌"); return m.reply(`*🤔No user found*`);
+		if(!users[0]) { await toReact("❌"); return m.reply(`*🤔No user found*`);
         }
 		await toReact("🎊");
 		await vorterx.groupParticipantsUpdate(m.from, [users[0]], "remove")

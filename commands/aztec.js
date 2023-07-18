@@ -6,7 +6,7 @@ module.exports = {
   alias: ["script"],
   description: "To see aztec information",
   category: "Extra",
-  start: async(vorterx, m, { prefix, toReact, pushNme }) => {
+  start: async(vorterx, m, { prefix, toReact, pushName }) => {
     
     await toReact("🛸");
     src = `https://i.ibb.co/6WV7wbc/20230718-084726.png`;

@@ -16,7 +16,7 @@ let response  = await getJson(`https://api-viper-x0.vercel.app/api/openai?openai
 
 await m.reply(response.data.text);
 
-});
+};
 
   /*if(!process.env.ChatGpT) { await toReact("⛔"); return m.reply("⛔Error no gpt api has been excuted yet");
                            }

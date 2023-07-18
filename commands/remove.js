@@ -3,7 +3,7 @@ const config = require("../config");
 require ("../config");
 module.exports = {
 	name: "kick",
-	alias: ["remove", "sick"],
+	alias: ["remove"],
 	description: "remove Member from group",
 	category: "Group",
 	start: async(vorterx, m, { text, prefix, toReact, isBotAdmin, isAdmin, mentionByTag, pushName}) => {
@@ -16,7 +16,7 @@ module.exports = {
 		if(!users) { await toReact("❌"); return m.reply(`*🤔No user found*`);
         }
 		await toReact("🎊");
-		await vorterx.groupParticipantsUpdate(m.from, [mention[0]], "remove")
+		await vorterx.groupParticipantsUpdate(m.from, [users[0]], "remove")
 		await vorterx.sendMessage(m.from,{text:`*🎊User has been removed by ${pushName}*`},{quoted:m})
 	},
 }

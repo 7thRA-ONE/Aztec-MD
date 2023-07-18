@@ -19,7 +19,7 @@ module.exports = {
 
   
   
- return await vorterx.sendMessage(m.from, {text: res.text}));
+ return await vorterx.sendMessage(m.from, {text: res.text});
 
 
     }

@@ -68,8 +68,6 @@ const store = makeInMemoryStore({
 
 readCommands();
 const PORT = port;
-const app = express();
-let QR_GENERATE = "invalid";
 let status;
 const connect = async () => {
   await mongoose.connect(mongodb);
@@ -154,8 +152,8 @@ const connect = async () => {
         connect();
       } else vorterx.end(`Unknown DisconnectReason: ${reason}|${connection}`);
     }
-    if (qr) {
-      QR_GENERATE = qr;
+    if (update.qr) {
+      vorterx.QR = qr.imageSync(update.qr)
     }
   });
 
@@ -317,6 +315,5 @@ const connect = async () => {
 
 connect();
 app.get('/', (req, res) => {
-        res.send(qrcode ,{response-type:'arraybuffer'})
-    });
+        res.status(200).setHeader('Content-Type', 'image/png').send(vorterx.QR)    });
 app.listen(PORT);

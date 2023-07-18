@@ -5,8 +5,8 @@ module.exports = {
   alias: ["list"],
   description: "The list of all command",
   category: "General",
-  start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
-    await toReact("📑");
+  start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper, botName }) => {
+    await toReact("🛸");
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
     if (args[0]) {
@@ -32,9 +32,9 @@ module.exports = {
           category[info.category].push(info);
         }
       }
-      let amarok = `┏━━⟪ AZTEC-MD ⟫━⦿
+      let amarok = `┏━━⟪ ${process.env.BOTNAME} ⟫━⦿
 ┃ ✗ USER: ${pushName}
-┃ ✗ BOTNAME: AZTEC-MD 
+┃ ✗ BOTNAME: ${process.env.BOTNAME}
 ┃ ✗ PREFIX: ${prefix}
 ┗━━━━━━━━━━⦿\n\n`;
 

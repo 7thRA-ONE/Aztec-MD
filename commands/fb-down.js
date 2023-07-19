@@ -14,9 +14,9 @@ fbInfoVideo.getInfo(text)
 let vurl=info.video.url_video;
 
 
-  let data  ="*Name     :* "+  info.video.title;
-	data +="\n*Views    :* "+  info.video.view;
-	data +="\n*Likes    :* "+info.video.reaction.Like ;
+      let data  ="*♲︎︎︎Name     :* "+  info.video.title;
+	data +="\n*♲︎︎︎Views    :* "+  info.video.view;
+	data +="\n*♲︎︎︎Likes    :* "+info.video.reaction.Like ;
 
 	data +=config.caption ;
                         let buttonMessage = {

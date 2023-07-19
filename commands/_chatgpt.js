@@ -14,7 +14,7 @@ module.exports = {
     await toReact("🤖");
 let response  = await getJson(`https://api.botcahx.live/api/search/openai-chat?text=${process.env.ChatGpT}&apikey=${ChatGpT}`)
 
-await m.reply(response.data.text);
+await m.reply(response.data);
 
   }
 };

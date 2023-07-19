@@ -5,7 +5,7 @@ module.exports = {
   alias: ["list"],
   description: "The list of all command",
   category: "General",
-  start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
+  start: async (vorterx, m, { commands, args, tiny, fancyText, prefix, toReact, text,  toUpper }) => {
     await toReact("🛸");
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;
@@ -33,15 +33,15 @@ module.exports = {
         }
       }
       let amarok = `┏━━⟪ ${process.env.BOTNAME} ⟫━⦿
-┃ ✗ USER: ${pushName}
-┃ ✗ BOTNAME: ${process.env.BOTNAME}
-┃ ✗ PREFIX: ${prefix}
+┃ ✗ User: ${pushName}
+┃ ✗ Botname: ${process.env.BOTNAME}
+┃ ✗ Prefix: ${prefix}
 ┗━━━━━━━━━━⦿\n\n`;
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*┌─『${key.toUpperCase()}*』─❖\n\n${category[key]
-          .map((cmd) => ` |${prefix + cmd.name}`)
+        amarok += `*┌─『${tiny(key.toUpperCase)()}*』─❖\n\n${category[key]
+          .map((cmd) => ` |${fancyText(prefix + cmd.name)}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }
       amarok += `*©VORTERX*`;

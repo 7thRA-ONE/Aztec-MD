@@ -25,7 +25,7 @@ module.exports = {
        await toReact("♻️");
        const url = data.dllink;
        
-	 let  inf  ="*乂 A P P R A N D M - D O W N L O A D E R*;\n\n 
+	 let  inf  ="*乂 A P P R A N D M - D O W N L O A D E R*;
          inf +=\n"*📚Name :* " +data.name;
          inf +="\n*📦Dev     :* " +data.package;
          inf +="\n*⬆️Last Update     :* " +data.lastup;
@@ -61,4 +61,4 @@ axios.get(url, { responseType: 'stream' })
   }) .catch(error => {
 	fs.unlink(filePath)
     return m.reply('*Could not find the app*')
-  }
+  }};

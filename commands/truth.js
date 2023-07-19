@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 module.exports = {
   name: "truth",
   description: "Tell the truth as game",

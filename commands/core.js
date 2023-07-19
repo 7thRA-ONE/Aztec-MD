@@ -1,11 +1,12 @@
 const fs = require("fs")
+const { tiny, fancyText } = require("../lib");
 
 module.exports = {
   name: "menu",
   alias: ["list"],
   description: "The list of all command",
   category: "General",
-  start: async (vorterx, m, { commands, args, tiny, fancyText, prefix, toReact, text,  toUpper }) => {
+  start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
     await toReact("🛸");
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
     const { pushName, sender } = m;

@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { tiny, fancyText } = require("../lib/fonts.js");
+const { tiny} = require("../lib/fonts.js");
 
 module.exports = {
   name: "menu",
@@ -42,7 +42,7 @@ module.exports = {
 const keys = Object.keys(category);
       for (const key of keys) {
         amarok += `*┌─『${tiny(key.toUpperCase)()}*』─❖\n\n${category[key]
-          .map((cmd) => ` |${fancyText(prefix + cmd.name)}`)
+          .map((cmd) => ` |${tiny(prefix + cmd.name)}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }
       amarok += `*©VORTERX*`;

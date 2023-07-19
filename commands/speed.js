@@ -12,7 +12,7 @@ start: async(vorterx, m, { prefix, toReact }) => {
 	var end = new Date().getTime();
 	var responseTime = end - start;
 	setTimeout(function (){
-	await vorterx.send(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
-},100);
+	await vorterx.send(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`));
+}
 };
   

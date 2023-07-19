@@ -5,7 +5,7 @@ module.exports = {
     alias: ["take"],
     description: "steals the sticker",
    category: "Converter",
-    start: async(vorterx, m,{pushName,args,mime,quoted}) => {
+    start: async(vorterx, m,{pushName,toReact,args,mime,quoted}) => {
         if (!quoted) { await toReact("⛔"); return m.reply(`*no sticker context found*`);
                      }
         if (q) {

@@ -6,8 +6,7 @@ module.exports = {
   alias: ["app"],
   description: "To download apk randomly",
   category: "Download",
-  start:
-     async(vorterx, m, { prefix, toReact, text }) => {
+  start: async(vorterx, m, { prefix, toReact, text }) => {
         if(!text ) { await toReact("⛔"); return m.reply("*Provide me with an app name*");
                    }
 

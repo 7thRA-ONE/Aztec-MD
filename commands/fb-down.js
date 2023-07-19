@@ -1,3 +1,4 @@
+require("../config");
 const fbInfoVideo = require('fb-info-video'); 
 
 module.exports = {
@@ -9,6 +10,7 @@ module.exports = {
     
 if(!text) { await toReact("⛔"); return m.reply(`*Give me fb url link*`);
           }
+	  await toReact("📹");
 fbInfoVideo.getInfo(text)
   .then(info =>{
 let vurl=info.video.url_video;
@@ -23,15 +25,15 @@ let vurl=info.video.url_video;
                         video: {url:vurl},
                         mimetype: 'video/mp4',
                         fileName: info.video.title+`.mp4`,
-                        caption :"     *FACEBOOK DOWNLOADER*  \n"+data
+                        caption :"     *乂 F A C E B O K - D O W  N *  \n\n"+data
                         
                     }
-                 message.client.sendMessage(message.jid, buttonMessage, { quoted: m });
+                 vorterx.sendMessage(m.from, buttonMessage, { quoted: m });
 
 
 
 })
-  .catch(err => {message.reply("Error, Video Not Found\n *Please Give Me A Valid Url*");
+  .catch(err => {m.reply("*NO video found Error*\n *Provide a valid  Url*");
 			console.error(err);})
 }
 )

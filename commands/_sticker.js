@@ -38,7 +38,6 @@ module.exports = {
         } else if (/video/.test(mime)) {
             if ((quoted.msg || quoted).seconds > 20) { await toReact("⛔"); return m.reply('Cannot fetch videos longer than *12 Seconds*');
                                                      }
-          await toReact("💗");
             let media = await quoted.download()
         let sticker = new Sticker(media, {
             author: author, 
@@ -47,7 +46,7 @@ module.exports = {
             id: '12345', 
             quality: 30, 
             background: 'transparent' })
-    
+    await toReact("💗");
         const stikk = await sticker.toBuffer()
     
     

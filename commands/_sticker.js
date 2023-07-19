@@ -6,7 +6,7 @@ module.exports = {
     description: "makes stickers",
     category: "Converter",
     start: async(vorterx, m,{pushName,toReact,body,quoted,mime,text,args,flags}) => {
-       if(!quoted) { await toReact("⛔"); return return m.reply("*Please reply to a photo or video*");
+       if(!quoted) { await toReact("⛔"); return m.reply("*Please reply to a photo or video*");
                    }
        flags.forEach((flag) => (text = text.replace(flag, '')))
  

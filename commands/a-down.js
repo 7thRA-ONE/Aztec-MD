@@ -9,8 +9,7 @@ module.exports = {
   start: async(vorterx, m, { prefix, toReact, text }) => {
         if(!text ) { await toReact("⛔"); return m.reply("*Provide me with an app name*");
                    }
-
-	const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };
+const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };
 	let randomName = getRandom(".apk");
 	const filePath = `./${randomName}`;     
         const {  search , download } = require('aptoide-scraper')
@@ -26,7 +25,7 @@ module.exports = {
        const url = data.dllink;
        
 	 let  inf  ="*乂 A P P R A N D M - D O W N L O A D E R*;\n\n
-         inf +=\n"*📚Name :* " +data.name;
+         inf +="\n*📚Name :* " +data.name;
          inf +="\n*📦Dev     :* " +data.package;
          inf +="\n*⬆️Last Update     :* " +data.lastup;
          inf +="\n*📥M Size     :* " +data.size;

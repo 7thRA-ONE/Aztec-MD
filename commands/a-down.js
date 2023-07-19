@@ -27,10 +27,10 @@ module.exports = {
        const url = data.dllink;
        
 	 let  inf  ="*乂 A P P R A N D M - D O W N L O A D E R*;\n\n 
-         inf +=\n"*App Name :* " +data.name;
-         inf +="\n*App id        :* " +data.package;
-         inf +="\n*Last Up       :* " +data.lastup;
-         inf +="\n*App Size     :* " +data.size;
+         inf +=\n"*📚Name :* " +data.name;
+         inf +="\n*📦Dev     :* " +data.package;
+         inf +="\n*⬆️Last Update     :* " +data.lastup;
+         inf +="\n*📥M Size     :* " +data.size;
   
          
 

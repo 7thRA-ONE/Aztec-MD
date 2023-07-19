@@ -62,4 +62,4 @@ axios.get(url, { responseType: 'stream' })
   }) .catch(error => {
 	fs.unlink(filePath)
     return m.reply('*Could not find the app*')
-  }};
+  }

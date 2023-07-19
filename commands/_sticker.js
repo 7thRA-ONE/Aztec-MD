@@ -19,7 +19,6 @@ module.exports = {
             let media = await quoted.download()
        
         let sticker = new Sticker(media, {
-            pack: pack, 
             author: author, 
             type: flags.includes('--c') || flags.includes('--crop') || flags.includes('--cropped')
             ? 'crop'

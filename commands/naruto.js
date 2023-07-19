@@ -9,6 +9,6 @@ module.exports = {
       await toReact("👲");
   let vorterxi = await axios.get("https://raw.githubusercontent.com/mask-sir/api.mask-ser/main/Naruto.json")
         let url =  vorterxi.data.result[Math.floor(Math.random() * vorterxi.data.result.length)];
-        return await vorterx.sendMessage(m.from,{video :{url : url } , caption: "«Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ᴠᴏʀᴛᴇx" }, { quoted: citel })
+        return await vorterx.sendMessage(m.from,{video :{url : url } , caption: "«Gᴇɴᴇʀᴀᴛᴇᴅ ʙʏ ᴠᴏʀᴛᴇx" }, { quoted: m })
 }
 };

@@ -21,7 +21,6 @@ const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`
 	
 	const apkSize = parseInt(data.size);
 	if(apkSize > 100) return m.reply(`⛔This App is too much large.`);
-       await toReact("♻️");
        const url = data.dllink;
        
 	 let  inf  ="*乂 A P P R A N D M - D O W N L O A D E R*;\n\n

@@ -58,4 +58,4 @@ const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`
   }) .catch(error => {
 	fs.unlink(filePath)
     return m.reply('*Could not find the app*');
-  }};
+  });

@@ -1,4 +1,4 @@
-require("../config");
+const config = require("../config");
 const fbInfoVideo = require('fb-info-video'); 
 
 module.exports = {

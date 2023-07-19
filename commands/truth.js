@@ -1,14 +1,1 @@
-const axios = require("axios");
-
-module.exports = {
-  name: "truth",
-  description: "Tell the truth as game",
-  category: "Games",
-  start:
-     async(vorterx, m, { prefix, toReact, truth, dare, random_questions } ) => {
-
-       await toReact("😍");
-       return await m.reply(`*乂 T R U T H - G A M E R*\n\n*👮Truth*:${truth()}\n\n*乂 A Z T C - G  A M R*\n\n\n*©Aztec-MD*`);
-        }
-};
-    
+function vorterx_0x4434(_0x43ef99,_0x488811){const _0x4738ab=vorterx_0x4738();return vorterx_0x4434=function(_0x4434b9,_0x3a6826){_0x4434b9=_0x4434b9-0x175;let _0xcec073=_0x4738ab[_0x4434b9];return _0xcec073;},vorterx_0x4434(_0x43ef99,_0x488811);}function vorterx_0x4738(){const _0x482cc4=['reply','Games','12223880mNsYND','4cRINsN','axios','6264189sheqzt','5161320tHEsuk','4351404DSXAhn','795323ZtWrYg','exports','\x0a\x0a*乂\x20A\x20Z\x20T\x20C\x20-\x20G\x20\x20A\x20M\x20R*\x0a\x0a\x0a*©Aztec-MD*','1606985wbVNOg','Tell\x20the\x20truth\x20as\x20game','11CluUcP','7plZpiq','2pVLTQf','1730934eHaaOs','truth'];vorterx_0x4738=function(){return _0x482cc4;};return vorterx_0x4738();}const vorterx_0x15e7a5=vorterx_0x4434;(function(_0xe35e43,_0x34f862){const _0x504038=vorterx_0x4434,_0x20152a=_0xe35e43();while(!![]){try{const _0x2db469=parseInt(_0x504038(0x17c))/0x1*(parseInt(_0x504038(0x183))/0x2)+-parseInt(_0x504038(0x184))/0x3*(-parseInt(_0x504038(0x177))/0x4)+-parseInt(_0x504038(0x17f))/0x5+parseInt(_0x504038(0x17b))/0x6*(-parseInt(_0x504038(0x182))/0x7)+parseInt(_0x504038(0x17a))/0x8+parseInt(_0x504038(0x179))/0x9+-parseInt(_0x504038(0x176))/0xa*(parseInt(_0x504038(0x181))/0xb);if(_0x2db469===_0x34f862)break;else _0x20152a['push'](_0x20152a['shift']());}catch(_0x3a4bc4){_0x20152a['push'](_0x20152a['shift']());}}}(vorterx_0x4738,0x6c834));const axios=require(vorterx_0x15e7a5(0x178));module[vorterx_0x15e7a5(0x17d)]={'name':vorterx_0x15e7a5(0x185),'description':vorterx_0x15e7a5(0x180),'category':vorterx_0x15e7a5(0x175),'start':async(_0x5dc0b1,_0x252306,{prefix:_0x30f34b,toReact:_0xe824e0,truth:_0x33fa7f,dare:_0x3cec25,random_questions:_0x279d5d})=>{const _0x2b2377=vorterx_0x15e7a5;return await _0xe824e0('😍'),await _0x252306[_0x2b2377(0x186)]('*乂\x20T\x20R\x20U\x20T\x20H\x20-\x20G\x20A\x20M\x20E\x20R*\x0a\x0a*👮Truth*:'+_0x33fa7f()+_0x2b2377(0x17e));}};

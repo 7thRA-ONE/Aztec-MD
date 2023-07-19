@@ -9,7 +9,7 @@ module.exports = {
      async(vorterx, m, { prefix, toReact, truth, dare, random_questions } ) => {
 
        await toReact("😍");
-       return await m.reply(`${truth()}`);
+       return await m.reply(`*乂 T R U T H - G A M E R*\n\n*👮Truth*:${truth()}\n\n*乂 A Z T C - G  A M R*\n\n\n*©Aztec-MD*`);
         }
 };
     

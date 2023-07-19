@@ -2,8 +2,7 @@ const fs = require("fs");
 
 module.exports = {
    name: 'alive',
-   alias: ['alv'],
-   category: 'Mics',
+   category: 'General',
    description: 'An cmd to test if its on',
    start: async(vorterx, m, { prefix, pushName, toReact }) => {
       await toReact("💗");

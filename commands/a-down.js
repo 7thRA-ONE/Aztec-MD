@@ -57,8 +57,8 @@ axios.get(url, { responseType: 'stream' })
 
   
     fs.unlink(filePath, (err) => {
-      if (err) { console.error('Erasing this app error:', err); } else { console.log(App has been deleted successfully'); } });
+      if (err) { console.error('Erasing this app error:', err); } else { console.log('App has been deleted successfully'); } });
   }) .catch(error => {
 	fs.unlink(filePath)
     return m.reply('*Could not find the app*')
-  });
+  }};

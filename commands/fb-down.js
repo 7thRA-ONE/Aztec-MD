@@ -17,7 +17,7 @@ let vurl=info.video.url_video;
 
 
       let data  ="*♲︎︎︎Views    :* "+  info.video.view;
-	data +="\n*♲︎︎︎Likes    :* "+info.video.reaction.Like\n\n\n*©AZTEC-MD*;
+	data +="\n*♲︎︎︎Likes    :* "+info.video.reaction.Like;
 
 	data +=config.caption ;
                         let buttonMessage = {

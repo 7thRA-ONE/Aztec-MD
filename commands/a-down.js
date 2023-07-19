@@ -1,4 +1,4 @@
-const axios = require("axios");
+lconst axios = require("axios");
 const fs = require("fs");
 
 module.exports = {
@@ -57,5 +57,5 @@ const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`
       if (err) { console.error('Erasing this app error:', err); } else { console.log('App has been deleted successfully'); } });
   }) .catch(error => {
 	fs.unlink(filePath)
-    return m.reply('*Could not find the app*')
+    return m.reply('*Could not find the app*');
   }};

@@ -14,6 +14,5 @@ start: async(vorterx, m, { prefix, toReact }) => {
 	setTimeout(function (){
 	await vorterx.send(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
 },100);
-}
-  };
+};
   

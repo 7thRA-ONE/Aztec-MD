@@ -12,7 +12,7 @@ module.exports = {
     if (!text) { await toReact("⛔"); return m.reply("*🤖need text example ai who is diegoson*");
                }
     await toReact("🤖");
-let response  = await getJson(`https://api-viper-x0.vercel.app/api/openai?openaiapikey=${ChatGpT}&text=${process.env.ChatGpT}`)
+let response  = await getJson(`https://api.botcahx.live/api/search/openai-chat?text=${ChatGpT}&apikey=${process.env.ChatGpT}`)
 
 await m.reply(response.data.text);
 

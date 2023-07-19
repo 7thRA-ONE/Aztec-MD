@@ -11,7 +11,9 @@ start: async(vorterx, m, { prefix, toReact }) => {
 	var msg = await m.reply('*𝆺𝅥 ʀᴜɴɪɴɢ 𝆺𝅥*');
 	var end = new Date().getTime();
 	var responseTime = end - start;
-	await vorterx.edit(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
+	setTimeout(function (){
+	await vorterx.send(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
+},100);
 }
-};
+  };
   

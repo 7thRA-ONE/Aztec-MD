@@ -6,7 +6,7 @@ module.exports = {
   alias: ["facebook"],
   description: "To download Facebook videos",
   category: "Download",
-  start: async(vorterx, m, { prefix, toReact, pushName }) => {
+  start: async(vorterx, m, { prefix, toReact, pushName, text }) => {
     
 if(!text) { await toReact("⛔"); return m.reply(`*Give me fb url link*`);
           }

@@ -18,14 +18,14 @@ let vurl=info.video.url_video;
 
       let data  ="*♲︎︎︎Name     :* "+  info.video.title;
 	data +="\n*♲︎︎︎Views    :* "+  info.video.view;
-	data +="\n*♲︎︎︎Likes    :* "+info.video.Like;
+	data +="\n*♲︎︎︎Likes    :* "+info.video.reaction.Like;
 
 	data +=config.caption ;
                         let buttonMessage = {
                         video: {url:vurl},
                         mimetype: 'video/mp4',
                         fileName: info.video.title+`.mp4`,
-                        caption :"     *乂 F A C E B O K - D O W  N*  \n\n"+data
+                        caption :"       *乂 F A C E B O K - D O W  N D*  \n\n"+data
                         
                     }
                  vorterx.sendMessage(m.from, buttonMessage, { quoted: m });

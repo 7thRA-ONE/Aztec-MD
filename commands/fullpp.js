@@ -1,7 +1,7 @@
 module.exports = {
     name: "fullpp",
     description: "set full profile picture",
-    category: "User",
+    category: "user",
 start: async(vorterx, m, { quoted,toReact }) => {
 		if (!quoted)
 			return await m.reply('*Reply to a image.*')

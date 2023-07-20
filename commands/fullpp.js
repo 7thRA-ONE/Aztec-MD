@@ -9,7 +9,7 @@ start: async(vorterx, m, { toReact }) => {
 			await vorterx.reply_message.downloadMediaMessage(),
 			vorterx.client.user.jid
 		)
-		return await vorterx.sendMessage('_Profile Picture Updated_')
+		return await m.reply('_Profile Picture Updated_')
 	}
 
 }

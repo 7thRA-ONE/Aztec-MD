@@ -16,7 +16,7 @@ if (!isBotAdmin) { await toReact("❌"); return m.reply("*Cannot execute without
 	  if (!users) return m.reply("*Couldn't find any userID in context*")
     await toReact("👮");
         await vorterx.groupParticipantsUpdate(m.from, [users], 'promote')
-         vorterx.sendMessage(m.from,{text:`@${users.split("@")[0]}has been promoted to be an admin member`,contextInfo: { mentionedJid: [users] }})
+         vorterx.sendMessage(m.from,{text:`*@${users.split("@")[0]} has been promoted by ${pushName}*`,contextInfo: { mentionedJid: [users] }})
         } catch { 
 		return m.reply(`*Sorry failed to promote user could not be found*`);
     }

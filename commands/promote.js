@@ -21,3 +21,4 @@ if (!isBotAdmin) { await toReact("❌"); return m.reply("*Cannot execute without
 		return m.reply(`*Sorry failed to promote user could not be found*`);
     }
          }
+);

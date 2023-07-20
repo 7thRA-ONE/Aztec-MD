@@ -17,5 +17,7 @@ if (!isBotAdmin) { await toReact("❌"); return m.reply("*Cannot execute without
     await toReact("👮");
         await vorterx.groupParticipantsUpdate(m.from, [users], 'promote')
          vorterx.sendMessage(m.from,{text:`@${users.split("@")[0]}has been promoted to be an admin member`,contextInfo: { mentionedJid: [users] }})
-        }
-    };
+        } catch { 
+		return m.reply(*`Sorry failed to promote user could not be found*`);
+    }
+         };

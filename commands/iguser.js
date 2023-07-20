@@ -20,7 +20,7 @@ const reply = ` *乂 I N S T A G R A M E R- F I N D E R*\n\n
 *🌲Bio*: ${vorterxi.data.biography}\n\n\n*©vorterx-team*
               `
 vorterx.sendMessage(m.from, {image: { url: vorterxi.data.profile_pic }, caption:reply}, {quoted:m});
-} catch (err) {
+} 
 console.log(err)
 return m.reply (`*Please give me valid insagram ID*`);
               }

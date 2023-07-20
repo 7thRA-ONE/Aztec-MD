@@ -7,7 +7,7 @@ module.exports = {
   description: "To download apk randomly",
   category: "Download",
   start: async(vorterx, m, { prefix, toReact, text }) => {
-    if (!text) {
+    if (typeof text !== 'string') {
       await toReact("⛔");
       return m.reply("*Provide me with an app name*");
     }
@@ -34,24 +34,5 @@ module.exports = {
 
     const url = data.dllink;
     let inf = "*乂 A P P R A N D M - D O W N L O A D E R*";
-    inf += "\n*📚Name*: " + data.name;
-    inf += "\n*📦Dev*: " + data.package;
-    inf += "\n*⬆️Last Update*: " + data.lastup;
-    inf += "\n*📥M Size*: " + data.size;
-
-    try {
-      const response = await axios.get(url, { responseType: "stream" });
-      const writer = fs.createWriteStream(filePath);
-      response.data.pipe(writer);
-      writer.on("finish", () => {
-        m.reply({
-          content: inf,
-          files: [filePath],
-        });
-      });
-    } catch (error) {
-      console.error(error);
-      m.reply("*An error occurred while downloading the APK.*");
-    }
-  },
-};
+  }
+}

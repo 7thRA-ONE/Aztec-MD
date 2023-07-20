@@ -4,12 +4,10 @@ module.exports = {
     category: "user",
 start: async(vorterx, m, { quoted,toReact }) => {
 		if (!quoted)
-			return await m.reply('*Reply to a image.*')
-		await vorterx.updateProfilePicture(
-			//await vorterx.reply_message.downloadMediaMessage(),
-			//vorterx.client.user.jid
-		)
-		return await m.reply('_Profile Picture Updated_')
+			if (!message.reply_message || !message.reply_message.image)
+				return await m.reply('_Reply to a image._')
+	const media = await vorterx.reply_message.downloadAndSaveMedia()
+	await vorterx.updateProfilePicture(message.user_id, media)
+	await m.reply('_Successfully Profile Picture Updated_')
 	}
-
 }

@@ -4,7 +4,8 @@ module.exports = {
   category: "Group",
   start: async(vorterx, m, { prefix, toReact, mentionByTag, text }) => {
     
-if (!isGroup) { await toReact("❌"); return m.reply("*Sorry its a group command.Couldn't process the request*")
+if (!isGroup) { await toReact("❌"); return m.reply("*Sorry its a group command.Couldn't process the request*");
+	      }
 if (!isAdmin) { await toReact("❌"); return m.reply("*This is an Admin command only*");
               }
 if (!isBotAdmin) { await toReact("❌"); return m.reply("*Cannot execute without being admin*");

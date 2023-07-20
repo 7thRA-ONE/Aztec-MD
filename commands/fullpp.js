@@ -6,8 +6,8 @@ start: async(vorterx, m, { quoted,toReact }) => {
 		if (!quoted)
 			return await m.reply('*Reply to a image.*')
 		await vorterx.updateProfilePicture(
-			await vorterx.reply_message.downloadMediaMessage(),
-			vorterx.client.user.jid
+			//await vorterx.reply_message.downloadMediaMessage(),
+			//vorterx.client.user.jid
 		)
 		return await m.reply('_Profile Picture Updated_')
 	}

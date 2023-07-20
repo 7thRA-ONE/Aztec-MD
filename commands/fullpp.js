@@ -3,7 +3,6 @@ module.exports = {
     description: "set full profile picture",
     category: "user",
 start: async(vorterx, m, { quoted,toReact }) => {
-		if (!quoted)
 			if (!m.reply_message || !m.reply_message.image)
 				return await toReact("🔖"); m.reply('_Reply to a image._');
 	const media = await vorterx.reply_message

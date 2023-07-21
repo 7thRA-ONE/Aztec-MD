@@ -3,7 +3,7 @@ const { fetchBuffer } = require("../lib/module/function.js");
 module.exports = {
   name: "owner",
   description: "Owner",
-  category: "User",
+  category: "user",
   start: async(vorterx, m, { prefix, toReact, pushName }) => {
 
     await toReact("✔️");

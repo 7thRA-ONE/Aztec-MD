@@ -1,3 +1,5 @@
+const { ar } = require("../lib/vorterx/vorterx.js");
+
 module.exports = {
   name: "join",
   description: "To join the invite link gc",

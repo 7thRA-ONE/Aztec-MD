@@ -7,7 +7,7 @@ module.exports = {
     await toReact("✔️");
   
 const config = require('../config');
-        const thmb = await getBuffer(global.THUMB_IMAGE)
+        const thmb = await getBuffer(global.IMAGE_URL)
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +
             'FN:' + config.vorterx + '\n' +

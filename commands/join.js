@@ -4,7 +4,7 @@ module.exports = {
   category: "Group",
   start: async(vorterx, m, { prefix, toReact, isUrl, isAdmin, isCreator, isBotAdmin }) => {
 
-  if (!isCreator) { await toReact("🚫");  return m.reply("*📢This cmd can only be used by the owner of the bot*");
+  if (!m.isCreator) { await toReact("🚫");  return m.reply("*📢This cmd can only be used by the owner of the bot*");
                   }
                 if (!ar) { await toReact("🚫"); return m.reply("📢Please provide the group link*");
                          }

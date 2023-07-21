@@ -9,7 +9,6 @@ module.exports = {
     await toReact("✔️");
   
 const config = require('../config');
-        const thmb = await fetchBuffer(process.env.IMAGE_URL)
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +
             'FN:' + config.vorterx + '\n' +

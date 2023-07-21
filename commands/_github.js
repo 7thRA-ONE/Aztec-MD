@@ -17,7 +17,7 @@ module.exports = {
       });
     await toReact("🗽");
     let GhUserPP = vorterxi.avatar_url;
-    let resText = `        *乂 G I T H U B - U S E R N M E*\n\n*🌲Name*: ${vorterxi.name}*\n\n*🗽Followers*: ${vorterxi.followers}\n\n*🌲Repos*: ${vorterxi.public_repos}\n\n*♻️Website*: ${vorterxi.blog}\n\n*📗Bio*: ${vorterxi.bio}\n\n\n*©vorterx-team*`;
+    let resText = ` *乂 G I T H U B - U S E R N M E*\n\n*🌲Name*: ${vorterxi.name}*\n\n*🗽Followers*: ${vorterxi.followers}\n\n*🌲Repos*: ${vorterxi.public_repos}\n\n*♻️Website*: ${vorterxi.blog}\n\n*📗Bio*: ${vorterxi.bio}\n\n\n*©vorterx-team*`;
 
     await vorterx.sendMessage(
       m.from,

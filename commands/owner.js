@@ -23,7 +23,7 @@ const config = require('../config');
                     body: 'Aztec MD.',
                     renderLargerThumbnail: true,
                     thumbnailUrl: ``,
-                    thumbnail: thmb,
+                    thumbnail: logo,
                     mediaType: 1,
                     mediaUrl: '',
                     sourceUrl: `https://wa.me/+` + vorterx + '?text=Hii+bro,I+am+' + pushName,

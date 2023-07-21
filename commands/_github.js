@@ -4,8 +4,8 @@ module.exports = {
   name: "github",
   description: "Search an username on github",
   category: "Search",
-  start: async (vorterx, m, { text, prefix, pushName, args,mime }) => {
-    if (!args[0]) { await toReact ("🚀"); return m.reply("*Missing a query github username*");
+  start: async (vorterx, m, { text, prefix, pushName, toReact, args,mime }) => {
+    if (!args[0]) { await toReact("🚀"); return m.reply("*Missing a query github username*");
                   }
     var newGCdesc = args.join(" ");
 

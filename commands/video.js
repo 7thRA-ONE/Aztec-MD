@@ -29,9 +29,9 @@ module.exports = {
           m.from,
           {
             video: { url: ytaud.videoUrl },
-            caption:`
- ${song.title}
- : ${botName}`,
+            caption:`  *乂 V I D E O - D O W  N L D*
+          *🌲Name*: ${song.title}\n\n
+          *🌲Botname*: ${process.env.BOTNAME}`,
           },
           { quoted: m }
         );

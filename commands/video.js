@@ -29,7 +29,7 @@ module.exports = {
           m.from,
           {
             video: { url: ytaud.videoUrl },
-            caption:`  *乂 V I D E O - D O W  N L D*\n\n
+            caption:`  *乂 V I D E O S  - D O W  N L O A D*\n\n
  *🌲Name*: ${song.title}\n\n
  *🌲Size*: ${song.size}\n\n
  *🌲Botname*: ${process.env.BOTNAME}`,

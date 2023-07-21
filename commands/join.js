@@ -6,9 +6,7 @@ module.exports = {
   category: "Group",
   start: async(vorterx, m, { prefix, toReact, isUrl, isAdmin, isCreator, isBotAdmin }) => {
 
-          if (!ar) { await toReact("🚫"); return m.reply("📢Please provide the group link*");
-                         }
-                if (!isUrl(ar) && !ar.includes('whatsapp.com')) return m.reply("*📢Please provide the group link📢");
+ if (!isUrl(ar) && !ar.includes('whatsapp.com')) return m.reply("*📢Please provide the group link📢");
                 m.reply("*processing your request*");
     await toReact("💠");
                 let result = args[0].split('https://chat.whatsapp.com/')[1]

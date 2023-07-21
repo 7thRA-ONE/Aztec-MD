@@ -1,4 +1,4 @@
-const { getBuffer } = require("../lib/module/function.js");
+const { fetchBuffer } = require("../lib/module/function.js");
                             
 module.exports = {
   name: "owner",
@@ -9,7 +9,7 @@ module.exports = {
     await toReact("✔️");
   
 const config = require('../config');
-        const thmb = await getBuffer(global.IMAGE_URL)
+        const thmb = await fetchBuffer(global.IMAGE_URL)
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +
             'FN:' + config.vorterx + '\n' +

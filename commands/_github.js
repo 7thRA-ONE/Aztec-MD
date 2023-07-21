@@ -1,31 +1,4 @@
-const axios = require("axios");
-
-module.exports = {
-  name: "github",
-  description: "Search an username on github",
-  category: "Search",
-  start: async (vorterx, m, { text, prefix, pushName, toReact, args,mime }) => {
-    if (!args[0]) { await toReact("🚀"); return m.reply("*Missing a query github username*");
-                  }
-    var newGCdesc = args.join(" ");
-
-    let vorterxi = await axios
-      .get(`https://api.github.com/users/${newGCdesc}`)
-      .then((response) => response.data)
-      .catch((error) => {
-        console.log(error);
-      });
-    await toReact("🗽");
-    let GhUserPP = vorterxi.avatar_url;
-    let resText = ` *乂 G I T H U B - U S E R N M E*\n\n*🌲Name*: ${vorterxi.name}*\n\n*🗽Followers*: ${vorterxi.followers}\n\n*🌲Repos*: ${vorterxi.public_repos}\n\n*♻️Website*: ${vorterxi.blog}\n\n*📗Bio*: ${vorterxi.bio}\n\n\n*©vorterx-team*`;
-
-    await vorterx.sendMessage(
-      m.from,
-      {
-        image: { url: GhUserPP, mimetype: "image/jpeg" },
-        caption: resText,
-      },
-      { quoted: m }
-    );
-  },
-};
+//©Vorterx
+//@diegoson
+//@aztec
+const vorterx_0x5e5c27=vorterx_0x293f;function vorterx_0x293f(_0x30cf62,_0xeb16d3){const _0x25e0f9=vorterx_0x25e0();return vorterx_0x293f=function(_0x293f97,_0x3ad8e3){_0x293f97=_0x293f97-0x14f;let _0x53518e=_0x25e0f9[_0x293f97];return _0x53518e;},vorterx_0x293f(_0x30cf62,_0xeb16d3);}function vorterx_0x25e0(){const _0x22a496=['exports','*\x0a\x0a*🗽Followers*:\x20','followers','image/jpeg','blog','\x0a\x0a*♻️Website*:\x20','777578ErBDKI','catch','168ftxwTP','\x20*乂\x20G\x20I\x20T\x20H\x20U\x20B\x20-\x20U\x20S\x20E\x20R\x20N\x20M\x20E*\x0a\x0a*🌲Name*:\x20','public_repos','data','axios','122619gayPFA','bio','from','\x0a\x0a*📗Bio*:\x20','sendMessage','avatar_url','get','521868wyDfmq','645249enxVDJ','https://api.github.com/users/','Search','13025916btuffZ','name','reply','185ofVKZN','Search\x20an\x20username\x20on\x20github','86118BWuwLW','log','join','709380lJmtVj','\x0a\x0a\x0a*©vorterx-team*'];vorterx_0x25e0=function(){return _0x22a496;};return vorterx_0x25e0();}(function(_0x54e552,_0x163fdc){const _0x2d3fa9=vorterx_0x293f,_0x2695c9=_0x54e552();while(!![]){try{const _0x21c563=parseInt(_0x2d3fa9(0x15a))/0x1+parseInt(_0x2d3fa9(0x16e))/0x2+-parseInt(_0x2d3fa9(0x15b))/0x3+parseInt(_0x2d3fa9(0x166))/0x4+parseInt(_0x2d3fa9(0x161))/0x5*(parseInt(_0x2d3fa9(0x163))/0x6)+-parseInt(_0x2d3fa9(0x153))/0x7*(-parseInt(_0x2d3fa9(0x170))/0x8)+-parseInt(_0x2d3fa9(0x15e))/0x9;if(_0x21c563===_0x163fdc)break;else _0x2695c9['push'](_0x2695c9['shift']());}catch(_0x4a5426){_0x2695c9['push'](_0x2695c9['shift']());}}}(vorterx_0x25e0,0x4f3a1));const axios=require(vorterx_0x5e5c27(0x152));module[vorterx_0x5e5c27(0x168)]={'name':'github','description':vorterx_0x5e5c27(0x162),'category':vorterx_0x5e5c27(0x15d),'start':async(_0x47a893,_0x3ecc07,{text:_0xe0557a,prefix:_0x48cc9b,pushName:_0x23c498,toReact:_0x1a7db7,args:_0x82f36e,mime:_0x4873d9})=>{const _0x1af14c=vorterx_0x5e5c27;if(!_0x82f36e[0x0])return await _0x1a7db7('🚀'),_0x3ecc07[_0x1af14c(0x160)]('*Missing\x20a\x20query\x20github\x20username*');var _0x5c12b2=_0x82f36e[_0x1af14c(0x165)]('\x20');let _0x5b72b1=await axios[_0x1af14c(0x159)](_0x1af14c(0x15c)+_0x5c12b2)['then'](_0x2708c0=>_0x2708c0[_0x1af14c(0x151)])[_0x1af14c(0x16f)](_0xb25408=>{const _0x483818=_0x1af14c;console[_0x483818(0x164)](_0xb25408);});await _0x1a7db7('🗽');let _0x20442b=_0x5b72b1[_0x1af14c(0x158)],_0x269b25=_0x1af14c(0x14f)+_0x5b72b1[_0x1af14c(0x15f)]+_0x1af14c(0x169)+_0x5b72b1[_0x1af14c(0x16a)]+'\x0a\x0a*🌲Repos*:\x20'+_0x5b72b1[_0x1af14c(0x150)]+_0x1af14c(0x16d)+_0x5b72b1[_0x1af14c(0x16c)]+_0x1af14c(0x156)+_0x5b72b1[_0x1af14c(0x154)]+_0x1af14c(0x167);await _0x47a893[_0x1af14c(0x157)](_0x3ecc07[_0x1af14c(0x155)],{'image':{'url':_0x20442b,'mimetype':_0x1af14c(0x16b)},'caption':_0x269b25},{'quoted':_0x3ecc07});}};

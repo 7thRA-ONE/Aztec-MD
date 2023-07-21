@@ -7,7 +7,7 @@ module.exports = {
   start: async(vorterx, m, { prefix, toReact, pushName }) => {
 
     await toReact("✔️");
-  
+logo = `https://i.ibb.co/v47d4BL/IMG-20230429-WA0021.jpg`; 
 const config = require('../config');
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +

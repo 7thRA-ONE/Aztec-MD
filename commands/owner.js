@@ -1,3 +1,5 @@
+const { getBuffer } = require("../lib/module/function.js");
+                            
 module.exports = {
   name: "owner",
   description: "Owner",

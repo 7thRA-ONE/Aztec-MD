@@ -8,7 +8,7 @@ module.exports = {
     
 if (!text) { await toReact("❌"); return m.reply("*Please provide me a valid instagram ID*");
     }
-let vorterxi = await axios.get(`https://api.popcat.xyz/instagram?user=${text}`);
+let vorterxi = await axios.get(`https://api.popcat.xyz/instagram?user=${q}`);
             await toReact("🌲");
 const reply = ` *乂 I N S T A G R A M E R- F I N D E R*\n\n
 *🌲Username*: ${vorterxi.data.username}

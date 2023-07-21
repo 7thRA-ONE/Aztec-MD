@@ -22,7 +22,7 @@ const config = require('../config');
                     title: config.vorterx,
                     body: 'Aztec MD.',
                     renderLargerThumbnail: true,
-                    thumbnailUrl: ``,
+                    thumbnailUrl: logo,
                     thumbnail: logo,
                     mediaType: 1,
                     mediaUrl: '',

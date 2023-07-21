@@ -1,5 +1,5 @@
 const fs = require("fs")
-const { tiny} = require("../lib/fonts.js");
+const { tiny } = require("../lib/fonts.js");
 
 module.exports = {
   name: "menu",

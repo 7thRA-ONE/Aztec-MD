@@ -30,7 +30,7 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
             }
         m.reply(`*Broadcast has been send to ${anu.length} groups*`);
     }
-}
+};
 case "owner": {
    await toReact("✔️");
 

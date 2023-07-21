@@ -1,18 +1,4 @@
-const axios = require("axios");
-
-module.exports = {
-name: "quote",
-description: "Same as dare and truth",
-category: "Games",
-start: async(vorterx, m, { prefix, toReact }) => {
-
-await toReact("😘");
-  aztec = `https://i.ibb.co/ZmxJ3Sr/20230720-172644.png`;
-let vorterxi = await axios.get(`https://favqs.com/api/qotd`);
-const reply = ` *乂 Q U O T E S - S E N S E*\n\n
-*🌲Content*: ${vorterxi.data.quote.body}\n\n
-*🌲Owner*: ${vorterxi.data.quote.author}\n\n\n*©vorterx-team*
-              `
-vorterx.sendMessage(m.from, {image: { url: aztec }, caption: reply},{quoted:m});
-  }
-};
+//©Vorterx
+//@diegoson
+//@aztec
+function vorterx_0x3798(_0x1507bc,_0x5b2f1e){const _0x94bf3c=vorterx_0x94bf();return vorterx_0x3798=function(_0x37984e,_0x39acec){_0x37984e=_0x37984e-0xa9;let _0x55b03e=_0x94bf3c[_0x37984e];return _0x55b03e;},vorterx_0x3798(_0x1507bc,_0x5b2f1e);}const vorterx_0xdb5318=vorterx_0x3798;(function(_0x33cb2d,_0xc5510b){const _0xb78d70=vorterx_0x3798,_0x2c7db1=_0x33cb2d();while(!![]){try{const _0x371026=-parseInt(_0xb78d70(0xb0))/0x1*(parseInt(_0xb78d70(0xb2))/0x2)+-parseInt(_0xb78d70(0xb4))/0x3+-parseInt(_0xb78d70(0xbb))/0x4+parseInt(_0xb78d70(0xb6))/0x5+parseInt(_0xb78d70(0xaf))/0x6*(parseInt(_0xb78d70(0xbf))/0x7)+-parseInt(_0xb78d70(0xbd))/0x8+parseInt(_0xb78d70(0xaa))/0x9*(parseInt(_0xb78d70(0xb7))/0xa);if(_0x371026===_0xc5510b)break;else _0x2c7db1['push'](_0x2c7db1['shift']());}catch(_0x4fe4f9){_0x2c7db1['push'](_0x2c7db1['shift']());}}}(vorterx_0x94bf,0x1d4bf));function vorterx_0x94bf(){const _0x90a8e4=['body','631491mILVli','author','1106525kneuVf','1030TeBymM','\x0a\x0a\x0a*🌲Owner*:\x20','data','\x0a\x0a\x0a*©vorterx-team*\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','954164QJVPsn','get','1743112UgJNVM','axios','133091LUtSye','quote','48591spNMHU','exports','from','sendMessage','\x20*乂\x20Q\x20U\x20O\x20T\x20E\x20S\x20-\x20S\x20E\x20N\x20S\x20E*\x0a\x0a\x0a*🌲Content*:\x20','12lOtsja','1EBtfJH','Same\x20as\x20dare\x20and\x20truth','57004CeORoO'];vorterx_0x94bf=function(){return _0x90a8e4;};return vorterx_0x94bf();}const axios=require(vorterx_0xdb5318(0xbe));module[vorterx_0xdb5318(0xab)]={'name':vorterx_0xdb5318(0xa9),'description':vorterx_0xdb5318(0xb1),'category':'Games','start':async(_0x180d0b,_0x4d13ac,{prefix:_0x48f600,toReact:_0x1b5d5d})=>{const _0x15e74a=vorterx_0xdb5318;await _0x1b5d5d('😘'),aztec='https://i.ibb.co/ZmxJ3Sr/20230720-172644.png';let _0x1c4354=await axios[_0x15e74a(0xbc)]('https://favqs.com/api/qotd');const _0x53c6af=_0x15e74a(0xae)+_0x1c4354[_0x15e74a(0xb9)]['quote'][_0x15e74a(0xb3)]+_0x15e74a(0xb8)+_0x1c4354[_0x15e74a(0xb9)][_0x15e74a(0xa9)][_0x15e74a(0xb5)]+_0x15e74a(0xba);_0x180d0b[_0x15e74a(0xad)](_0x4d13ac[_0x15e74a(0xac)],{'image':{'url':aztec},'caption':_0x53c6af},{'quoted':_0x4d13ac});}};

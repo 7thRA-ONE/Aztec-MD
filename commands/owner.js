@@ -29,7 +29,7 @@ const config = require('../config');
                 },
             },
         };
-        return await vorterx.sendMessage(m.from buttonMessaged, {
+        return await vorterx.sendMessage(m.from, buttonMessaged, {
             quoted: m,
         });
 

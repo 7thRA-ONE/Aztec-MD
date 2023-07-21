@@ -1,10 +1,11 @@
 const { ar } = require("../lib/vorterx/vorterx.js");
+const { isUrl } = require("../lib/module/function.js");
 
 module.exports = {
   name: "join",
   description: "To join the invite link gc",
   category: "Group",
-  start: async(vorterx, m, { prefix, toReact, isUrl, isAdmin, isCreator, isBotAdmin }) => {
+  start: async(vorterx, m, { prefix, toReact, isAdmin, isCreator, isBotAdmin }) => {
 
  if (!isUrl(ar) && !ar.includes('whatsapp.com')) return m.reply("*📢Please provide the group link📢");
                 m.reply("*processing your request*");

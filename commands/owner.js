@@ -27,7 +27,7 @@ const config = require('../config');
                     thumbnail: thmb,
                     mediaType: 1,
                     mediaUrl: '',
-                    sourceUrl: `https://wa.me/+` + owner + '?text=Hii+bro,I+am+' + pushName,
+                    sourceUrl: `https://wa.me/+` + vorterx + '?text=Hii+bro,I+am+' + pushName,
                 },
             },
         };

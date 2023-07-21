@@ -1,24 +1,4 @@
-module.exports = {
-  name: "promote",
-  description: "To promote a member",
-  category: "Group",
-  start: async(vorterx, m, { prefix, isGroup, pushName, isAdmin, isBotAdmin, toReact, mentionByTag, text }) => {
-    
-if (!m.isGroup) { await toReact("❌"); return m.reply("*Sorry its a group command.Couldn't process the request*");
-	      }
-if (!isAdmin) { await toReact("❌"); return m.reply("*This is an Admin command only*");
-              }
-if (!isBotAdmin) { await toReact("❌"); return m.reply("*Cannot execute without being admin*");
-                 }
-	try {
-                            let mention = mentionByTag
-      let users = await (mention[0]) || m.msg.contextInfo.participant
-	  if (!users) return m.reply("*Couldn't find any userID in context*")
-    await toReact("👮");
-        await vorterx.groupParticipantsUpdate(m.from, [users], 'promote')
-         vorterx.sendMessage(m.from,{text:`@${users.split("@")[0]} *has been promoted by ${pushName}*`,contextInfo: { mentionedJid: [users] }})
-        } catch { 
-		return m.reply(`*Sorry failed to promote user could not be found*`);
-    }
-         },
-};
+//© Vorterx
+//@diegoson
+//@aztec
+function vorterx_0xa88a(){const _0x1ff594=['groupParticipantsUpdate','19657080pbNprz','sendMessage','*Sorry\x20failed\x20to\x20promote\x20user\x20could\x20not\x20be\x20found*','2gWlWzX','4gmkWXG','split','9QVIWiv','msg','*Sorry\x20its\x20a\x20group\x20command.Couldn\x27t\x20process\x20the\x20request*','*Couldn\x27t\x20find\x20any\x20userID\x20in\x20context*','\x20*has\x20been\x20promoted\x20by\x20','reply','5859203ZpAaff','5274056KKFSTS','3611120lkBORF','172302oiXCZe','79487hmatfC','*Cannot\x20execute\x20without\x20being\x20admin*','participant','isGroup','promote','from','contextInfo','4021764dAjjJD','Group','To\x20promote\x20a\x20member','exports'];vorterx_0xa88a=function(){return _0x1ff594;};return vorterx_0xa88a();}const vorterx_0x429eb7=vorterx_0x2690;function vorterx_0x2690(_0xe0aa3e,_0x2da730){const _0xa88a56=vorterx_0xa88a();return vorterx_0x2690=function(_0x26903c,_0x466f80){_0x26903c=_0x26903c-0xd8;let _0x3ad547=_0xa88a56[_0x26903c];return _0x3ad547;},vorterx_0x2690(_0xe0aa3e,_0x2da730);}(function(_0x17d564,_0x37abcc){const _0x4f6505=vorterx_0x2690,_0x1be6ff=_0x17d564();while(!![]){try{const _0x37cb85=parseInt(_0x4f6505(0xe2))/0x1+-parseInt(_0x4f6505(0xf1))/0x2*(parseInt(_0x4f6505(0xe1))/0x3)+parseInt(_0x4f6505(0xf2))/0x4*(parseInt(_0x4f6505(0xe0))/0x5)+-parseInt(_0x4f6505(0xe9))/0x6+-parseInt(_0x4f6505(0xde))/0x7+-parseInt(_0x4f6505(0xdf))/0x8*(parseInt(_0x4f6505(0xd8))/0x9)+parseInt(_0x4f6505(0xee))/0xa;if(_0x37cb85===_0x37abcc)break;else _0x1be6ff['push'](_0x1be6ff['shift']());}catch(_0x594b11){_0x1be6ff['push'](_0x1be6ff['shift']());}}}(vorterx_0xa88a,0x84aad),module[vorterx_0x429eb7(0xec)]={'name':vorterx_0x429eb7(0xe6),'description':vorterx_0x429eb7(0xeb),'category':vorterx_0x429eb7(0xea),'start':async(_0x41bfb3,_0x3f3523,{prefix:_0x2f01a4,isGroup:_0x1b0aa0,pushName:_0x1de39e,isAdmin:_0x2f1b93,isBotAdmin:_0x5ca191,toReact:_0x4adc57,mentionByTag:_0x43dbdd,text:_0xfaa092})=>{const _0x59c6ed=vorterx_0x429eb7;if(!_0x3f3523[_0x59c6ed(0xe5)])return await _0x4adc57('❌'),_0x3f3523[_0x59c6ed(0xdd)](_0x59c6ed(0xda));if(!_0x2f1b93)return await _0x4adc57('❌'),_0x3f3523[_0x59c6ed(0xdd)]('*This\x20is\x20an\x20Admin\x20command\x20only*');if(!_0x5ca191)return await _0x4adc57('❌'),_0x3f3523[_0x59c6ed(0xdd)](_0x59c6ed(0xe3));try{let _0x5215b6=_0x43dbdd,_0x57c3ce=await _0x5215b6[0x0]||_0x3f3523[_0x59c6ed(0xd9)][_0x59c6ed(0xe8)][_0x59c6ed(0xe4)];if(!_0x57c3ce)return _0x3f3523[_0x59c6ed(0xdd)](_0x59c6ed(0xdb));await _0x4adc57('👮'),await _0x41bfb3[_0x59c6ed(0xed)](_0x3f3523[_0x59c6ed(0xe7)],[_0x57c3ce],_0x59c6ed(0xe6)),_0x41bfb3[_0x59c6ed(0xef)](_0x3f3523['from'],{'text':'@'+_0x57c3ce[_0x59c6ed(0xf3)]('@')[0x0]+_0x59c6ed(0xdc)+_0x1de39e+'*','contextInfo':{'mentionedJid':[_0x57c3ce]}});}catch{return _0x3f3523[_0x59c6ed(0xdd)](_0x59c6ed(0xf0));}}});

@@ -1,4 +1,5 @@
 const fs = require("fs")
+const moment = require("moment-timezone");
 //const { tiny } = require("../lib/fonts.js");
 const { tiny } = require("@viper-x/fancytext");
 
@@ -9,6 +10,9 @@ module.exports = {
   start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
     await toReact("🛸");
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
+    const time = moment(moment()).format('HH:mm:ss')
+                moment.tz.setDefault('Africa/Johannesburg').locale('id')
+                const date = moment.tz('africa/johannesburg').format('DD/MM/YYYY');
     const { pushName, sender } = m;
     if (args[0]) {
       let data = [];

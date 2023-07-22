@@ -2,13 +2,13 @@ module.exports = {
   name: "genshin",
   description: "Anime lovers",
   category: "Anime",
-  start: async(vorterx,m {prfix, toReact, pushName, text}) => {
+  start: async(vorterx,m, { prfix, toReact, pushName, text}) => {
 
 const genshin = require("genshin-api");
 a = text.toLowerCase();
     await toReact("🔥");
 const anime = await genshin.Characters(text)
-let txt = ""
+let txt = " *乂 A N  I M E - G E N S H I N*\n\n"
 txt += `🎀 *Name:* ${anime.name}\n`
 txt += `🌲 *Title:* ${anime.title}\n`
 txt += `💠 *Vision:* ${anime.vision}\n`
@@ -25,5 +25,6 @@ await vorterx.sendMessage(m.from,{image:{url:urll}, caption:txt},{quoted:m});
 console.log(err)
 return m.reply('Error');
 }
+  };
    
 

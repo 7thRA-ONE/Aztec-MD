@@ -7,7 +7,7 @@ module.exports = {
                if(!text) { await toReact("⛔"); return m.reply("*Please give me  a query*");
                          }
       await toReact("💘");
-    await vorterx.setStatus(m.from,text)
+    await vorterx.setStatus(text)
        return m.reply(`*Successfully Wa Status has been set*`);
   }
                };

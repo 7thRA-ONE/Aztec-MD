@@ -1,4 +1,5 @@
 const Jimp = require("jimp");
+const fs = require("fs");
 
 module.exports = { 
   name: "fullpp",
@@ -26,7 +27,7 @@ let media = await vorterx.downloadAndSaveMediaMessage(quoted)
                 })
                 fs.unlinkSync(media)
             } else {
-                await vorterx.updateProfilePicture(m.from, user, media, m);
+                await vorterx.updateProfilePicture(m.from, user, media, m)
                 .then( res => {
                     vorterx.sendMessage(m.from,{text:"*Profile picture has been updated successfully*"});
                     fs.unlinkSync(media)

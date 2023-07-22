@@ -1,5 +1,6 @@
 const fs = require("fs")
 const os = require('os');
+const {runtime} = require("../lib/module/function.js");
 const moment = require("moment-timezone");
 //const { tiny } = require("../lib/fonts.js");
 const { tiny } = require("@viper-x/fancytext");
@@ -42,7 +43,7 @@ module.exports = {
 ┃ ✗ User: ${tiny(pushName)}
 ┃ ✗ Botname: ${tiny(process.env.BOTNAME)}
 ┃ ✗ Prefix: ${tiny(prefix)}
-┃ ✗ Uptime: ${tiny(runtime(process.uptime()))}
+┃ ✗ Runtime: ${tiny(runtime(process.uptime()))}
 ┃ ✗ Time: ${tiny(time)}
 ┃ ✗ Date: ${tiny(date)}
 ┗━━━━━━━━━━⦿\n\n`;

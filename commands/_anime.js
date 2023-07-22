@@ -1,3 +1,5 @@
+const { tiny } = require("@viper-x/fancytext");
+
 module.exports = { 
   name: "anime",
   description: "Randomly anime background",
@@ -5,7 +7,7 @@ module.exports = {
   start:async(vorterx,m,{prefix,toReact,pushName,text}) => {
 
   if (!text) { await toReact("⭕"); return m.reply(`*Give anime name you want to search*`);
-             }
+             } 
 const malScraper = require('mal-scraper');
         const anime = await malScraper.getInfoFromName(text).catch(() => null)
         if (!anime) { await toReact("⭕"); return m.reply(`*Sorry couldnt find the Anime server error*`);

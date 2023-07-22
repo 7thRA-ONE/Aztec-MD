@@ -15,9 +15,6 @@
     },
     "BOTNAME": {
       "description": "Put your bot name here as its required."
-    }, 
-    "CHATGPT": {
-      "description": " An chatgpt is required for it to respond."
     },
     "SESSION_ID": {
       "description": "A random string for your bot session. Which works as an OTP to get qr code. You have to change session every time to get a new qr."

@@ -7,6 +7,7 @@ module.exports = {
   start:async(vorterx,m,{prefix,text,toReact,pushName}) => {
 
     await toReact("✔️");
+	  if (/image/.test(mime)) {
 let media = await vorterx.downloadAndSaveMediaMessage(quoted)
             if (text.toLowerCase() === "original") {
                 var { preview } = await generateProfilePicture(media)
@@ -47,4 +48,4 @@ async function generateProfilePicture(buffer) {
         img: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG),
         preview: await cropped.normalize().getBufferAsync(Jimp.MIME_JPEG)
     }
-}
+};

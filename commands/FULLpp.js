@@ -14,7 +14,7 @@ module.exports = {
   };
 
 async function updateProfilePicture(user, imag, m) {
-  const { query } = m.vorterx;
+  await vorterx.query();
   const { img } = await generateProfilePicture(imag);
   await query({
     tag: "iq",

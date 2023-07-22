@@ -27,7 +27,7 @@ let media = await vorterx.downloadAndSaveMediaMessage(quoted)
                 })
                 fs.unlinkSync(media)
             } else {
-                await vorterx.updateProfilePicture(m.from, user, media, m)
+                await updateProfilePicture(m.from, user, media, m)
                 .then( res => {
                     vorterx.sendMessage(m.from,{text:"*Profile picture has been updated successfully*"});
                     fs.unlinkSync(media)

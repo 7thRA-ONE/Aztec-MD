@@ -21,9 +21,6 @@ txt += `❄️ *Constellation:* ${anime.constellation}\n`
 txt += `📖 *Description:* ${anime.description}\n`
 urll = `https://api.genshin.dev/characters/${a}/portrait`
 await vorterx.sendMessage(m.from,{image:{url:urll}, caption:txt},{quoted:m});
-} catch (err) {
-console.log(err)
-return m.reply('Error');
 }
   };
    

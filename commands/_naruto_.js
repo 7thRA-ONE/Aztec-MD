@@ -1,5 +1,5 @@
 module.exports = {
-  name: "naruto",
+  name: "nxn",
   description: "Textpro",
   category: "Textpro",
   start: async(vorterx,m,{ prefix, toReact,text }) => {

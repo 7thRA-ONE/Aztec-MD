@@ -10,7 +10,6 @@ global.owner = vorterx.split(",");
 global.mongodb = process.env.MONGODB || "none";
 global.botName = process.env.BOTNAME || "Aᴢᴛᴇᴄ-Mᴅ"; // change botName
 global.prefix = process.env.PREFIX || "-";
-global.chatGpT = process.env.ChatGpT || ""; //chatgpt api key here so it will respond
 global.sessionId = process.env.SESSION_ID || "vorterx"; //change session 
 global.port = process.env.PORT || 8081;
 

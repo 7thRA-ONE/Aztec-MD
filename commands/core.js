@@ -41,6 +41,7 @@ module.exports = {
 ┃ ✗ User: ${tiny(pushName)}
 ┃ ✗ Botname: ${tiny(process.env.BOTNAME)}
 ┃ ✗ Prefix: ${tiny(prefix)}
+┃ ✗ Cmds: ${tiny(commands.length)}
 ┃ ✗ Time: ${tiny(time)}
 ┃ ✗ Date: ${tiny(date)}
 ┗━━━━━━━━━━⦿\n\n`;

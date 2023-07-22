@@ -4,7 +4,6 @@ const { tiny } = require("@viper-x/fancytext");
 
 module.exports = {
   name: "menu",
-  alias: ["list"],
   description: "The list of all command",
   category: "General",
   start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
@@ -35,9 +34,9 @@ module.exports = {
         }
       }
       let amarok = `┏━━⟪ ${process.env.BOTNAME} ⟫━⦿
-┃ ✗ User: ${pushName}
-┃ ✗ Botname: ${process.env.BOTNAME}
-┃ ✗ Prefix: ${prefix}
+┃ ✗ User: ${tiny(pushName)}
+┃ ✗ Botname: ${tiny(process.env.BOTNAME)}
+┃ ✗ Prefix: ${tiny(prefix)}
 ┗━━━━━━━━━━⦿\n\n`;
 
 const keys = Object.keys(category);

@@ -8,6 +8,6 @@ module.exports = {
                          }
       await toReact("💘");
     await vorterx.setStatus(m.from,text)
-       return m.reply("*Successfully Wa Status has been set*");
+       return m.reply(`*Successfully Wa Status has been set*`);
   }
                };

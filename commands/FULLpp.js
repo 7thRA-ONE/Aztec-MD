@@ -1,5 +1,4 @@
 const Jimp = require("jimp");
-const vorterx = require("../lib/vorterx/vorterx.js");
 
 module.exports = { 
   name: "fullpp",
@@ -15,7 +14,6 @@ module.exports = {
   };
 
 async function updateProfilePicture(user, imag, m) {
-  await vorterx.query();
   const { img } = await generateProfilePicture(imag);
   await query({
     tag: "iq",

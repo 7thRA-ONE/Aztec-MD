@@ -31,8 +31,8 @@ let media = await vorterx.downloadAndSaveMediaMessage(quoted)
                 .then( res => {
                     vorterx.sendMessage(m.from,{text:"*Profile picture has been updated successfully*"});
                     fs.unlinkSync(media)
-                }).catch(() => 
-)
+                }).catch() => 
+
             }
         } else {
                     vorterx.sendMessage(m.from,{text:"Reply to an image only"}) 

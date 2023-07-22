@@ -6,7 +6,7 @@ module.exports = {
   category: "Owner",
   start:async(vorterx,m,{prefix,text,toReact,pushName}) => {
 
-    if(text) { await toReact("⛔"); return m.reply("*Please reply to an image*");
+    if(!text) { await toReact("⛔"); return m.reply("*Please reply to an image*");
              }
     let media = await vorterx.downloadAndSaveMediaMessage();
     await updateProfilePicture(m.user, media, m);

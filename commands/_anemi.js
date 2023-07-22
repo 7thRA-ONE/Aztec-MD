@@ -4,7 +4,7 @@ module.exports = {
   category: "Anime",
   start: async(vorterx,m, { prfix, toReact, pushName, text}) => {
 
-const genshin = require("genshin-api");
+const genshin = require("@genshindev/api");
 a = text.toLowerCase();
     await toReact("🔥");
 const anime = await genshin.Characters(text)

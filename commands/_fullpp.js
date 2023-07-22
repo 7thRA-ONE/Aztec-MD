@@ -1,4 +1,4 @@
-const Jimp = require("jimp");
+/*const Jimp = require("jimp");
 const fs = require("fs");
 
 module.exports = { 
@@ -50,3 +50,4 @@ async function generateProfilePicture(buffer) {
         preview: await cropped.normalize().getBufferAsync(Jimp.MIME_JPEG)
     }
 };
+*/

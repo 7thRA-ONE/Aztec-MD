@@ -8,6 +8,7 @@ if (!vorterx) {
 
 global.owner = vorterx.split(",");
 global.mongodb = process.env.MONGODB || "none";
+global.owner = process.env.OWNER || "27686881509";
 global.botName = process.env.BOTNAME || "Aᴢᴛᴇᴄ-Mᴅ"; // change botName
 global.prefix = process.env.PREFIX || "-";
 global.sessionId = process.env.SESSION_ID || "vorterx"; //change session

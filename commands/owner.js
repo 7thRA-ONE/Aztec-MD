@@ -11,9 +11,9 @@ logo = `https://i.ibb.co/v47d4BL/IMG-20230429-WA0021.jpg`;
 const config = require('../config');
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +
-            'FN:' + config.mods + '\n' +
+            'FN:' + global.mods + '\n' +
             'ORG:;\n' +
-            'TEL;type=CELL;type=VOICE;waid=' + config.mods + ':+' + config.mods + '\n' +
+            'TEL;type=CELL;type=VOICE;waid=' + global.mods + ':+' + global.mods + '\n' +
             'END:VCARD'
         let buttonMessaged = {
             contacts: { displayName: global.mods, contacts: [{ vcard }] },

@@ -2,7 +2,7 @@ module.exports = {
   name: "gcname",
   description: "change gc name",
   category: "Group",
-  start: async(vorterx,m,{ prefix,isBotAdmin,isGroup, toReact, pushName}) => {
+  start: async(vorterx,m,{ prefix,text,isBotAdmin,isGroup, toReact, pushName}) => {
 
                 if (!m.isGroup) { await toReact("⛔"); return m.reply("*This command is only for admins*");
                                 }

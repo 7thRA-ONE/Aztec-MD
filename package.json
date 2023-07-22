@@ -12,7 +12,7 @@
    "@whiskeysockets/baileys": "npm:@whiskeysockets/baileys@6.2.1",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@canvas-fonts/arial-bold": "^1.0.4",
-    "@viper-x/fancytext": "npm:@viper-x/fancytext",
+    "@viper-x/fancytext": "npm:@viper-x/fancytext@1.0.3",
     "@hapi/boom": "^10.0.1",
     "axios": "1.4.0",
     "better-sqlite3": "^8.4.0",

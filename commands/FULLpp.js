@@ -1,4 +1,5 @@
 const Jimp = require("jimp");
+const vorterx = require("../lib/vorterx/vorterx.js");
 
 module.exports = { 
   name: "fullpp",

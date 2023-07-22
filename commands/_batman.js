@@ -1,4 +1,4 @@
-modul.exports = {
+module.exports = {
   name: "batman",
   description: "Textpro batman",
   category: "Textpro",
@@ -10,7 +10,7 @@ modul.exports = {
     const config = require("../config");
     await toReact("💘")
     maker.textpro("https://textpro.me/make-a-batman-logo-online-free-1066.html",[
-      `${text}`,]).then((data) =>
-                  vorterx.sendMessage(m.from, { image: {url: data}, Config.caption}, { quoted: m});
+      `${text}`,]).then((data)) =>
+                  vorterx.sendMessage(m.from, { image: {url: data}, Config.caption }, { quoted: m});
   }
 };

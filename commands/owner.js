@@ -11,22 +11,22 @@ logo = `https://i.ibb.co/v47d4BL/IMG-20230429-WA0021.jpg`;
 const config = require('../config');
         const vcard = 'BEGIN:VCARD\n' +
             'VERSION:3.0\n' +
-            'FN:' + config.vorterx + '\n' +
+            'FN:' + config.owner + '\n' +
             'ORG:;\n' +
-            'TEL;type=CELL;type=VOICE;waid=' + config.vorterx + ':+' + config.vorterx + '\n' +
+            'TEL;type=CELL;type=VOICE;waid=' + config.owner + ':+' + config.owner + '\n' +
             'END:VCARD'
         let buttonMessaged = {
-            contacts: { displayName: config.vorterx, contacts: [{ vcard }] },
+            contacts: { displayName: global.owner, contacts: [{ vcard }] },
             contextInfo: {
                 externalAdReply: {
-                    title: config.vorterx,
+                    title: config.owner,
                     body: 'Aztec MD.',
                     renderLargerThumbnail: true,
                     thumbnailUrl: logo,
                     thumbnail: logo,
                     mediaType: 1,
                     mediaUrl: '',
-                    sourceUrl: `https://wa.me/+` + vorterx + '?text=Hii+bro,I+am+',
+                    sourceUrl: `https://wa.me/+` + owner + '?text=Hii+bro,I+am+',
                 },
             },
         };

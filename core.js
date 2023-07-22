@@ -265,25 +265,40 @@ const connect = async () => {
    * @returns
    */
  vorterx.downloadAndSaveMediaMessage = async (
-    message,
-    filename,
-    attachExtension = true
-  ) => {
-    let quoted = message.msg ? message.msg : message;
-    let mime = (message.msg || message).mimetype || "";
-    let messageType = message.mtype
-      ? message.mtype.replace(/Message/gi, "")
-      : mime.split("/")[0];
-    const stream = await downloadContentFromMessage(quoted, messageType);
-    let buffer = Buffer.from([]);
-    for await (const chunk of stream) {
-      buffer = Buffer.concat([buffer, chunk]);
-    }
-    let type = await FileType.fromBuffer(buffer);
-    trueFileName = attachExtension ? filename + "." + type.ext : filename;
-    await fs.writeFileSync(trueFileName, buffer);
-    return trueFileName;
-  };
+  message, 
+  filename,
+  attachExtension = true
+) => {
+
+  let quoted = message?.msg || message;
+  let mime = quoted?.mimetype || "";
+
+  let messageType = quoted?.mtype 
+    ? quoted.mtype.replace(/Message/gi, "")
+    : mime.split("/")[0];
+
+  if (!quoted) {
+    console.log("Message is undefined");
+    return;
+  }
+
+  const stream = await downloadContentFromMessage(quoted, messageType);
+  
+  let buffer = Buffer.from([]);
+
+  for await (const chunk of stream) {
+    buffer = Buffer.concat([buffer, chunk]);  
+  }
+
+  let type = await FileType.fromBuffer(buffer);
+
+  trueFileName = attachExtension ? filename + "." + type.ext : filename;
+
+  await fs.writeFileSync(trueFileName, buffer);
+
+  return trueFileName;
+ } 
+      
 
  vorterx.downloadMediaMessage = async (message) => {
     let mime = (message.msg || message).mimetype || "";

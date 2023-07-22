@@ -7,7 +7,7 @@ module.exports = {
     if(!text) { await toReact("⛔"); return m.reply("*Provide me a query ex batman aztec*");
               }
     const Config = require("../config");
-    await toReact("💘")
+    await toReact("💘");
     maker.textpro("https://textpro.me/make-a-batman-logo-online-free-1066.html",[
       `${text}`,]).then((data) =>
                   vorterx.sendMessage(m.from, { image: {url: data}, caption: Config.caption }, { quoted: m}));

@@ -5,7 +5,7 @@ module.exports = {
   name: "fullpp",
   description: "Set fullpp on your dp",
   category: "Owner",
-  start:async(vorterx,m,{prefix,text,toReact,pushName}) => {
+  start:async(vorterx,m,{prefix,mime,quoted,text,toReact,pushName}) => {
 
     await toReact("✔️");
 	  if (/image/.test(mime)) {

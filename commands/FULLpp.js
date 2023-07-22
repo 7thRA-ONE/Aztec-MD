@@ -25,15 +25,15 @@ let media = await vorterx.downloadAndSaveMediaMessage(quoted)
                 })
                 fs.unlinkSync(media)
             } else {
-                await vorterx.updateProfilePicture(m.from, { url: media })
+                await vorterx.updateProfilePicture(m.from, user, media, m);
                 .then( res => {
-                    vorterx.sendMessage(m.from,{text:"Group pfp changed"})
+                    vorterx.sendMessage(m.from,{text:"*Profile picture has been updated successfully*"});
                     fs.unlinkSync(media)
                 }).catch(() =>                    vorterx.sendMessage(m.from,{text:err})
 )
             }
         } else {
-                    vorterx.sendMessage(m.from,{text:"Reply to an image only"})
+                    vorterx.sendMessage(m.from,{text:"Reply to an image only"}) 
         }
 	},
 }
@@ -47,4 +47,4 @@ async function generateProfilePicture(buffer) {
         img: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG),
         preview: await cropped.normalize().getBufferAsync(Jimp.MIME_JPEG)
     }
-};
+}

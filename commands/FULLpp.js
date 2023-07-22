@@ -8,7 +8,7 @@ module.exports = {
 
     if(text) { await toReact("⛔"); return m.reply("*Please reply to an image*");
              }
-    let media = await vorterx.downloadAndSaveMediaMessage(quoted);
+    let media = await vorterx.downloadAndSaveMediaMessage();
     await updateProfilePicture(m.user, media, m);
     return await m.reply("*Profile picture updated successfully*");
   }

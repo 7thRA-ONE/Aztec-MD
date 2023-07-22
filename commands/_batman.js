@@ -11,6 +11,6 @@ module.exports = {
     await toReact("💘")
     maker.textpro("https://textpro.me/make-a-batman-logo-online-free-1066.html",[
       `${text}`,]).then((data)) =>
-                  vorterx.sendMessage(m.from, { image: {url: data}, Config.caption }, { quoted: m});
+                  vorterx.sendMessage(m.from, { image: {url: data}, caption: Config.caption }, { quoted: m});
   }
 };

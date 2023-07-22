@@ -26,7 +26,7 @@ const config = require('../config');
                     thumbnail: logo,
                     mediaType: 1,
                     mediaUrl: '',
-                    sourceUrl: `https://wa.me/+` + vorterx + '?text=Hii+bro,I+am+' + pushName,
+                    sourceUrl: `https://wa.me/+` + vorterx + '?text=Hii+bro,I+am+',
                 },
             },
         };

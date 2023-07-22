@@ -1,32 +1,4 @@
-const { tiny } = require("@viper-x/fancytext");
-
-module.exports = { 
-  name: "anime",
-  description: "Randomly anime background",
-  category: "Anime",
-  start: async(vorterx, m, { prefix, toReact, pushName, text}) => {
-
-  if (!text) { await toReact("⭕"); return m.reply("*Give anime name you want to search*");
-             } 
-const malScraper = require('mal-scraper');
-        const anime = await malScraper.getInfoFromName(text).catch(() => null)
-        if (!anime) { await toReact("⭕"); return m.reply("*Sorry couldnt find the Anime server error*");
-                    }
-    await toReact("🔥");
-let animetxt = `
-🎀 Title: ${anime.title}
-🌲 Type: ${anime.type}
-🎐 Premiered on: ${anime.premiered}
-💠 Total Episodes: ${anime.episodes}
-📈 Status: ${anime.status}
-💮 Genres: ${anime.genres}
-📍 Studio: ${anime.studios}
-🌟 Score: ${anime.score}
-♻️ Rating: ${anime.rating}
-🏅 Rank: ${anime.ranked}
-💫 Popularity: ${anime.popularity}
-♦️ Trailer: ${anime.trailer}
-🌵 Description: ${anime.synopsis}\n\n\n*©vrterx-team*`
-               await vorterx.sendMessage(m.from,{image:{url:anime.picture}, caption: tiny(animetxt)},{quoted:m});
-                }
-};
+//©anime by vorterx
+//@diegoson
+//@aztec
+const vorterx_0x2ac244=vorterx_0xc037;(function(_0x3b79bc,_0x4897f1){const _0x12dea8=vorterx_0xc037,_0x2872e5=_0x3b79bc();while(!![]){try{const _0x297a8a=-parseInt(_0x12dea8(0x1da))/0x1+parseInt(_0x12dea8(0x1cc))/0x2+-parseInt(_0x12dea8(0x1e6))/0x3+-parseInt(_0x12dea8(0x1d3))/0x4*(-parseInt(_0x12dea8(0x1ea))/0x5)+-parseInt(_0x12dea8(0x1e3))/0x6+parseInt(_0x12dea8(0x1d9))/0x7*(-parseInt(_0x12dea8(0x1d1))/0x8)+-parseInt(_0x12dea8(0x1d2))/0x9*(-parseInt(_0x12dea8(0x1dd))/0xa);if(_0x297a8a===_0x4897f1)break;else _0x2872e5['push'](_0x2872e5['shift']());}catch(_0x4568ee){_0x2872e5['push'](_0x2872e5['shift']());}}}(vorterx_0x4de1,0xf1031));function vorterx_0xc037(_0x4f80cb,_0x264e7c){const _0x4de10e=vorterx_0x4de1();return vorterx_0xc037=function(_0xc03755,_0x5ae8fe){_0xc03755=_0xc03755-0x1c8;let _0x37c6ab=_0x4de10e[_0xc03755];return _0x37c6ab;},vorterx_0xc037(_0x4f80cb,_0x264e7c);}const {tiny}=require(vorterx_0x2ac244(0x1c8));function vorterx_0x4de1(){const _0x47ef88=['sendMessage','type','rating','Anime','4597584vXFHKs','\x0a♻️\x20Rating:\x20','ranked','219657QPWhGX','genres','reply','\x0a💠\x20Total\x20Episodes:\x20','2739455cOvfdv','status','\x0a🌲\x20Type:\x20','synopsis','exports','@viper-x/fancytext','from','studios','\x0a\x0a\x0a*©vrterx-team*','1592372DliQBD','\x0a🌟\x20Score:\x20','catch','*Sorry\x20couldnt\x20find\x20the\x20Anime\x20server\x20error*','\x0a🌵\x20Description:\x20','585608PnMzNG','16510302OjMlzY','12pbxVOl','\x0a🏅\x20Rank:\x20','episodes','anime','getInfoFromName','\x0a📍\x20Studio:\x20','175ajnZWU','617644ENnvHm','\x0a💫\x20Popularity:\x20','\x0a♦️\x20Trailer:\x20','10AzRZPe','Randomly\x20anime\x20background'];vorterx_0x4de1=function(){return _0x47ef88;};return vorterx_0x4de1();}module[vorterx_0x2ac244(0x1ee)]={'name':vorterx_0x2ac244(0x1d6),'description':vorterx_0x2ac244(0x1de),'category':vorterx_0x2ac244(0x1e2),'start':async(_0x579acd,_0x201942,{prefix:_0x4fc194,toReact:_0x506d24,pushName:_0x43a6d3,text:_0x488183})=>{const _0x4d1e5f=vorterx_0x2ac244;if(!_0x488183)return await _0x506d24('⭕'),_0x201942[_0x4d1e5f(0x1e8)]('*Give\x20anime\x20name\x20you\x20want\x20to\x20search*');const _0x3dd421=require('mal-scraper'),_0x377135=await _0x3dd421[_0x4d1e5f(0x1d7)](_0x488183)[_0x4d1e5f(0x1ce)](()=>null);if(!_0x377135)return await _0x506d24('⭕'),_0x201942[_0x4d1e5f(0x1e8)](_0x4d1e5f(0x1cf));await _0x506d24('🔥');let _0x20aa60='\x0a🎀\x20Title:\x20'+_0x377135['title']+_0x4d1e5f(0x1ec)+_0x377135[_0x4d1e5f(0x1e0)]+'\x0a🎐\x20Premiered\x20on:\x20'+_0x377135['premiered']+_0x4d1e5f(0x1e9)+_0x377135[_0x4d1e5f(0x1d5)]+'\x0a📈\x20Status:\x20'+_0x377135[_0x4d1e5f(0x1eb)]+'\x0a💮\x20Genres:\x20'+_0x377135[_0x4d1e5f(0x1e7)]+_0x4d1e5f(0x1d8)+_0x377135[_0x4d1e5f(0x1ca)]+_0x4d1e5f(0x1cd)+_0x377135['score']+_0x4d1e5f(0x1e4)+_0x377135[_0x4d1e5f(0x1e1)]+_0x4d1e5f(0x1d4)+_0x377135[_0x4d1e5f(0x1e5)]+_0x4d1e5f(0x1db)+_0x377135['popularity']+_0x4d1e5f(0x1dc)+_0x377135['trailer']+_0x4d1e5f(0x1d0)+_0x377135[_0x4d1e5f(0x1ed)]+_0x4d1e5f(0x1cb);await _0x579acd[_0x4d1e5f(0x1df)](_0x201942[_0x4d1e5f(0x1c9)],{'image':{'url':_0x377135['picture']},'caption':tiny(_0x20aa60)},{'quoted':_0x201942});}};

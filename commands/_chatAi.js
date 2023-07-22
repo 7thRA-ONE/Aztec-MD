@@ -1,13 +1,4 @@
-const axios = require("axios");
-
-module.exports = {
-  name: "chat",
-  description: "Chat with Ai",
-  category: "user",
-  start: async(vorterx, m, { prefix, toReact, text, pushName }) => {
-    await toReact("🤖");
-
-  let {data} = await axios.get(`http://api.brainshop.ai/get?bid=175685&key=Pg8Wu8mrDQjfr0uv&uid=[${m.sender.split("@")[0]}]&msg=[${text}]`);
-            return m.reply(data.cnt);  
-   }
-};
+//©Vorterx
+//@diegoson
+//@aztec
+const vorterx_0x49dc26=vorterx_0x220d;(function(_0x4f72bc,_0x3852f0){const _0x363563=vorterx_0x220d,_0x5dc6a3=_0x4f72bc();while(!![]){try{const _0x56dbe3=-parseInt(_0x363563(0x156))/0x1*(-parseInt(_0x363563(0x165))/0x2)+-parseInt(_0x363563(0x167))/0x3+parseInt(_0x363563(0x162))/0x4+-parseInt(_0x363563(0x157))/0x5*(-parseInt(_0x363563(0x160))/0x6)+parseInt(_0x363563(0x15b))/0x7+-parseInt(_0x363563(0x15e))/0x8*(-parseInt(_0x363563(0x168))/0x9)+-parseInt(_0x363563(0x169))/0xa;if(_0x56dbe3===_0x3852f0)break;else _0x5dc6a3['push'](_0x5dc6a3['shift']());}catch(_0x2aed34){_0x5dc6a3['push'](_0x5dc6a3['shift']());}}}(vorterx_0x3313,0xd4f12));function vorterx_0x220d(_0x4267a9,_0x36cf09){const _0x331304=vorterx_0x3313();return vorterx_0x220d=function(_0x220d9b,_0x4ee310){_0x220d9b=_0x220d9b-0x156;let _0x5d1f63=_0x331304[_0x220d9b];return _0x5d1f63;},vorterx_0x220d(_0x4267a9,_0x36cf09);}function vorterx_0x3313(){const _0x3906ed=['3988266lfUfZA','Chat\x20with\x20Ai','3693108eyHkZk',']&msg=[','chat','2rvsuMK','http://api.brainshop.ai/get?bid=175685&key=Pg8Wu8mrDQjfr0uv&uid=[','144867HDUdrr','9leUyBW','39378240UwbQXp','230515wlsdvl','10iMBFJJ','user','sender','reply','11989964aKCduW','split','exports','5298056OsjZsm','get'];vorterx_0x3313=function(){return _0x3906ed;};return vorterx_0x3313();}const axios=require('axios');module[vorterx_0x49dc26(0x15d)]={'name':vorterx_0x49dc26(0x164),'description':vorterx_0x49dc26(0x161),'category':vorterx_0x49dc26(0x158),'start':async(_0x2ec54b,_0x5de026,{prefix:_0x5ba535,toReact:_0x3d4357,text:_0x494e06,pushName:_0x394803})=>{const _0x12e97d=vorterx_0x49dc26;await _0x3d4357('🤖');let {data:_0x2441d0}=await axios[_0x12e97d(0x15f)](_0x12e97d(0x166)+_0x5de026[_0x12e97d(0x159)][_0x12e97d(0x15c)]('@')[0x0]+_0x12e97d(0x163)+_0x494e06+']');return _0x5de026[_0x12e97d(0x15a)](_0x2441d0['cnt']);}};

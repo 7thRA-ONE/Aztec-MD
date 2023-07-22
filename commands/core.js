@@ -33,7 +33,7 @@ module.exports = {
           category[info.category].push(info);
         }
       }
-      let amarok = `┏━━⟪ ${process.env.BOTNAME} ⟫━⦿
+      let amarok = `┏━━⟪ ${tiny(process.env.BOTNAME)} ⟫━⦿
 ┃ ✗ User: ${tiny(pushName)}
 ┃ ✗ Botname: ${tiny(process.env.BOTNAME)}
 ┃ ✗ Prefix: ${tiny(prefix)}

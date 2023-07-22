@@ -25,5 +25,5 @@ await vorterx.sendMessage(m.from,{image:{url:urll}, caption:txt},{quoted:m});
 console.log(err)
 return m.reply('Error');
 }
-   };
+   
 

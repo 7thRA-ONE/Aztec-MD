@@ -41,6 +41,8 @@ module.exports = {
 ┃ ✗ User: ${tiny(pushName)}
 ┃ ✗ Botname: ${tiny(process.env.BOTNAME)}
 ┃ ✗ Prefix: ${tiny(prefix)}
+┃ ✗ Time: ${tiny(time)}
+┃ ✗ Date: ${tiny(date)}
 ┗━━━━━━━━━━⦿\n\n`;
 
 const keys = Object.keys(category);

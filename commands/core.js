@@ -42,8 +42,8 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*┌─『${tiny(key.toUpperCase())}*』─❖\n\n${category[key]
-          .map((cmd) => ` |${fancy(prefix + cmd.name)}`)
+        amarok += `*┌─『${key.toUpperCase()}*』─❖\n\n${category[key]
+          .map((cmd) => ` |${prefix + cmd.name}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }
       amarok += `*©vorterx-team*`;

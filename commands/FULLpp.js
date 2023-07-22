@@ -12,7 +12,7 @@ module.exports = {
     await updateProfilePicture(m.user, media, m);
     return await m.reply("*Profile picture updated successfully*");
   }
-);
+  };
 
 async function updateProfilePicture(user, imag, m) {
   const { query } = m.vorterx;

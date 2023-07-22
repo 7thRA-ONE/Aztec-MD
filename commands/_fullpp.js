@@ -5,7 +5,7 @@ module.exports = {
   name: "fullpp",
   description: "Set fullpp on your dp",
   category: "Owner",
-  start:async(vorterx,m,{prefix,mime,quoted,text,toReact,pushName}) => {
+  start:async(vorterx,m,{prefix,mime,quoted,text,toReact,pushName, command}) => {
 
     await toReact("✔️");
 	  if (/image/.test(mime)) {
@@ -31,7 +31,7 @@ let media = await vorterx.downloadAndSaveMediaMessage(quoted)
                 .then( res => {
                     vorterx.sendMessage(m.from,{text:"*Profile picture has been updated successfully*"});
                     fs.unlinkSync(media)
-                }).catch(() =>                    vorterx.sendMessage(m.from,{text:err})
+                }).catch(() =>  m.reply("*Error occurred while processing*")
 )
             }
         } else {

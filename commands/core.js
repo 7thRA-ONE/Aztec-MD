@@ -42,7 +42,7 @@ module.exports = {
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `*┌─『${tiny(key.toUpperCase())}*』─❖\n\n${category[key]
+        amarok += `*┌─『${tiny(key.toLowerCase())}*』─❖\n\n${tiny(category)[key]
           .map((cmd) => ` |${prefix + cmd.name}`)
           .join("\n")}\n\n└─────────◉\n\n`;
       }

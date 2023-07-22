@@ -4,10 +4,11 @@ module.exports = {
   name: "gimage",
   description: "Google images",
   category: "Download",
-  start: async(vorterx, m, { prefix, toReact }) => {
+  start: async(vorterx, m, { prefix, text, toReact }) => {
 
     if(!text) { await toReact("⭕"); return m.reply("*Give me image name mate*");
               }
+    await toReact("✔️");
         let vorterxi = await axios.get(`https://api.akuari.my.id/search/googleimage?query=${text}`);
 
         n = vorterxi.result

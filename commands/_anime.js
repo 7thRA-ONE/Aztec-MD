@@ -26,7 +26,7 @@ let animetxt = `
 🏅 Rank: ${tiny(anime.ranked)}
 💫 Popularity: ${tiny(anime.popularity)}
 ♦️ Trailer: ${tiny(anime.trailer)}
-🌵 Description: ${tiny(anime.synopsis)}`,
-               await vorterx.sendMessage(m.from,{image:{url:anime.picture}, caption:animetxt},{quoted:m})
+🌵 Description: ${tiny(anime.synopsis)}\n\n\n*©vrterx-team*`
+               await vorterx.sendMessage(m.from,{image:{url:anime.picture}, caption:animetxt},{quoted:m});
                 }
 };

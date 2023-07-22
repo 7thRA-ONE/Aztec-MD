@@ -14,19 +14,19 @@ const malScraper = require('mal-scraper');
                     }
     await toReact("🔥");
 let animetxt = `
-🎀 Title: ${tiny(anime.title)}
-🌲 Type: ${tiny(anime.type)}
-🎐 Premiered on: ${tiny(anime.premiered)}
-💠 Total Episodes: ${tiny(anime.episodes)}
-📈 Status: ${tiny(anime.status)}
-💮 Genres: ${tiny(anime.genres)}
-📍 Studio: ${tiny(anime.studios)}
-🌟 Score: ${tiny(anime.score)}
-♻️ Rating: ${tiny(anime.rating)}
-🏅 Rank: ${tiny(anime.ranked)}
-💫 Popularity: ${tiny(anime.popularity)}
-♦️ Trailer: ${tiny(anime.trailer)}
-🌵 Description: ${tiny(anime.synopsis)}\n\n\n*©vrterx-team*`
-               await vorterx.sendMessage(m.from,{image:{url:anime.picture}, caption:animetxt},{quoted:m});
+🎀 Title: ${anime.title}
+🌲 Type: ${anime.type}
+🎐 Premiered on: ${anime.premiered}
+💠 Total Episodes: ${anime.episodes}
+📈 Status: ${anime.status}
+💮 Genres: ${anime.genres}
+📍 Studio: ${anime.studios}
+🌟 Score: ${anime.score}
+♻️ Rating: ${anime.rating}
+🏅 Rank: ${anime.ranked}
+💫 Popularity: ${anime.popularity}
+♦️ Trailer: ${anime.trailer}
+🌵 Description: ${anime.synopsis}\n\n\n*©vrterx-team*`
+               await vorterx.sendMessage(m.from,{image:{url:anime.picture}, caption: tiny(animetxt)},{quoted:m});
                 }
 };

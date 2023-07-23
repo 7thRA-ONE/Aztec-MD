@@ -1,3 +1,5 @@
+const { formatp } = require("../lib/module/function.js");
+
 module.exports = {
   name: "system",
   description: "To Check the system status",

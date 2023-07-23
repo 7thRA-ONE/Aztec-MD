@@ -12,6 +12,7 @@ const xeonplaymp3 = require('../lib/ytdl2');
 await toReact("🎶");
 let yts = require("youtube-yts")
         let search = await yts(text)
+      await m.reply(`*Downloading:* ${anup3k.title}`);
         let anup3k = search.videos[0]
 const pl= await xeonplaymp3.mp3(anup3k.url)
       m.reply(```Downloading ${anup3k.title}```);

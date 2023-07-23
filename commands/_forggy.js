@@ -12,5 +12,7 @@ module.exports = {
     maker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html",[
       `${text}`,]).then((data) =>
                   vorterx.sendMessage(m.from, { image: {url: data}, caption: `Cʀᴇᴀᴛᴇᴅ Bʏ: ${process.env.BOTNAME}`}, { quoted: m}));
+  } catch((err) => console.log(err))
+  return m.reply(`Error`);
   }
 };

@@ -41,19 +41,10 @@ module.exports = {
       }
 //-----------------------------------------------------------------------
        var up_up, up_mid, up_btm, ctgry_L, ctgry_R, cmd_L, ctgry_end
-            let default_menu = 0 ;
-            if (!process.env.MENU) { default_menu = Math.floor(Math.random() * 2) + 1;      }
+            var random_menu = 0 ;
+            if (!process.env.MENU) { random_menu = Math.floor(Math.random() * 2) + 1; } //make Sure to replace '2' with Exact number of how many styles you have added---- Then it takes randome_STYLE,When user did't Put any Value in 'process.env.MENU'
             
-            if (default_menu == 1 || process.env.MENU.trim().startsWith("1") || process.env.MENU.toLowerCase().includes("aztec")) {            
-              up_up =  `┏━━⟪ ${tiny(process.env.BOTNAME)} ⟫━━⦿`
-              up_mid = `┃ ✗`
-              up_btm = `┗━━━━━━━━━━━━━━━⦿`
-              ctgry_L  = `┌──『`
-              ctgry_R  = `』──❖\n`
-              cmd_L =    ` | `
-              ctgry_end =`\n└──────────────◉`
-              
-            }else{
+            if (random_menu == 1 || process.env.MENU.trim().startsWith("1") || process.env.MENU.toLowerCase().includes("suhail-md")) {            
               up_up =  `╭────《  ${tiny(process.env.BOTNAME)}  》────⊷\n│ ╭──────✧❁✧──────◆`
               up_mid = `│ │`
               up_btm = `│ ╰──────✧❁✧──────◆\n╰══════════════════⊷`
@@ -61,12 +52,21 @@ module.exports = {
               ctgry_R =  `❏`
               cmd_L =    `│`
               ctgry_end =`╰━━━━━━━━━━━━━━──⊷`
-              
-              
+            }else{
+              up_up =  `┏━━⟪ ${tiny(process.env.BOTNAME)} ⟫━━⦿`
+              up_mid = `┃ ✗`
+              up_btm = `┗━━━━━━━━━━━━━━━⦿`
+              ctgry_L  = `┌──『`
+              ctgry_R  = `』──❖\n`
+              cmd_L =    ` | `
+              ctgry_end =`\n└──────────────◉`
             }
 
-
-
+    //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX
+    // if (random_menu == 2(For_Menu_Style_no_2) || process.env.MENU.trim().startsWith("MENU_STYLE_NO") || process.env.MENU.toLowerCase().includes("Bot_NAME"))
+    // if user put NUMBER or GIVEN NAME_ Then check statement here and , select the STYLE_MENU Through that NUMBER or GIVEN NAME 
+//------------------------------------------------------------------------------
+      
 
 
       
@@ -82,11 +82,11 @@ ${up_btm}\n
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `${ctgry_L} ${tiny(key.toLowerCase())} ${ctgry_R}  \n\n${category[key]
-          .map((cmd) => ` ${cmd_L}${prefix + cmd.name}`)
+        amarok += `${ctgry_L} ${tiny(key.toLowerCase())} ${ctgry_R} ${category[key]
+          .map((cmd) => `${cmd_L}${prefix + cmd.name}`)
           .join("\n")}\n${ctgry_end}\n`;
       }
-      amarok += `*©vorterx-team*`;
+      amarok += `\n*©vorterx-team*`;
 await vorterx.sendMessage(m.from, { image: aztec, caption: tiny(amarok )}, { quoted: m});
    }
 },

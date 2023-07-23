@@ -2,7 +2,7 @@ module.exports = {
   name: "igstalker",
   description: "Instagram",
   category: "Search",
-  start: async(vorterx,m,{prefix,toReact, text}) => {
+  start: async(vorterx,m,{prefix,toReact,args, text}) => {
     
 if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*");
               }
@@ -10,7 +10,7 @@ if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*
     await toReact("📍");
     let res = await fg.igStalk(args[0])
     let aztec = `
-*乂 I G S T A L K E R*
+*乂 I G S T A L K E R*\n\n
 ▢ *🧕Name:* ${res.name} 
 ▢ *👩‍🚀Username:* ${res.username}
 ▢ *👥Followers:* ${res.followersH}

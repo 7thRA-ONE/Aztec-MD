@@ -30,9 +30,9 @@ const { tmpdir } = require('os');
          const speed = await test.checkUploadSpeed(options, fileSizeInBytes)
          return speed
       }
-      let text = '◦ *Download* : ' + download.mbps + ' mbps\n'
-      text += '◦ *Upload* : ' + upload.mbps + ' mbps\n'
-      text += '◦ *Response* : ' + ((new Date - old) * 1) + ' ms'
-      m.reply(m.from, text, m)
+      let aztec = '◦ *Download* : ' + download.mbps + ' mbps\n'
+      aztec += '◦ *Upload* : ' + upload.mbps + ' mbps\n'
+      aztec += '◦ *Response* : ' + ((new Date - old) * 1) + ' ms'
+      m.reply(m.from, aztec, m)
    }
 };

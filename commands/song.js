@@ -15,7 +15,6 @@ let yts = require("youtube-yts")
       await m.reply(`*Downloading:* ${anup3k.title}`);
         let anup3k = search.videos[0]
 const pl= await xeonplaymp3.mp3(anup3k.url)
-      m.reply(```Downloading ${anup3k.title}```);
 await vorterx.sendMessage(m.from,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',

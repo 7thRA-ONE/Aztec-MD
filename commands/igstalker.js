@@ -20,7 +20,7 @@ if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*
 ▢ *📥Posts:* ${res.postsH}
 ▢ *📩Email:* ${res.email}
 `
-     await vorterx.sendMessage(m.from, {image: { url: res.profilePic }, caption: aztec }, {quoted: m})
-      }
+     await vorterx.sendMessage(m.from, {image: { url: res.profilePic }, caption: aztec }, {quoted: m});
+      },
   }
 };

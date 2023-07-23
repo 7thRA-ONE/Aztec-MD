@@ -8,15 +8,4 @@
 
 ## .```🙏THANKS-TO```
    Thanks to all contributors who participate on this project,
-   
-
-## .```ABOUT-AC```
-  .```made with js : node```
-  
-  .```base used : nezuko```
-  
-  .```mongodb require : act```
-  
-  
-
 

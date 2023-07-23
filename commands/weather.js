@@ -4,7 +4,7 @@ module.exports = {
   category: "Search",
   start: async(vorterx,m,{ prefix,text,toReact}) => {
 
-const axios = require(axios");
+const axios = require("axios");
     if (!text) { await toReact("⛔"); return m.reply("*Give the location please*");
                }
     await toReact("🌟");

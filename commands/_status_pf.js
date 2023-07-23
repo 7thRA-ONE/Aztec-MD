@@ -4,8 +4,6 @@ description: "Status",
 category: "Owner",
   start: async(vorterx,m,{prefix,isCreator,toReact,text}) => {
 
-  if (!m.isCreator) { await toReact("👩‍🚀"); return m.reply("*Sorry but this cmd is for my owner*");
-  }
 if (!text) { await toReact("⛔"); return m.reply("*Provide me with a text ex aztec md*");
            }
   await toReact("📍");

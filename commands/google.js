@@ -15,6 +15,6 @@ aztec += `⭔ *Description* : ${g.snippet}\n`
 aztec += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
 } 
 m.reply(aztec)
-     } 
+     })
                              }
 };

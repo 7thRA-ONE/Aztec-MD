@@ -5,6 +5,7 @@
     start: async(vorterx,m,{prefix,toReact,text}) => {
     
    const fs = require("fs");
+      const { fetchBuffer } = require('../lib/module/function.js');
 if (!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex hope by xxx*");
 }
 const xeonplaymp3 = require('../lib/ytdl2');

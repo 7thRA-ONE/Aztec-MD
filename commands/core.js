@@ -57,9 +57,9 @@ module.exports = {
               up_mid = `┃ ✗`
               up_btm = `┗━━━━━━━━━━━━━━━⦿`
               ctgry_L  = `┌──『`
-              ctgry_R  = `』──❖\n\n`
+              ctgry_R  = `』──❖\n`
               cmd_L =    ` | `
-              ctgry_end =`\n└──────────────◉`
+              ctgry_end =`└──────────────◉`
             }
 
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX

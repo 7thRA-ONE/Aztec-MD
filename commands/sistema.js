@@ -1,4 +1,4 @@
-const { formatp } = require("../lib/module/function.js");
+const { formatp, runtime } = require("../lib/module/function.js");
 
 module.exports = {
   name: "system",

@@ -14,7 +14,8 @@ aztec += `❲❒❳ *Title* : ${g.title}\n`
 aztec += `❲❒❳ *Description* : ${g.snippet}\n`
 aztec += `❲❒❳ *Link* : ${g.link}\n\n────────────────────────\n\n`
 } 
-m.reply(aztec)
+   img = `https://i.ibb.co/k2mkzHJ/IMG-20230723-WA0071.jpg`;
+await vorterx.sendMessage(m.from, {image: {url: img}, aztec})
      })
                              }
 };

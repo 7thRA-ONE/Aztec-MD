@@ -58,8 +58,8 @@ module.exports = {
               up_btm = `┗━━━━━━━━━━━━━━━⦿`
               ctgry_L  = `┌──『`
               ctgry_R  = `』──❖\n`
-              cmd_L =    ` |\n `
-              ctgry_end =`\n└──────────────◉\n`
+              cmd_L =    `  | `
+              ctgry_end =`└─────────◉\n`
             }
 
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX

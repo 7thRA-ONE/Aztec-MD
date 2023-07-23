@@ -17,7 +17,7 @@ const pl= await xeonplaymp3.mp3(anup3k.url)
 await vorterx.sendMessage(m.from,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mp4', ptt: true,
+    mimetype: 'document/doc', ptt: true,
     contextInfo:{
         externalAdReply:{
             title:anup3k.title,

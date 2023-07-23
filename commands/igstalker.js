@@ -8,6 +8,7 @@ if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*
               }
                const fg = require('api-dylux');
     await toReact("📍");
+    try {
     let res = await fg.igStalk(args[0])
     let aztec = `
 *乂 I G S T A L K E R*\n\n

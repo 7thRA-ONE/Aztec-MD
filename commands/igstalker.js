@@ -22,4 +22,5 @@ if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*
 `
      await vorterx.sendMessage(m.from, {image: { url: res.profilePic }, caption: aztec }, {quoted: m})
       }
+  }
 };

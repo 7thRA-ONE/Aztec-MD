@@ -11,9 +11,9 @@
    
 
 ## .```ABOUT-AC```
-  .```this a wa user bot```
-  .```made with js and node```
-  .```base used : nezuko```
+  .```this a wa user bot```,
+  .```made with js and node```,
+  .```base used : nezuko```,
   .```mongodb require ,act```
   
   

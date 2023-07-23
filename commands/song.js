@@ -20,7 +20,7 @@ await vorterx.sendMessage(m.from,{
     contextInfo:{
         externalAdReply:{
             title:anup3k.title,
-            body: botname,
+            body: process.env.BOTNAME,
             thumbnail: await fetchBuffer(pl.meta.image),
             mediaType:2,
             mediaUrl:anup3k.url,

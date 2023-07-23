@@ -2,7 +2,7 @@ module.exports = {
 name: "status",
 description: "Status",
 category: "Owner",
-  start: async(vorterx,m,{prefix,toReact,text}) => {
+  start: async(vorterx,m,{prefix,isCreator,toReact,text}) => {
 
   if (!isCreator) { await toReact("👩‍🚀"); return m.reply("*Sorry but this cmd is for my owner*");
   }

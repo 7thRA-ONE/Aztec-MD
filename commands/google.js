@@ -14,6 +14,6 @@ aztec += `⭔ *Title* : ${g.title}\n`
 aztec += `⭔ *Description* : ${g.snippet}\n`
 aztec += `⭔ *Link* : ${g.link}\n\n────────────────────────\n\n`
 } 
-m.reply(aztec))
+m.reply(aztec)
      } 
 };

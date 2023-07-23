@@ -11,11 +11,11 @@
    
 
 ## .```ABOUT-AC```
-  .```made with js and node```,
+  .```made with js : node```
   
-  .```base used : nezuko```,
+  .```base used : nezuko```
   
-  .```mongodb require ,act```
+  .```mongodb require : act```
   
   
 

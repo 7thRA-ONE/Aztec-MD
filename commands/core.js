@@ -83,11 +83,11 @@ ${up_btm}\n
 const keys = Object.keys(category);
       for (const key of keys) {
         amarok += `${ctgry_L} ${tiny(key.toLowerCase())}${ctgry_R} ${category[key]
-          .map((cmd) =>`\n${cmd_L}${prefix + cmd.name}`)
+          .map((cmd) => `${cmd_L}${prefix + cmd.name}`)
           .join("\n")} ${ctgry_end}\n`;
       }
       amarok += `\n*©vorterx-team*`;
-await vorterx.sendMessage(m.from, { image: aztec, caption: tiny(amarok )}, { quoted: m});
+await vorterx.sendMessage(m.from, { image: aztec, caption: tiny(amarok)}, { quoted: m});
    }
 },
 };

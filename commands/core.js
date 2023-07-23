@@ -82,8 +82,8 @@ ${up_btm}\n
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `${ctgry_L} ${tiny(key.toLowerCase())} ${ctgry_R} ${category[key]
-          .map((cmd) => `${cmd_L}\n${prefix + cmd.name}`)
+        amarok += `${ctgry_L} ${tiny(key.toLowerCase())}\n ${ctgry_R} ${category[key]
+          .map((cmd) =>`${cmd_L}${prefix + cmd.name}`)
           .join("\n")}\n${ctgry_end}\n`;
       }
       amarok += `\n*©vorterx-team*`;

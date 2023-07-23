@@ -22,6 +22,7 @@ await vorterx.sendMessage(m.from,{
         externalAdReply:{
             title:anup3k.title,
             body: "©VORTERX TEAM",
+            renderLargerThumbnail: true,
             thumbnail: await fetchBuffer(pl.meta.image),
             mediaType:2,
             mediaUrl:anup3k.url,

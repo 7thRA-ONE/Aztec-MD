@@ -84,7 +84,7 @@ const keys = Object.keys(category);
       for (const key of keys) {
         amarok += `${ctgry_L} ${tiny(key.toLowerCase())} ${ctgry_R} ${category[key]
           .map((cmd) => `${cmd_L}${prefix + cmd.name}`)
-          .join("\n")}\n${ctgry_end}\n`;
+          .join("\n")}${ctgry_end}\n`;
       }
       amarok += `\n*©vorterx-team*`;
 await vorterx.sendMessage(m.from, { image: aztec, caption: tiny(amarok )}, { quoted: m});

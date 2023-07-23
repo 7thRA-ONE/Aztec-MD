@@ -42,9 +42,9 @@ module.exports = {
 //-----------------------------------------------------------------------
        var up_up, up_mid, up_btm, ctgry_L, ctgry_R, cmd_L, ctgry_end
             let default_menu = 0 ;
-            if (Config.menu === '') { default_menu = Math.floor(Math.random() * 3) + 1;      }
+            if (!process.env.MENU) { default_menu = Math.floor(Math.random() * 2) + 1;      }
             
-            if (default_menu == 1 || Config.menu.trim().startsWith("1") || Config.menu.toLowerCase().includes("aztec")) {            
+            if (default_menu == 1 || process.env.MENU.trim().startsWith("1") || process.env.MENU.toLowerCase().includes("aztec")) {            
               up_up =  `┏━━⟪ ${tiny(process.env.BOTNAME)} ⟫━━⦿`
               up_mid = `┃ ✗`
               up_btm = `┗━━━━━━━━━━━━━━━⦿`
@@ -52,6 +52,16 @@ module.exports = {
               ctgry_R  = `』──❖\n`
               cmd_L =    ` | `
               ctgry_end =`\n└──────────────◉`
+              
+            }else{
+              up_up =  `╭────《  ${tiny(process.env.BOTNAME)}  》────⊷\n│ ╭──────✧❁✧──────◆`
+              up_mid = `│ │`
+              up_btm = `│ ╰──────✧❁✧──────◆\n╰══════════════════⊷`
+              ctgry_L =  `╭────❏`
+              ctgry_R =  `❏`
+              cmd_L =    `│`
+              ctgry_end =`╰━━━━━━━━━━━━━━──⊷`
+              
               
             }
 

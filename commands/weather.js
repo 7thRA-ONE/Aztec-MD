@@ -27,7 +27,7 @@ const axios = require("axios");
 
            vorterx.sendMessage(
                 m.from, {image: {url: pp},
-                    text: aztec,
+                    caption: aztec,
                 }, {
                     quoted: m,
                 }

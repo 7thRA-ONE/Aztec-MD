@@ -58,6 +58,7 @@
     "api-dylux": "^1.4.4",
     "genshin-api": "^2.1.0",
     "mal-scraper": "^2.11.4",
+    "node-youtube-music": "^0.8.3",
     "readline": "^1.3.0",
     "human-readable": "^0.2.1",
     "mumaker": "^1.0.0",

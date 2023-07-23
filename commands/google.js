@@ -6,7 +6,7 @@ module.exports = {
    category: "Search",
    start: async(vorterx,m,{prefix,toReact, text}) => {
 
-
+await toReact("📍");
 google({'query': text}).then(res => {
 let aztec = `*乂 GOOGLE SEARCH TERM*\n\n${text}\n\n`
 for (let g of res) {

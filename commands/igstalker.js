@@ -22,7 +22,7 @@ if (!args[0]) { await toReact("⛔"); return m.reply("*Please give me use ig id*
 `
      await vorterx.sendMessage(m.from, {image: { url: res.profilePic }, caption: aztec }, {quoted: m});
       } catch {
-      return m.reply(`*Provide me a valid ig user name*`);
+      m.reply(`*Provide me a valid ig user name*`);
     }
   }
 };

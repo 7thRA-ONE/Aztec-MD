@@ -46,7 +46,7 @@ module.exports = {
             
             if (random_menu == 1 || process.env.MENU.trim().startsWith("1") || process.env.MENU.toLowerCase().includes("suhail-md")) {            
               up_up =  `╭────《  ${tiny(process.env.BOTNAME)}  》────⊷\n│ ╭──────✧❁✧──────◆`
-              up_mid = `│ │`
+              up_mid = `│`
               up_btm = `│ ╰──────✧❁✧──────◆\n╰══════════════════⊷`
               ctgry_L =  `╭────❏`
               ctgry_R =  `❏`

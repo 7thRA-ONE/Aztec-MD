@@ -16,6 +16,8 @@
     "BOTNAME": {
       "description": "Put your bot name here as its required."
     },
+    "MENU": { 
+      "description": "Kindly choose the menu style use number to choose ( 0\", for aztec 1\" for sector null\" randomly.)",
     "SESSION_ID": {
       "description": "A random string for your bot session. Which works as an OTP to get qr code. You have to change session every time to get a new qr."
     },

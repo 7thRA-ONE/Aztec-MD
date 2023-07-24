@@ -1,7 +1,6 @@
 require ('../config')
 module.exports={
     name:"eval",
-    react:"✅",
     description:"evaluates js codes",
     category:"Owner",
     start:async(vorterx,m,{text,ban,pushName,toReact,mentionByTag,iscreator,args,body,quoted,mime})=>{

@@ -9,7 +9,6 @@ module.exports = {
   start: async(vorterx,m,{prefix,toReact,text}) => {
 
   await toReact("🌡️");
-	  const latensi = speed() - speed();
 	  
   const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {

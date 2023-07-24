@@ -8,6 +8,7 @@ module.exports = {
                }
     await toReact("✅");
     await vorterx.groupRevokeInvite(m.from).then((res) => {
-            m.reply(`*🔉 Group link has been reserted successfully*`});
+            m.reply(`*🔉Group link has been reserted successfully*`);
     })
+              }
 };

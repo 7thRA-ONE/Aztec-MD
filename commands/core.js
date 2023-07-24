@@ -58,7 +58,7 @@ module.exports = {
               up_btm = `┗━━━━━━━━━━━━━━⦿`
               ctgry_L  = `\n┌──『`
               ctgry_R  = `』──❖\n\n`
-              cmd_L =    `\x20|`
+              cmd_L =    `\x20|\n`
               ctgry_end =`\n\n└─────────◉\n`
             }
 

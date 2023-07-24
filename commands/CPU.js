@@ -1,5 +1,6 @@
-const { runtime } = require("../lib/module/function.js");
-
+const { runtime, formatp } = require("../lib/module/function.js");
+const os = require('os');
+  const speed = require('performance-now');
 
 module.exports = {
   name: "cpu",
@@ -8,6 +9,8 @@ module.exports = {
   start: async(vorterx,m,{prefix,toReact,text}) => {
 
   await toReact("🌡️");
+	  const latensi = speed() - speed();
+	  
   const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
                     cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)

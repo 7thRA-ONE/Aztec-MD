@@ -82,7 +82,7 @@ ${up_btm}\n
 
 const keys = Object.keys(category);
       for (const key of keys) {
-        amarok += `${ctgry_L}  ${tiny(key.toLowerCase())}  ${ctgry_R}${category[key]
+        amarok += `${ctgry_L}  *${tiny(key.toLowerCase())}*  ${ctgry_R}${category[key]
 .map((cmd) => `${cmd_L}${prefix + cmd.name}`)
 .join("\n")} ${ctgry_end}\n`;
       }

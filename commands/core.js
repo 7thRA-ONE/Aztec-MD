@@ -55,7 +55,7 @@ module.exports = {
             }else{
               up_up =  `┏━━⟪ ${tiny(process.env.BOTNAME)} ⟫━━⦿`
               up_mid = `┃ ✗`
-              up_btm = `┗━━━━━━━━━━━━━━⦿`
+              up_btm = `┗━━━━━━━━━━━━━━⦿\n`
               ctgry_L  = `\n┌──『`
               ctgry_R  = `』──❖\n\n`
               cmd_L =    `\x20|`
@@ -84,7 +84,7 @@ const keys = Object.keys(category);
       for (const key of keys) {
         amarok += `${ctgry_L} ${tiny(key.toLowerCase())}   ${ctgry_R} ${category[key]
           .map((cmd) => `${cmd_L}${prefix + cmd.name}`)
-          .join("")} ${ctgry_end}\n`;
+          .join("\n")} ${ctgry_end}\n`;
       }
       amarok += `\n*©vorterx-team*`;
 await vorterx.sendMessage(m.from, { image: aztec, caption: tiny(amarok)}, { quoted: m});

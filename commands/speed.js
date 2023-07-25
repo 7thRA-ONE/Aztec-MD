@@ -7,11 +7,11 @@ module.exports = {
    description: 'to check ping',
 start: async(vorterx, m, { prefix, toReact }) => {
   await toReact("💘");
-        var start = new Date().getTime();
+      /*  var start = new Date().getTime();
 	var msg = await m.reply('*𝆺𝅥 ʀᴜɴɪɴɢ 𝆺𝅥*');
 	var end = new Date().getTime();
 	var responseTime = end - start;
 	await m.reply(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
  }
-};
+};*/
   

@@ -2,7 +2,7 @@ module.exports = {
   name: "tiktok",
   description: "To download tiktok videos",
   category: "Download",
-  start: async(vorterx,m,{prefix,toReact,text,args[0]}) => {
+  start: async(vorterx,m,{prefix,toReact,text,args}) => {
 
 
   const fg = require("api-dylux");

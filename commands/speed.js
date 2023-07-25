@@ -14,7 +14,10 @@ start: async(vorterx, m, { prefix, toReact }) => {
 	await m.reply(`*☇ ꜱᴩᷨᴇͦᴇͭᴅ ☁ : ${responseTime}ms*`);
  }
 };*/
-	const speed = require("performance-now");
+	
+	//Copyright by vorterx
+
+	  const speed = require("performance-now");
 const {spawn, exec, execSync} = require("child_process");
 
 	let timestamp = speed();
@@ -22,7 +25,7 @@ const {spawn, exec, execSync} = require("child_process");
          exec(`neofetch --stdout`, (error, stdout, stderr) => {
           let child = stdout.toString("utf-8");
           let aztec = child.replace(/Memory:/, "Ram:");
-          m.reply(`${aztec}🛑*Performance* : ${latensi.toFixed(4)} _ms_`);
+          m.reply(`${aztec}*🛑Performance* : ${latensi.toFixed(4)} _ms_`);
             });
 }
     };

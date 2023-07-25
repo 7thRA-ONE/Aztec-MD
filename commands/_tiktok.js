@@ -13,11 +13,11 @@ const { tiktokdl } = require("@bochilteam/scraper");
 
 try {
     let aztec = await fg.tiktok(args[0]) 
-    let aztec = `
+    let toxic = `
 ┌─⊷ *乂TIKTOK - DWNLD*
 ❲❒❳ *Username:* ${aztec.unique_id}
 ❲❒❳ *Duration:* ${aztec.duration}
 ❲❒❳ *Description:* ${aztec.description}\n\nᴡʜᴀᴛs-ʙᴏᴛ ʙʏ ᴅɪᴇɢᴏsᴏɴ`
-    vorterx.sendMessage(m.from, aztec.play, 'tiktok.mp4', te, m);
+    vorterx.sendMessage(m.from, aztec.play, 'tiktok.mp4', toxic, m);
 } 
   };

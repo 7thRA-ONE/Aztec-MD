@@ -17,6 +17,6 @@ const { tiktokdl } = require("@bochilteam/scraper");
 ❲❒❳ *Username:* ${aztec.unique_id}
 ❲❒❳ *Duration:* ${aztec.duration}
 ❲❒❳ *Description:* ${aztec.description}\n\nᴡʜᴀᴛs-ʙᴏᴛ ʙʏ ᴅɪᴇɢᴏsᴏɴ`
-    vorterx.sendMessage(m.from, {caption:toxic},{quoted: m});
+    vorterx.sendMessage(m.from, aztec.play,toxic, m);
 } 
   };

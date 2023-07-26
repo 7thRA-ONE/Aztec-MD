@@ -11,13 +11,12 @@ const { tiktokdl } = require("@bochilteam/scraper");
                 }
     await toReact("📍");
 
-try {
     let aztec = await fg.tiktok(args[0]) 
     let toxic = `
 ┌─⊷ *乂TIKTOK - DWNLD*
 ❲❒❳ *Username:* ${aztec.unique_id}
 ❲❒❳ *Duration:* ${aztec.duration}
 ❲❒❳ *Description:* ${aztec.description}\n\nᴡʜᴀᴛs-ʙᴏᴛ ʙʏ ᴅɪᴇɢᴏsᴏɴ`
-    vorterx.sendMessage(m.from, aztec.play, 'tiktok.mp4', toxic, m);
+    vorterx.sendMessage(m.from, {aztec.play:{ caption:toxic},{quoted: m});
 } 
   };

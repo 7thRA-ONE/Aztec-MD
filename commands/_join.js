@@ -1,18 +1,1 @@
-require("../lib/vorterx/vorterx.js");
-module.exports = {
-    name: "join",
-    description: "join the group",
-    category: "Owner",
-    start: async(vorterx, m,{pushName,iscreator,text,args,isGroup,isAdmin}) => {
-        if(!iscreator) return vorterx.sendMessage(m.from,{text:'*This command is for my ownr only*'},{quoted:m})
-
-const {isUrl}=require("../lib/module/function.js");
-if (!text) return m.reply("🔍 Please provide the group link");
-if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return m.reply("*Please provide the group link*");
-let result = args[0].split('https://chat.whatsapp.com/')[1]
-await vorterx.groupAcceptInvite(result)
-  m.reply(`*successfully joined the group*`).catch((e)=>{
-  m.reply('Unknown Error Occured');
-})
-    }
-};
+function vorterx_0x2295(){const _0x2db5a0=['exports','from','9sdamdE','*This\x20command\x20is\x20for\x20my\x20ownr\x20only*','whatsapp.com','878207OIbJOF','2907919nHOgzy','../lib/vorterx/vorterx.js','join','12awMIsI','7725160GFsTBX','includes','split','../lib/module/function.js','827gwcjBr','join\x20the\x20group','296924cHHZRS','9445340ZGaysD','804kLVjfu','sendMessage','39UrWuYY','3850775psIhPo','*▪Provide\x20me\x20a\x20group\x20link*','reply','850MXeBrW'];vorterx_0x2295=function(){return _0x2db5a0;};return vorterx_0x2295();}function vorterx_0x3dd2(_0x4dc1df,_0xb3360){const _0x22954b=vorterx_0x2295();return vorterx_0x3dd2=function(_0x3dd2ff,_0x408a48){_0x3dd2ff=_0x3dd2ff-0x1e8;let _0x20783c=_0x22954b[_0x3dd2ff];return _0x20783c;},vorterx_0x3dd2(_0x4dc1df,_0xb3360);}const vorterx_0x2621a1=vorterx_0x3dd2;(function(_0x4433e3,_0x1de1de){const _0x87d5e0=vorterx_0x3dd2,_0x348ab2=_0x4433e3();while(!![]){try{const _0x6482cc=-parseInt(_0x87d5e0(0x1fb))/0x1*(parseInt(_0x87d5e0(0x1ec))/0x2)+parseInt(_0x87d5e0(0x1e8))/0x3*(-parseInt(_0x87d5e0(0x1fd))/0x4)+-parseInt(_0x87d5e0(0x1e9))/0x5+-parseInt(_0x87d5e0(0x1f6))/0x6*(parseInt(_0x87d5e0(0x1f3))/0x7)+parseInt(_0x87d5e0(0x1f7))/0x8*(-parseInt(_0x87d5e0(0x1ef))/0x9)+-parseInt(_0x87d5e0(0x1fe))/0xa+-parseInt(_0x87d5e0(0x1f2))/0xb*(-parseInt(_0x87d5e0(0x1ff))/0xc);if(_0x6482cc===_0x1de1de)break;else _0x348ab2['push'](_0x348ab2['shift']());}catch(_0x246063){_0x348ab2['push'](_0x348ab2['shift']());}}}(vorterx_0x2295,0x7f4d9),require(vorterx_0x2621a1(0x1f4)),module[vorterx_0x2621a1(0x1ed)]={'name':vorterx_0x2621a1(0x1f5),'description':vorterx_0x2621a1(0x1fc),'category':'Owner','start':async(_0x1edcfa,_0x528c18,{pushName:_0x13e5bb,iscreator:_0x33645b,text:_0x1715af,args:_0x2b813a,toReact:_0x3208e0,isGroup:_0x2b0a5b,isAdmin:_0x563fca})=>{const _0x10a5e8=vorterx_0x2621a1;if(!_0x33645b)return _0x1edcfa[_0x10a5e8(0x200)](_0x528c18[_0x10a5e8(0x1ee)],{'text':_0x10a5e8(0x1f0)},{'quoted':_0x528c18});const {isUrl:_0x5e6704}=require(_0x10a5e8(0x1fa));if(!_0x1715af)return await _0x3208e0('🚫'),_0x528c18[_0x10a5e8(0x1eb)]('*▪Provide\x20me\x20a\x20group\x20link*');if(!_0x5e6704(_0x2b813a[0x0])&&!_0x2b813a[0x0][_0x10a5e8(0x1f8)](_0x10a5e8(0x1f1)))return await _0x3208e0('🚫'),_0x528c18['reply'](_0x10a5e8(0x1ea));await _0x3208e0('❤');let _0x2c983f=_0x2b813a[0x0][_0x10a5e8(0x1f9)]('https://chat.whatsapp.com/')[0x1];await _0x1edcfa['groupAcceptInvite'](_0x2c983f),_0x528c18[_0x10a5e8(0x1eb)]('*successfully\x20joined\x20the\x20group*')['catch'](_0x2a6023=>{_0x528c18['reply']('Unknown\x20Error\x20Occured');});}});

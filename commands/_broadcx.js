@@ -45,7 +45,7 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
         m.reply(`*Sending Broadcast To ${anu.length} Group Chat*`);
         for (let i of anu) {
             await toReact("📢");
-            let txt = `  *乂${bct} B R  O  A D C A S T*\n\n *■Owner:* ${pushName}\n\n${text}`;
+            let txt = `  *乂 B R  O  A D C A S T*\n\n *■Owner:* ${pushName}\n\n${text}`;
             let buttonMessaged = {
                 image: aztec,
                 caption: txt,

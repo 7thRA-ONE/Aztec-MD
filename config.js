@@ -8,6 +8,7 @@ if (!vorterx) {
 
 global.owner = vorterx.split(",");
 global.mongodb = process.env.MONGODB || "none";
+levelupmessage:  process.env.LEVEL_UP_MESSAGE === undefined ? false : process.env.LEVEL_UP_MESSAGE,
 global.mods = process.env.MODS || "27686881509";
 global.botName = process.env.BOTNAME || "Aᴢᴛᴇᴄ-Mᴅ"; // change botName
 global.prefix = process.env.PREFIX || "-";

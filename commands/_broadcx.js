@@ -35,6 +35,8 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
 };*/
         if (!iscreator) {await toReact("🚫"); return m.reply("*This command is for my owner only*");
                         }
+        if(!text) { await toReact("🚫"); return m.reply("*Provide me with a message please*");
+                  }
         let getGroups = await vorterx.groupFetchAllParticipating();
         let groups = Object.entries(getGroups)
             .slice(0)
@@ -43,7 +45,6 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
         m.reply(`*Sending Broadcast To ${anu.length} Group Chat*`);
         for (let i of anu) {
             await toReact("📢");
-            await sleep(1500);
             let txt = `  *乂${bct} B R  O  A D C A S T*\n\n *■Owner:* ${pushName}\n\n${text}`;
             let buttonMessaged = {
                 image: aztec,

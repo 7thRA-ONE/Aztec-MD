@@ -56,7 +56,7 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
                     isForwarded: false,
                     externalAdReply: {
                         title: 'Broadcast by ' + pushName,
-                        body: bct,
+                        body: 'vorterx',
                         thumbnail: aztec,
                         mediaUrl: '',
                         mediaType: 2,

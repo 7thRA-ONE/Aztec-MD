@@ -17,7 +17,7 @@ function vorterx_0x4267(){const _0x145494=['url','1595070NYzSrB','562rLTdzK','6P
 await vorterx.sendMessage(m.from,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mpeg', asDocument: from.useDocument'
+    mimetype: 'audio/mpeg', asDocument: from.useDocument
     contextInfo:{
         externalAdReply:{
             title:anup3k.title,

@@ -5,6 +5,8 @@ module.exports = {
     category:"Owner",
 
     start:async(vorterx,m,{command,prefix,text,pushName,toReact,participants,args,iscreator,body,quoted,mime})=>{
+        const fs = require("fs");
+        let aztec = fs.readFileSync("./lib/connect/vorterx.png")
       /*  if(!iscreator) { await toReact("⛔"); return m.reply('*This command is for my owner only*');}
         if (!text) { await toReact("⛔"); return m.reply("Provide me a text");
                    }
@@ -40,10 +42,11 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
         let anu = groups.map((v) => v.id);
         m.reply(`*Sending Broadcast To ${anu.length} Group Chat*`);
         for (let i of anu) {
+            await toReact("📢");
             await sleep(1500);
-            let txt = `*--❗${bct} Broadcast❗--*\n\n *■Owner:* ${pushName}\n\n${text}`;
+            let txt = `  *乂${bct} B R  O  A D C A S T*\n\n *■Owner:* ${pushName}\n\n${text}`;
             let buttonMessaged = {
-                image: log0,
+                image: aztec,
                 caption: txt,
                 footer: pushName,
                 headerType: 1,
@@ -53,7 +56,7 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
                     externalAdReply: {
                         title: 'Broadcast by ' + pushName,
                         body: bct,
-                        thumbnail: log0,
+                        thumbnail: aztec,
                         mediaUrl: '',
                         mediaType: 2,
                         sourceUrl: `https://github.com`,

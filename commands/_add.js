@@ -1,15 +1,1 @@
-module.exports = {
-  name: "add",
-  description: "To add members",
-  category: "Group",
-  start: async(vorterx,m,{prefix,text,toReact,isGroup,isBotAdmin,isAmin}) => {
-    
-if (!m.isGroup) { await toReact("🚫"); return m.reply("*This cmd isfor the group admins only*");
-  }
-if (!isBotAdmin) { await toReact("🚫"); return m.reply("*Im not an admin l cant procedure*");
-  }
-let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-await vorterx.groupParticipantsUpdate(m.from, [users], 'add')
-await m.reply(`*💠User has been added successfully*`);
-  }
-     };
+ const vorterx_0xd9737c=vorterx_0xa667;(function(_0x1cf5db,_0xca6ca4){const _0x5db1fa=vorterx_0xa667,_0x57e4b9=_0x1cf5db();while(!![]){try{const _0x126c7b=-parseInt(_0x5db1fa(0x1ae))/0x1*(-parseInt(_0x5db1fa(0x1ab))/0x2)+parseInt(_0x5db1fa(0x1b4))/0x3+parseInt(_0x5db1fa(0x1a9))/0x4+parseInt(_0x5db1fa(0x1b0))/0x5*(-parseInt(_0x5db1fa(0x1ac))/0x6)+-parseInt(_0x5db1fa(0x1b7))/0x7+parseInt(_0x5db1fa(0x1a8))/0x8+-parseInt(_0x5db1fa(0x1b3))/0x9*(parseInt(_0x5db1fa(0x1b9))/0xa);if(_0x126c7b===_0xca6ca4)break;else _0x57e4b9['push'](_0x57e4b9['shift']());}catch(_0x25dbae){_0x57e4b9['push'](_0x57e4b9['shift']());}}}(vorterx_0x4f8a,0x68e2b),module[vorterx_0xd9737c(0x1aa)]={'name':vorterx_0xd9737c(0x1b2),'description':'To\x20add\x20members','category':'Group','start':async(_0x56a390,_0x1536e6,{prefix:_0x41dcf5,text:_0x36aa19,toReact:_0x103572,isGroup:_0x3df30c,isBotAdmin:_0xb2d905,isAmin:_0x5cc0aa})=>{const _0x544b9e=vorterx_0xd9737c;if(!_0x1536e6['isGroup'])return await _0x103572('🚫'),_0x1536e6[_0x544b9e(0x1bc)](_0x544b9e(0x1af));if(!_0xb2d905)return await _0x103572('🚫'),_0x1536e6['reply'](_0x544b9e(0x1b5));let _0x116820=_0x1536e6[_0x544b9e(0x1ba)]?_0x1536e6[_0x544b9e(0x1ba)]['sender']:_0x36aa19[_0x544b9e(0x1ad)](/[^0-9]/g,'')+_0x544b9e(0x1b6);await _0x56a390[_0x544b9e(0x1b8)](_0x1536e6[_0x544b9e(0x1b1)],[_0x116820],'add'),await _0x1536e6[_0x544b9e(0x1bc)](_0x544b9e(0x1bb));}});function vorterx_0xa667(_0x252f09,_0x439f5f){const _0x4f8a82=vorterx_0x4f8a();return vorterx_0xa667=function(_0xa66758,_0x5c2bc8){_0xa66758=_0xa66758-0x1a8;let _0x811512=_0x4f8a82[_0xa66758];return _0x811512;},vorterx_0xa667(_0x252f09,_0x439f5f);}function vorterx_0x4f8a(){const _0x17efd6=['reply','2574296jlpjrS','446212NZjkRW','exports','35122HlyTJE','18HIofhK','replace','47AWQNnP','*This\x20cmd\x20isfor\x20the\x20group\x20admins\x20only*','1162115ViyJnB','from','add','54jUTwsj','1702947sgwgJC','*Im\x20not\x20an\x20admin\x20l\x20cant\x20procedure*','@s.whatsapp.net','869792KVrhlY','groupParticipantsUpdate','958700mKZTzA','quoted','*💠User\x20has\x20been\x20added\x20successfully*'];vorterx_0x4f8a=function(){return _0x17efd6;};return vorterx_0x4f8a();}

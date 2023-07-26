@@ -5,7 +5,7 @@ module.exports = {
     category:"Owner",
 
     start:async(vorterx,m,{command,prefix,text,pushName,toReact,participants,args,iscreator,body,quoted,mime})=>{
-        if(!iscreator) { await toReact("⛔"); return m.reply('*This command is for my owner only*');}
+      /*  if(!iscreator) { await toReact("⛔"); return m.reply('*This command is for my owner only*');}
         if (!text) { await toReact("⛔"); return m.reply("Provide me a text");
                    }
         const bct=body.slice(4)
@@ -30,4 +30,41 @@ await vorterx.sendMessage(i, { video:media,  caption: txt, mentions:participants
             }
         m.reply(`*Broadcast has been send to ${anu.length} groups*`);
     }
-};
+};*/
+        if (!iscreator) {await toReact("🚫"); return m.reply("*This command is for my owner only*");
+                        }
+        let getGroups = await vorterx.groupFetchAllParticipating();
+        let groups = Object.entries(getGroups)
+            .slice(0)
+            .map((entry) => entry[1]);
+        let anu = groups.map((v) => v.id);
+        m.reply(`*Sending Broadcast To ${anu.length} Group Chat*`);
+        for (let i of anu) {
+            await sleep(1500);
+            let txt = `*--❗${bct} Broadcast❗--*\n\n *■Owner:* ${pushName}\n\n${text}`;
+            let buttonMessaged = {
+                image: log0,
+                caption: txt,
+                footer: pushName,
+                headerType: 1,
+                contextInfo: {
+                    forwardingScore: 999,
+                    isForwarded: false,
+                    externalAdReply: {
+                        title: 'Broadcast by ' + pushName,
+                        body: bct,
+                        thumbnail: log0,
+                        mediaUrl: '',
+                        mediaType: 2,
+                        sourceUrl: `https://github.com`,
+                        showAdAttribution: true,
+                    },
+                },
+            };
+            await vorterx.sendMessage(i, buttonMessaged, {
+                quoted: m,
+            });
+        }
+        m.reply(`*Successfully Sending Broadcast To ${anu.length} Groups*`);
+    }
+      };

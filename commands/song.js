@@ -54,7 +54,7 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
         title: title,
         body: toxic,
         sourceUrl: url,
-        thumbnail: await fetchBuffer(thumbnail)).data
+        thumbnail: await fetchBuffer(thumbnail).data
       }
     }
   };

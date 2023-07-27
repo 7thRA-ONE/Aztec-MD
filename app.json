@@ -16,9 +16,6 @@
     "BOTNAME": {
       "description": "Put your bot name here as its required."
     },
-    "MENU": { 
-      "description": "Kindly choose the menu style use number to choose ( 0\", for aztec 1\" for sector null\" randomly.)",
-    },
     "LEVEL_UP_MESSAGE": {
     "description": "Fill the value true if you want the bot to send Level up message in chat.",
      "required" :false,

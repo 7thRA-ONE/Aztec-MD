@@ -51,7 +51,7 @@ module.exports = {
               ctgry_L =  `╭────❏`
               ctgry_R =  `❏`
            cmd_L =     `│`
-              ctgry_end =`╰━━━━━━━━━━━━━━──⊷`
+              ctgry_end =`\n╰━━━━━━━━━━━━━━──⊷`
             }else{
               up_up =  `┏━━⟪ *${tiny(process.env.BOTNAME)}* ⟫━━⦿`
               up_mid = `┃ ✗`

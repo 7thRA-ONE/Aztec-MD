@@ -38,7 +38,6 @@ await fs.unlinkSync(pl.path)
 const fs = require("fs");
 const yts = require("youtube-yts");
 
-try {
       if (!args[0]) { await toReact("🚫"); return m.reply(`*Provide me a song  name..*`);
     }
       const songSearchTerm = args.join(" ");
@@ -47,10 +46,8 @@ try {
       let songUrl = song.url;
       let songId = songUrl.split("v=")[1];      
       const result = await yts(songId);
-      audio: fs.readFileSync(p1.path),
-      mimetype: 'audio/mpeg',
-      } else {
-        const ytaud = await YT.mp3(songUrl);
-    }
+  const ytaud = await YT.mp3(songUrl);
+  mimetype: 'audio/mpeg',
+      } 
       
   };

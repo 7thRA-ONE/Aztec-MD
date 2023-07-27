@@ -57,7 +57,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
     };*/
 
-	  const { cpus as _cpus, totalmem, freemem } = require('os');
+	  const { cpus, totalmem, freemem } = require('os');
 const util = require('util');
 const { performance } = require('perf_hooks');
 const { sizeFormatter } = require('human-readable');

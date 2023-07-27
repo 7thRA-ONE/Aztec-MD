@@ -27,7 +27,7 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
  ❒  Views: ${views}
 └──────────⭓`;
 
-  vorterx.sendMessage(m.from, { image: { url: thumbnail }, caption: amarok, footer: author }, { quoted: m });
+  vorterx.sendMessage(m.from, { image: { url: thumbnail }, caption: amarok }, { quoted: m });
 
 
   const audioStream = ytdl(url, {

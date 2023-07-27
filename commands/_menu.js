@@ -49,26 +49,18 @@ module.exports = {
               up_mid = `│`
               up_btm = `│ ╰──────✧❁✧──────◆\n╰══════════════════⊷`
               ctgry_L =  `╭────❏`
-              ctgry_R =  `❏`
+              ctgry_R =  `❏ \n`
            cmd_L =     `│`
               ctgry_end =`\n╰━━━━━━━━━━━━━━──⊷`
             }else{
-              /*up_up =  `┏━━⟪ *${tiny(process.env.BOTNAME)}* ⟫━━⦿`
+              up_up =  `┏━━⟪ *${tiny(process.env.BOTNAME)}* ⟫━━⦿`
               up_mid = `┃ ✗`
               up_btm = `┗━━━━━━━━━━━━━━⦿`
               ctgry_L  = `\n┌──『`
               ctgry_R  = `』──❖\n\n`
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
-            else {*/
-              up_up = `*┌─⊷* *${tiny(process.env.BOTNAME)}*`
-              up_mid = `*▢*`
-              up_btm = `*└───────────*`
-              ctgry_L = `\n   *┌───⭓『* `
-              ctgry_R = `』\n`
-cmd_L = `*╏│❒*`
-              ctgry_end = `\n  *└────────────⭓*\n`
-            }
+                              }
     
         
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX

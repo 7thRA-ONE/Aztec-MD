@@ -9,3 +9,5 @@
 ## .```🙏THANKS-TO```
    *THANKS TO ALL CONTRIBUTORS*
 
+## .```SCAN_QR_CODE```
+   *QR CODE COMING SOON*

@@ -1,4 +1,5 @@
 const { runtime, formatp } = require("../lib/module/function.js");
+const os = require('os');
   const speed = require('performance-now');
 
 module.exports = {

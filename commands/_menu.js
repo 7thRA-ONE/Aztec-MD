@@ -67,7 +67,7 @@ module.exports = {
               ctgry_L = `\n\n*┬* *┌───⭓『* `
               ctgry_R = `』\n`
         cmd_L = `*╏◦│❒*`
-              ctgry_end = `\n*┴**└──────────────⭓*\n`
+              ctgry_end = `\n*┴* *└──────────────⭓*\n`
             }
     
         

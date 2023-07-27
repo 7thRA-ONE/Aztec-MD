@@ -1,5 +1,5 @@
-/*const { runtime, formatp } = require("../lib/module/function.js");
-const os = require('os');
+const { runtime, formatp } = require("../lib/module/function.js");
+/*const os = require('os');
   const speed = require('performance-now');*/
 
 module.exports = {
@@ -118,4 +118,5 @@ let aztec = `
 *≡  NodeJS memory *
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
-vorterx.sendMessage(m.from, pp, aztec, m, false, { mentions: [who] });
+vorterx.sendMessage(m.from, pp, aztec, m, false, {quoted: m});
+	

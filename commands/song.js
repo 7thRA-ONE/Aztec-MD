@@ -3,7 +3,7 @@
     description: "To download songs",
     category: "Download",
     start: async(vorterx,m,{prefix,toReact,args,text}) => {
-    
+    const fs = require("fs");
  /*  const fs = require("fs");
       const { fetchBuffer } = require('../lib/module/function.js');
 if (!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex hope by xxx*");
@@ -47,32 +47,16 @@ try {
       let songUrl = song.url;
       let songId = songUrl.split("v=")[1];      
       const result = await yts(songId);
-      const length = result.seconds;
-
-      if (length >= 1800) {
-        return m.reply(
-          "The video is more than 30 minutes long "
-        );
+      audio: fs.readFileSync(p1.path),
+      mimetype: 'audio/mpeg',
       } else {
         const ytaud = await YT.mp3(songUrl);
         await toReact("💠");
-        vorterx.sendMessage(
-          m.from,
-          {
-            video: { url: ytaud.songUrl },
-            caption:`  *乂 V I D E O S  - D O W  N L O A D*\n\n
- *🌲Name*: ${song.title}\n\n
- *🌲Views*: atc\n\n
- *🌲Botname*: ${process.env.BOTNAME}`,
-          },
-          { quoted: m }
-        );
-      }
     } catch (err) {
       console.error(err);
      vorterx.sendMessage(
         m.from,
-        { text: `*Failed to play the video*: ${err.message}` },
+        { text: `*Failed to play the song*: ${err.message}` },
         { quoted: m }
       );
     }

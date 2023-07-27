@@ -9,6 +9,12 @@ module.exports = {
   start: async(vorterx,m,{prefix,toReact,text}) => {
 
   await toReact("🌡️");
+let format = sizeFormatter({
+  std: 'JEDEC',
+  decimalPlaces: 2,
+  keepTrailingZeroes: false,
+  render: (literal, symbol) => `${literal} ${symbol}B`,
+})	  
 	  const {  totalmem, freemem } = require('os');
  const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {

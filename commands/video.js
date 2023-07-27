@@ -30,7 +30,7 @@ module.exports = {
           {
             video: { url: ytaud.videoUrl },
             caption:`  *┌───⭓『* V I D O - D O W N *』*\n
- *❒Name: ${song.title}\n
+ *❒Name*: ${song.title}\n
  *❒Size*: ${size}\n
  *❒BotName*: ${process.env.BOTNAME}
  *└────────────⭓*`,

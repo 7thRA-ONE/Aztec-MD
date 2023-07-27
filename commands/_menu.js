@@ -42,7 +42,7 @@ module.exports = {
 //-----------------------------------------------------------------------
        var up_up, up_mid, up_btm, ctgry_L, ctgry_R, cmd_L, ctgry_end
             var random_menu = 0 ;
-            if (!process.env.MENU) { random_menu = Math.floor(Math.random() * 2) + 1; } //make Sure to replace '2' with Exact number of how many styles you have added---- Then it takes randome_STYLE,When user did't Put any Value in 'process.env.MENU'
+            if (!process.env.MENU) { random_menu = Math.floor(Math.random() * 3) + 1; } //make Sure to replace '2' with Exact number of how many styles you have added---- Then it takes randome_STYLE,When user did't Put any Value in 'process.env.MENU'
             
             if (random_menu == 1 || process.env.MENU.trim().startsWith("1") || process.env.MENU.toLowerCase().includes("suhail-md")) {            
               up_up =  `╭────《  *${tiny(process.env.BOTNAME)}*  》────⊷\n│ ╭──────✧❁✧──────◆`
@@ -64,8 +64,12 @@ module.exports = {
               up_up = `┌─⊷ *${tiny(process.env.BOTNAME)}*`
               up_mid = `▢`
               up_btm = `└───────────`
-
-
+              catgry_L = `*┬╯┌───⭓『 `
+              ctgry_R = `』`
+              ctgry_L = `* ╏◦ │❒`
+              ctgry_end = `*   ┴╮└──────────────⭓`
+            }
+        
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX
     // if (random_menu == 2(For_Menu_Style_no_2) || process.env.MENU.trim().startsWith("MENU_STYLE_NO") || process.env.MENU.toLowerCase().includes("Bot_NAME"))
     // if user put NUMBER or GIVEN NAME_ Then check statement here and , select the STYLE_MENU Through that NUMBER or GIVEN NAME 

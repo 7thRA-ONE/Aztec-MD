@@ -2,7 +2,7 @@
     name: "song",
     description: "To download songs",
     category: "Download",
-    start: async(vorterx,m,{prefix,toReact,text}) => {
+    start: async(vorterx,m,{prefix,toReact,args,text}) => {
     
  /*  const fs = require("fs");
       const { fetchBuffer } = require('../lib/module/function.js');

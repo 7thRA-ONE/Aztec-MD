@@ -54,7 +54,7 @@ Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\
 • https://github.com/
 
 *≡ S E R V E R*
-*🛑RAM:* ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+*🛑 RAM:* ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
 *🔘 FreeRAM:* ${format(freemem())}
 			
 ≡ NodeJS Memory Usaage_

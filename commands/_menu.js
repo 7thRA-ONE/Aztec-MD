@@ -69,6 +69,7 @@ module.exports = {
               cmd_L = `* ╏◦ │❒`
               ctgry_end = `*   ┴╮└──────────────⭓`
             }
+    }
         
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX
     // if (random_menu == 2(For_Menu_Style_no_2) || process.env.MENU.trim().startsWith("MENU_STYLE_NO") || process.env.MENU.toLowerCase().includes("Bot_NAME"))

@@ -1,4 +1,4 @@
-const { runtime,sizeFormatter, formatp } = require("../lib/module/function.js");
+const { runtime, formatp } = require("../lib/module/function.js");
 const os = require('os');
   const speed = require('performance-now');
 
@@ -9,12 +9,12 @@ module.exports = {
   start: async(vorterx,m,{prefix,toReact,text}) => {
 
   await toReact("🌡️");
-let format = sizeFormatter({
+/*let format = sizeFormatter({
   std: 'JEDEC',
   decimalPlaces: 2,
   keepTrailingZeroes: false,
   render: (literal, symbol) => `${literal} ${symbol}B`,
-})	  
+})	*/  
 	  const {  totalmem, freemem } = require('os');
  const used = process.memoryUsage()
                 const cpus = os.cpus().map(cpu => {
@@ -55,7 +55,6 @@ Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\
 
 *≡ S E R V E R*
 *🛑 RAM:* ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
-*🔘 FreeRAM:* ${format(freemem())}
 			
 ≡ NodeJS Memory Usaage_
 ${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}

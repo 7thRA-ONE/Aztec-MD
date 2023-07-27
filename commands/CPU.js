@@ -118,5 +118,6 @@ let aztec = `
 *≡  NodeJS memory *
 ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}
 `
-vorterx.sendMessage(m.from, pp, aztec, m, false, {quoted: m});
-	
+vorterx.sendMessage(m.from, pp, aztec, m, false, {quoted: m})
+   }
+};

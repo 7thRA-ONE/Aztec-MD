@@ -6,7 +6,7 @@
     const fs = require("fs");
 
 const ytdl = require('ytdl-core');
-const yts from ('yt-search');
+const yts = require('yt-search');
 const { pipeline } = require('stream');
       const { promisify } = require('util');
 const os = require('os');

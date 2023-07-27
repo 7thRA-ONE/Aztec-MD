@@ -23,11 +23,11 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
   let { title, thumbnail, timestamp, views, ago, url } = vid;
   let toxic = 'aztec wa bot';
 
-  let amarok = `┌───⭓『S O N G - D O W N 』
+  let amarok = ` ┌───⭓『S O N G - D O W N 』
  ❒  Title: ${title}
  ❒  Duration: ${timestamp}
  ❒  Views: ${views}
-└──────────⭓`;
+ └──────────⭓`;
 
   vorterx.sendMessage(m.from, { image: { url: thumbnail }, caption: amarok }, { quoted: m });
 

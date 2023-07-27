@@ -69,7 +69,6 @@ module.exports = {
               cmd_L = `* ╏◦ │❒`
               ctgry_end = `*┴╮└──────────────⭓`
             }
-    }
     
         
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX

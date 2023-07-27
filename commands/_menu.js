@@ -48,8 +48,8 @@ module.exports = {
               up_up =  `╭────《  *${tiny(process.env.BOTNAME)}*  》────⊷\n│ ╭──────✧❁✧──────◆`
               up_mid = `│`
               up_btm = `│ ╰──────✧❁✧──────◆\n╰══════════════════⊷`
-              ctgry_L =  `╭────❏`
-              ctgry_R =  `\n❏`
+              ctgry_L =  `\n╭────❏`
+              ctgry_R =  `❏`
               cmd_L =    ` │ `
               ctgry_end =`\n╰━━━━━━━━━━━━━━──⊷`
             }else{

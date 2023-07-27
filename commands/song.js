@@ -51,13 +51,6 @@ try {
       mimetype: 'audio/mpeg',
       } else {
         const ytaud = await YT.mp3(songUrl);
-        await toReact("💠");
-    } catch (err) {
-      console.error(err);
-     vorterx.sendMessage(
-        m.from,
-        { text: `*Failed to play the song*: ${err.message}` },
-        { quoted: m }
-      );
     }
+      
   };

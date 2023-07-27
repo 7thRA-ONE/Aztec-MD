@@ -60,14 +60,14 @@ module.exports = {
               ctgry_R  = `』──❖\n\n`
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
-            else{
+            else {
               up_up = `┌─⊷ *${tiny(process.env.BOTNAME)}*`
               up_mid = `▢`
               up_btm = `└───────────`
               ctgry_L = `*┬╯┌───⭓『 `
               ctgry_R = `』`
               cmd_L = `* ╏◦ │❒`
-              ctgry_end = `*   ┴╮└──────────────⭓`
+              ctgry_end = `*┴╮└──────────────⭓`
             }
     }
     

@@ -18,6 +18,7 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
   let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
   if (!search) { await toReact("⛔");  return m.reply('*Song not found try another name Mnike by Tyler lcu*');
                }
+      await toReact ("🔘");
   let { title, thumbnail, timestamp, views, ago, url } = vid;
   let toxic = 'aztec wa bot';
 
@@ -52,7 +53,7 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
         title: title,
         body: toxic,
         sourceUrl: url,
-        thumbnail: await (await vorterx.getFile(thumbnail)).data
+        thumbnail: await (await vorterx.getBuffer(thumbnail)).data
       }
     }
   };

@@ -10,6 +10,7 @@ const yts = require('yt-search');
 const { pipeline } = require('stream');
       const { promisify } = require('util');
 const os = require('os');
+      const { fetchBuffer } = require("./lib/module/function.js");
 
 const streamPipeline = promisify(pipeline);
 if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Banyana by Daliwonga*");
@@ -53,7 +54,7 @@ if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Ban
         title: title,
         body: toxic,
         sourceUrl: url,
-        thumbnail: await (await vorterx.getBuffer(thumbnail)).data
+        thumbnail: await (await vorterx.fetchBuffer(thumbnail)).data
       }
     }
   };

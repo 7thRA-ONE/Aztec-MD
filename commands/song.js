@@ -4,7 +4,7 @@
     category: "Download",
     start: async(vorterx,m,{prefix,toReact,args,text}) => {
     const fs = require("fs");
- /*  const fs = require("fs");
+   const fs = require("fs");
       const { fetchBuffer } = require('../lib/module/function.js');
 if (!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex hope by xxx*");
 }
@@ -32,22 +32,6 @@ await vorterx.sendMessage(m.from,{
 },{quoted:m})
 await fs.unlinkSync(pl.path)
 }
-    };*/
+    };
 
-      const YT = require("../lib/ytdl-core.js");
-const fs = require("fs");
-const yts = require("youtube-yts");
-
-      if (!args[0]) { await toReact("🚫"); return m.reply(`*Provide me a song  name..*`);
-    }
-      const songSearchTerm = args.join(" ");
-      const songInfo = await yts(songSearchTerm);
-      const song = songInfo.videos[0];
-      let songUrl = song.url;
-      let songId = songUrl.split("v=")[1];      
-      const result = await yts(songId);
-  const ytaud = await YT.mp3(songUrl);
-  mimetype: 'audio/mpeg',
-      } 
       
-  };

@@ -19,6 +19,11 @@
     "MENU": { 
       "description": "Kindly choose the menu style use number to choose ( 0\", for aztec 1\" for sector null\" randomly.)",
     },
+    "LEVEL_UP_MESSAGE": {
+    "description": "Fill the value true if you want the bot to send Level up message in chat.",
+     "required" :false,
+     "value": "true"
+    },
     "SESSION_ID": {
       "description": "A random string for your bot session. Which works as an OTP to get qr code. You have to change session every time to get a new qr."
     },

@@ -12,11 +12,11 @@ const { pipeline } = require('stream');
 const os = require('os');
 
 const streamPipeline = promisify(pipeline);
-if(!text) { await toReact("⛔") return m.reply("*Provide me a song name ex Banyana by Daliwonga*");
+if(!text) { await toReact("⛔"); return m.reply("*Provide me a song name ex Banyana by Daliwonga*");
           }
   let search = await yts(text);
   let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
-  if (!search) { await toReact("⛔")  return m.reply('*Song not found try another name Mnike by Tyler lcu*');
+  if (!search) { await toReact("⛔");  return m.reply('*Song not found try another name Mnike by Tyler lcu*');
                }
   let { title, thumbnail, timestamp, views, ago, url } = vid;
   let toxic = 'aztec wa bot';

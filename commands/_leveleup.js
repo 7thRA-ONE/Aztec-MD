@@ -1,6 +1,7 @@
-const { canLevelUp } = require('../lib/levelup.js')
+const { canLevelUp } = require('../lib/levelup.js');
 
-export async function before(m, { vorterx }) {
+await toReact("😯");
+start: async(vorterx,m,{text,toReact,pushName,prefix}) => {
     let user = global.db.data.users[m.sender]
     if (!user.autolevelup)
         return !0

@@ -14,7 +14,7 @@ export async function before(m, { vorterx }) {
                *You just got leveled up😯*\n\n
                *❲❒❳ Name* : ${pushName}\n
                *❲❒❳ Level* : ${before}\n
-               *❲❒❳ Triple* : ${user.level}
+               *❲❒❳ Triple* : ${user.level}\n
                *❲❒❳ Role* : ${user.role}\n\n
                *What an Angel of Super Saiyan*
 	       ╰────────────⭓

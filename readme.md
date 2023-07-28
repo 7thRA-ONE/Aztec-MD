@@ -4,7 +4,7 @@
 ## .```AZTEC-MD```
   *AZTEC-MD-WA-BOT BASED ON BAILEY'S*
    
-*<a href="https://heroku.com/deploy?template=https://github.com/Vorterx/Aztec-MD/"><img title="DEPLOY HEROKU"></a>*
+## *<a href="https://heroku.com/deploy?template=https://github.com/Vorterx/Aztec-MD/"><title="DEPLOY HEROKU"></a>*
 
 ## .```🙏THANKS-TO```
    *THANKS TO ALL CONTRIBUTORS*

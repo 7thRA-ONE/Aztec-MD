@@ -10,14 +10,14 @@ export async function before(m, { vorterx }) {
     user.role = global.rpg.role(user.level).name
     if (before !== user.level) {
         m.reply(`
-╭────────────
-│   *Congratulations* 
-│      *Level Up🥳*
-│
-│ *📍Level* *${before}* ‣  *${user.level}*
-│ *🐉Role*: *${user.role}*
-│ *Have A Good Day🎯*
-╰────────────
+       *┌───⭓『
+               *You just got leveled up😯*\n\n
+               *❲❒❳ Name* : ${pushName}\n
+               *❲❒❳ Level* : ${before}\n
+               *❲❒❳ Triple* : ${user.level}
+               *❲❒❳ Role* : ${user.role}\n\n
+               *What an Angel of Super Saiyan*
+	       ╰────────────⭓
 	`.trim())
     }
 };

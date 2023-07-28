@@ -17,4 +17,4 @@ if (isiOS) {
 } else {
   console.log("User is not using iOS");
 }
-};
+}};

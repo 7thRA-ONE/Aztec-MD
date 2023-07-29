@@ -9,7 +9,7 @@ module.exports = {
     await toReact("🔒");
                 vorterx.public = true
                 m.reply('*Bot has been set to public mode⚙️*');
-break
+break:
   case 'private':
     if(!iscreator) { await toReact("🔒"); return m.reply("*This cmd is for my owner only*");
                    }
@@ -17,7 +17,7 @@ break
     vorterx.public = false
     m.reply("*Bot has been set to private mode*");
 
-  break
+  break:
   default;
   }
 };

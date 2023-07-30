@@ -52,7 +52,7 @@ module.exports = {
               ctgry_R =  `❏ \n`
            cmd_L =     `│`
               ctgry_end =`\n╰━━━━━━━━━━━━━━──⊷`
-            }else{
+            }else{/*
               up_up =  `┏━━⟪ *${tiny(process.env.BOTNAME)}* ⟫━━⦿`
               up_mid = `┃ ✗`
               up_btm = `┗━━━━━━━━━━━━━━⦿`
@@ -60,10 +60,7 @@ module.exports = {
               ctgry_R  = `』──❖\n\n`
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
-                }if(condition){
-} else if(2ndcondition){
-}else if(3rd condition){
-}else{
+                */
         up_up = `*┌─⊷*`
         up_mid = `*▢*`
         up_btm = `*└───────────*`

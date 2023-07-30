@@ -17,7 +17,7 @@ module.exports = {
             image: {url: src},
             caption: git,
             footer: 'vorterx team',
-            headerType: 4,
+            headerType: 2,
             contextInfo: {
                 externalAdReply: {
                     title: "aztec github",

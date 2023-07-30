@@ -64,10 +64,10 @@ module.exports = {
         up_up = `*┌─⊷*`
         up_mid = `*▢*`
         up_btm = `*└───────────*`
-        ctgry_L = ` *┌──〔*_◉*` 
-        ctgry_R = `*◉_〕*\n`
+        ctgry_L = ` *┌──〔*` 
+        ctgry_R = `*〕*\n`
         ctgry_L = `*┊*`
-        ctgry_end = `\n*└───────────●*`
+        ctgry_end = `\n*└───────────●*\n`
   }
                 
     

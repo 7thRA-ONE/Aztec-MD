@@ -61,6 +61,13 @@ module.exports = {
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
                               }
+      if(condition)  {
+            } else {
+        up_up = `*┌─⊷*`
+        up_mid = `*▢*`
+        up_btm = `*└───────────*`
+
+        
     
         
     //  ADD MORE STYLES HERE ACCORDING TO YOU AND ADD ELSE IF STATEMENT THROUGH BELLOW SYNTEX

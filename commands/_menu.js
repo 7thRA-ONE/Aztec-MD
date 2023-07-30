@@ -10,12 +10,12 @@ module.exports = {
   description: "The list of all command",
   category: "General",
   start: async (vorterx, m, { commands, args, prefix, toReact, text,  toUpper }) => {
-    await toReact("🛸");
+    await toReact("📔");
   let aztec = fs.readFileSync("./lib/connect/vorterx.png");
-    const time = moment(moment()).format('HH:mm:ss')
-                moment.tz.setDefault('Africa/Johannesburg').locale('id')
-                const date = moment.tz('africa/johannesburg').format('DD/MM/YYYY');
-    const { pushName, sender } = m;
+     let [date, time] = new Date()
+        .toLocaleString("en-IN", { timeZone: "Africa/Johannesburg" })
+        .split(",");
+      const { pushName, sender } = m;
     if (args[0]) {
       let data = [];
       let name = args[0].toLowerCase();

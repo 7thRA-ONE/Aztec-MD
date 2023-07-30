@@ -3,7 +3,7 @@ const chalk = require("chalk");
 require("dotenv").config();
 let vorterx = process.env.MODS;
 if (!vorterx) {
-  vorterx = "27686881509, 27782914890"; //add your number here 
+  vorterx = "27686881509", "27782914890"; //add your number here 
 }
 
 global.owner = vorterx.split(",");

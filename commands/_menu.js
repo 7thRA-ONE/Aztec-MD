@@ -68,7 +68,7 @@ module.exports = {
         up_btm = `*└───────────*`
         ctgry_L = ` *┌──〔*_◉*` 
         ctgry_R = `*◉_〕*`
-        ctgry_R = `*┊*`
+        ctgry_L = `*┊*`
         ctgry_end = `*└───────────●*`
       }
         

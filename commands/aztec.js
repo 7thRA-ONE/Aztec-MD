@@ -29,6 +29,6 @@ module.exports = {
                 },
             },
         };
-        await vorterx.sendMessage(m.from, buttonMessage, {quoted: m});
+       return await vorterx.sendMessage(m.from, buttonMessage, {quoted: m});
   }
 };

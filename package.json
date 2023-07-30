@@ -14,6 +14,7 @@
     "@canvas-fonts/arial-bold": "^1.0.4",
     "@viper-x/fancytext": "^1.0.2",
     "@hapi/boom": "^10.0.1",
+    "aztec-md-ytdl": "3.0.0",
     "axios": "1.4.0",
     "better-sqlite3": "^8.4.0",
     "canvacord": "^5.4.9",

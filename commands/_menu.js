@@ -61,7 +61,7 @@ module.exports = {
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
                               }
-      if(condition)  {
+      {
             } else {
         up_up = `*┌─⊷*`
         up_mid = `*▢*`

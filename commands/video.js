@@ -23,7 +23,7 @@ module.exports = {
           "The video is more than 30 minutes long "
         );
       } else {
-        const ytaud = await ytdl.mp4(videoUrl);
+        const ytaud = await ytdl(videoUrl);
         await toReact("💠");
         vorterx.sendMessage(
           m.from,

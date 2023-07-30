@@ -9,6 +9,6 @@ module.exports = {
             }
     await toReact("👍");
   let aztec = await fetchJson(`https://linkpoi.ga/api.php?url=${text}`)
-                vorterx.sendMessage(m.from, { text: aztec.shorturl + `\nby aztec`}, { quoted: m });
+                vorterx.sendMessage(m.from, { text: aztec + `\nby aztec`}, { quoted: m });
   }
             };

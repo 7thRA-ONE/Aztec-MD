@@ -60,7 +60,7 @@ module.exports = {
               ctgry_R  = `』──❖\n\n`
             cmd_L = ` | `
               ctgry_end =`\n\n└─────────◉\n`
-                              }
+                              }if(condition)
       {
             } else {
         up_up = `*┌─⊷*`

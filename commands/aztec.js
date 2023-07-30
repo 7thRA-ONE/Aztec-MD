@@ -7,7 +7,8 @@ module.exports = {
   description: "To see aztec information",
   category: "Extra",
   start: async(vorterx, m, { prefix, toReact, pushName }) => {
-    
+
+    pp = `https://i.ibb.co/6WV7wbc/20230718-084726.png`;
     await toReact("🛸");
     src = `https://i.ibb.co/6WV7wbc/20230718-084726.png`;
     let vorterxi = await axios.get(`https://api.github.com/repos/Vorterx/Aztec-MD`);

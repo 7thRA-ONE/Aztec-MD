@@ -1,5 +1,5 @@
 module.exports = {
-  name: "spin",
+  name: "dice",
   description: "Funny game",
   category: "Games",
   start: async(vorterx,m,{prefix,toReact,text,args}) => {
